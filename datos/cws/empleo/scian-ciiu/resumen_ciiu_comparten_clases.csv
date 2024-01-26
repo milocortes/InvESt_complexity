@@ -1,0 +1,633 @@
+ciiu,ciiu_descripcion,ciiu_clases_comparten,clases_comparten,razon_empleo_total
+321,"Acuicultura marina (explotación de peces, moluscos, tortugas acuáticas, cocodrilos, anfibios, y acuicultura vegetal en ambientes controlados en agua de mar)",322,"112512,112511",0.13447008235622387
+322,"Acuicultura de agua dulce (explotación de peces, moluscos, tortugas acuáticas, cocodrilos, anfibios, y acuicultura vegetal en ambientes controlados en agua dulce)",321,"112512,112511",0.13447008235622387
+1610,Aserrado y acepilladura de madera (fabricación de harina y lana de madera),1629,"321999,321111",0.005068825141372701
+1610,Aserrado y acepilladura de madera (fabricación de harina y lana de madera),1622,"321999,321910,321111",0.005068825141372701
+240,Servicios de apoyo a la silvicultura (servicios de consultoría forestal),7490,541690,0.41340168124156973
+893,Extracción de sal (refinación de sal),1079,311940,0.013939269138774928
+910,Actividades de apoyo para la extracción de petróleo y gas natural (licuefacción de gas con fines de transporte),5229,488990,0.10605541834256729
+4100,Construcción de edificios (edificación de inmuebles comerciales y de servicios),4290,"236211,236221",0.1514798898017919
+4100,Construcción de edificios (edificación de inmuebles comerciales y de servicios),4390,236211,0.1514798898017919
+4290,"Construcción de otras obras de ingeniería civil (construcción de instalaciones deportivas al aire libre, y otras construcciones de ingeniería civil n.c.p.*)",4100,"236211,236221",0.1514798898017919
+4290,"Construcción de otras obras de ingeniería civil (construcción de instalaciones deportivas al aire libre, y otras construcciones de ingeniería civil n.c.p.*)",4390,236211,0.1514798898017919
+4390,Otras actividades especializadas de construcción (servicios de limpieza de fachadas a vapor),4100,236211,0.1514798898017919
+4390,Otras actividades especializadas de construcción (servicios de limpieza de fachadas a vapor),4290,236211,0.1514798898017919
+4390,Otras actividades especializadas de construcción (servicios de limpieza de fachadas a vapor),8129,561790,0.13785742223435274
+4321,Instalaciones eléctricas (instalación de antenas parabólicas),3320,238290,0.47654267134395756
+4321,Instalaciones eléctricas (instalación de antenas parabólicas),4329,238290,0.47654267134395756
+4322,"Instalaciones de fontanería, calefacción y aire acondicionado (instalación de ductos para sistemas de aire acondicionado y sistemas de calefacción)",3320,238222,0.389958364962721
+4322,"Instalaciones de fontanería, calefacción y aire acondicionado (instalación de ductos para sistemas de aire acondicionado y sistemas de calefacción)",4329,238222,0.389958364962721
+4322,"Instalaciones de fontanería, calefacción y aire acondicionado (instalación de ductos para sistemas de aire acondicionado y sistemas de calefacción)",8129,238222,0.389958364962721
+3320,Instalación de maquinaria y equipo industriales (instalación de maquinaria industrial),4321,238290,0.47654267134395756
+3320,Instalación de maquinaria y equipo industriales (instalación de maquinaria industrial),4322,238222,0.389958364962721
+3320,Instalación de maquinaria y equipo industriales (instalación de maquinaria industrial),4329,"238222,238290",0.389958364962721
+3320,Instalación de maquinaria y equipo industriales (instalación de maquinaria industrial),8129,238222,0.389958364962721
+4329,Otras instalaciones para obras de construcción (instalación de material para aislamiento térmico y acústico),4321,238290,0.47654267134395756
+4329,Otras instalaciones para obras de construcción (instalación de material para aislamiento térmico y acústico),4322,238222,0.389958364962721
+4329,Otras instalaciones para obras de construcción (instalación de material para aislamiento térmico y acústico),3320,"238222,238290",0.389958364962721
+4329,Otras instalaciones para obras de construcción (instalación de material para aislamiento térmico y acústico),8129,238222,0.389958364962721
+8129,Otras actividades de limpieza de edificios y de instalaciones industriales (limpieza y mantenimiento de maquinaria y equipo industrial),4390,561790,0.13785742223435274
+8129,Otras actividades de limpieza de edificios y de instalaciones industriales (limpieza y mantenimiento de maquinaria y equipo industrial),4322,238222,0.389958364962721
+8129,Otras actividades de limpieza de edificios y de instalaciones industriales (limpieza y mantenimiento de maquinaria y equipo industrial),3320,238222,0.389958364962721
+8129,Otras actividades de limpieza de edificios y de instalaciones industriales (limpieza y mantenimiento de maquinaria y equipo industrial),4329,238222,0.389958364962721
+8129,Otras actividades de limpieza de edificios y de instalaciones industriales (limpieza y mantenimiento de maquinaria y equipo industrial),5222,488390,0.0005117563844655132
+8129,Otras actividades de limpieza de edificios y de instalaciones industriales (limpieza y mantenimiento de maquinaria y equipo industrial),5229,488390,0.0005117563844655132
+8129,Otras actividades de limpieza de edificios y de instalaciones industriales (limpieza y mantenimiento de maquinaria y equipo industrial),8121,561720,2.8726835408180547
+1061,Elaboración de productos de molienda (elaboración de harinas premezcladas),1030,311214,0.06197126122360952
+1030,"Elaboración y conservación de frutas, legumbres y hortalizas (corte y pelado y envasado de frutas y verduras)",1061,311214,0.06197126122360952
+1030,"Elaboración y conservación de frutas, legumbres y hortalizas (corte y pelado y envasado de frutas y verduras)",1073,311340,0.2982564947368293
+1030,"Elaboración y conservación de frutas, legumbres y hortalizas (corte y pelado y envasado de frutas y verduras)",1079,"311993,311930,311999",0.004264636537212609
+1030,"Elaboración y conservación de frutas, legumbres y hortalizas (corte y pelado y envasado de frutas y verduras)",1071,311910,0.09942695469615684
+1062,Elaboración de almidones y productos derivados del almidón (molienda de nixtamal),1040,311222,0.02546597246506958
+1040,Elaboración de aceites y grasas de origen vegetal y animal (elaboración de aceite de pescado),1062,311222,0.02546597246506958
+1073,Elaboración de cacao y chocolate y de productos de confitería (elaboración de chocolate y productos de chocolate),1030,311340,0.2982564947368293
+1074,"Elaboración de macarrones, fideos, alcuzcuz y productos farináceos similares (elaboración de pastas para sopa)",1075,"311423,311412",0.2922616342330904
+1074,"Elaboración de macarrones, fideos, alcuzcuz y productos farináceos similares (elaboración de pastas para sopa)",1079,"311423,311412",0.2922616342330904
+1075,Elaboración de comidas y platos preparados (elaboración de guisos a base de pescados y mariscos),1074,"311423,311412",0.2922616342330904
+1075,Elaboración de comidas y platos preparados (elaboración de guisos a base de pescados y mariscos),1079,"311423,311710,311412",0.2922616342330904
+1079,"Elaboración de otros productos alimenticios n.c.p. (elaboración de huevo procesado, corte y pelado de papas, procesamiento de miel, y de otros productos alimenticios n.c.p.*)",893,311940,0.013939269138774928
+1079,"Elaboración de otros productos alimenticios n.c.p. (elaboración de huevo procesado, corte y pelado de papas, procesamiento de miel, y de otros productos alimenticios n.c.p.*)",1030,"311993,311930,311999",0.004264636537212609
+1079,"Elaboración de otros productos alimenticios n.c.p. (elaboración de huevo procesado, corte y pelado de papas, procesamiento de miel, y de otros productos alimenticios n.c.p.*)",1074,"311423,311412",0.2922616342330904
+1079,"Elaboración de otros productos alimenticios n.c.p. (elaboración de huevo procesado, corte y pelado de papas, procesamiento de miel, y de otros productos alimenticios n.c.p.*)",1075,"311423,311710,311412",0.2922616342330904
+1071,Elaboración de productos de panadería (elaboración de botanas a base de maíz),1030,311910,0.09942695469615684
+2011,Fabricación de sustancias químicas básicas (fabricación de agua destilada),2399,325999,0.1545991668118674
+2011,Fabricación de sustancias químicas básicas (fabricación de agua destilada),1910,325190,0.1753862237618237
+2011,Fabricación de sustancias químicas básicas (fabricación de agua destilada),2022,"325190,325999",0.1753862237618237
+2011,Fabricación de sustancias químicas básicas (fabricación de agua destilada),2029,"325190,325610,325999",0.1753862237618237
+2011,Fabricación de sustancias químicas básicas (fabricación de agua destilada),2100,325190,0.1753862237618237
+2011,Fabricación de sustancias químicas básicas (fabricación de agua destilada),2021,325610,0.3082235595580862
+2011,Fabricación de sustancias químicas básicas (fabricación de agua destilada),2023,"325999,325610",0.1545991668118674
+2011,Fabricación de sustancias químicas básicas (fabricación de agua destilada),2817,325999,0.1545991668118674
+2011,Fabricación de sustancias químicas básicas (fabricación de agua destilada),8292,325999,0.1545991668118674
+1311,Preparación e hilatura de fibras textiles (fabricación de productos textiles reciclados),1629,313111,0.011185532403317643
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",1610,"321999,321111",0.005068825141372701
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",1311,313111,0.011185532403317643
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",1399,"339940,339999",0.05358820425903158
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",1392,337920,0.001973917482938408
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",1622,"321999,321111",0.005068825141372701
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",1623,"321920,321111",0.015108998017553244
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",1701,339940,0.05358820425903158
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",1709,"339940,339999",0.05358820425903158
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",2022,339940,0.05358820425903158
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",2817,339940,0.05358820425903158
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",2593,337920,0.001973917482938408
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",2819,"339940,339999",0.05358820425903158
+1629,"Fabricación de otros productos de madera; fabricación de artículos de corcho, paja y materiales trenzables (fabricación de juntas de corcho y marcos de madera)",3290,"339940,339999",0.05358820425903158
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),1629,"339940,339999",0.05358820425903158
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),1391,313240,0.16071587407381233
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),1392,"313240,336360",0.16071587407381233
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),2220,"322220,336360,339999",0.08675489184272508
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),1420,315999,0.09294470715959367
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),1701,"339940,322220",0.05358820425903158
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),1702,322220,0.08675489184272508
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),1709,"339940,322220,339999",0.05358820425903158
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),2420,322220,0.08675489184272508
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),2599,"322220,339999",0.08675489184272508
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),2022,339940,0.05358820425903158
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),2817,339940,0.05358820425903158
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),2819,"339940,339999",0.05358820425903158
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),3011,336360,0.04742275829380421
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),3020,336360,0.04742275829380421
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),3030,336360,0.04742275829380421
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),3290,"339940,339999",0.05358820425903158
+1399,Fabricación de otros productos textiles n.c.p. (fabricación de juntas textiles),2930,336360,0.04742275829380421
+1391,Fabricación de tejidos de punto y ganchillo ,1399,313240,0.16071587407381233
+1391,Fabricación de tejidos de punto y ganchillo ,1392,313240,0.16071587407381233
+1392,"Fabricación de artículos confeccionados de materiales textiles, excepto prendas de vestir (fabricación de persianas de materiales textiles)",1629,337920,0.001973917482938408
+1392,"Fabricación de artículos confeccionados de materiales textiles, excepto prendas de vestir (fabricación de persianas de materiales textiles)",1399,"313240,336360",0.16071587407381233
+1392,"Fabricación de artículos confeccionados de materiales textiles, excepto prendas de vestir (fabricación de persianas de materiales textiles)",1391,313240,0.16071587407381233
+1392,"Fabricación de artículos confeccionados de materiales textiles, excepto prendas de vestir (fabricación de persianas de materiales textiles)",2220,"337920,314120,336360",0.001973917482938408
+1392,"Fabricación de artículos confeccionados de materiales textiles, excepto prendas de vestir (fabricación de persianas de materiales textiles)",2599,337920,0.001973917482938408
+1392,"Fabricación de artículos confeccionados de materiales textiles, excepto prendas de vestir (fabricación de persianas de materiales textiles)",2593,337920,0.001973917482938408
+1392,"Fabricación de artículos confeccionados de materiales textiles, excepto prendas de vestir (fabricación de persianas de materiales textiles)",3011,336360,0.04742275829380421
+1392,"Fabricación de artículos confeccionados de materiales textiles, excepto prendas de vestir (fabricación de persianas de materiales textiles)",3020,336360,0.04742275829380421
+1392,"Fabricación de artículos confeccionados de materiales textiles, excepto prendas de vestir (fabricación de persianas de materiales textiles)",3030,336360,0.04742275829380421
+1392,"Fabricación de artículos confeccionados de materiales textiles, excepto prendas de vestir (fabricación de persianas de materiales textiles)",2930,336360,0.04742275829380421
+1313,Acabado de productos textiles (impresión sobre productos textiles),1709,323119,1.0038467021565658
+1313,Acabado de productos textiles (impresión sobre productos textiles),1811,323119,1.0038467021565658
+1313,Acabado de productos textiles (impresión sobre productos textiles),8219,323119,1.0038467021565658
+2219,Fabricación de otros productos de caucho (fabricación de juntas de hule),2220,"337910,339999,326220",0.026733178750412756
+2219,Fabricación de otros productos de caucho (fabricación de juntas de hule),3100,337910,0.026733178750412756
+2219,Fabricación de otros productos de caucho (fabricación de juntas de hule),2829,339920,0.0031680157133579384
+2219,Fabricación de otros productos de caucho (fabricación de juntas de hule),3230,339920,0.0031680157133579384
+2219,Fabricación de otros productos de caucho (fabricación de juntas de hule),3240,"339920,339999",0.0031680157133579384
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),1399,"322220,336360,339999",0.08675489184272508
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),1392,"337920,314120,336360",0.001973917482938408
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),2219,"337910,339999,326220",0.026733178750412756
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),1701,322220,0.08675489184272508
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),1702,322220,0.08675489184272508
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),1709,"322220,339999",0.08675489184272508
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),2420,322220,0.08675489184272508
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),3100,"326198,326194,337910",0.022590388971406222
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),2720,326198,0.022590388971406222
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),2593,337920,0.001973917482938408
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),3011,336360,0.04742275829380421
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),3020,336360,0.04742275829380421
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),3030,336360,0.04742275829380421
+2220,Fabricación de productos de plástico (fabricación de juntas de plástico),2930,336360,0.04742275829380421
+1410,"Fabricación de prendas de vestir, excepto prendas de piel (fabricación de redes para cabello)",1420,"315999,315210",0.09294470715959367
+1410,"Fabricación de prendas de vestir, excepto prendas de piel (fabricación de redes para cabello)",1520,316999,0.006994003921028679
+1410,"Fabricación de prendas de vestir, excepto prendas de piel (fabricación de redes para cabello)",1512,"316999,339999",0.006994003921028679
+1420,Fabricación de artículos de piel (confección de guantes y mitones),1399,315999,0.09294470715959367
+1420,Fabricación de artículos de piel (confección de guantes y mitones),1410,"315999,315210",0.09294470715959367
+1520,Fabricación de calzado (fabricación de partes para calzado de cuero y piel),1410,316999,0.006994003921028679
+1520,Fabricación de calzado (fabricación de partes para calzado de cuero y piel),1512,316999,0.006994003921028679
+1512,"Fabricación de maletas, bolsos de mano y artículos similares, y de artículos de talabartería y guarnicionería (fabricación de juntas de cuero)",1410,"316999,339999",0.006994003921028679
+1512,"Fabricación de maletas, bolsos de mano y artículos similares, y de artículos de talabartería y guarnicionería (fabricación de juntas de cuero)",1520,316999,0.006994003921028679
+1622,Fabricación de partes y piezas de carpintería para edificios y construcciones (fabricación de mamparas de madera),1610,"321999,321910,321111",0.005068825141372701
+1622,Fabricación de partes y piezas de carpintería para edificios y construcciones (fabricación de mamparas de madera),1629,"321999,321111",0.005068825141372701
+1622,Fabricación de partes y piezas de carpintería para edificios y construcciones (fabricación de mamparas de madera),3100,337210,0.10512938298020112
+1622,Fabricación de partes y piezas de carpintería para edificios y construcciones (fabricación de mamparas de madera),2511,337210,0.10512938298020112
+1623,Fabricación de recipientes de madera (fabricación de productos de madera de uso industrial),1629,"321920,321111",0.015108998017553244
+1701,"Fabricación de pasta de madera, papel y cartón (fabricación de papel esténcil)",1629,339940,0.05358820425903158
+1701,"Fabricación de pasta de madera, papel y cartón (fabricación de papel esténcil)",1399,"339940,322220",0.05358820425903158
+1701,"Fabricación de pasta de madera, papel y cartón (fabricación de papel esténcil)",2220,322220,0.08675489184272508
+1701,"Fabricación de pasta de madera, papel y cartón (fabricación de papel esténcil)",2399,322122,0.1763366284758311
+1701,"Fabricación de pasta de madera, papel y cartón (fabricación de papel esténcil)",2420,322220,0.08675489184272508
+1701,"Fabricación de pasta de madera, papel y cartón (fabricación de papel esténcil)",2599,322220,0.08675489184272508
+1701,"Fabricación de pasta de madera, papel y cartón (fabricación de papel esténcil)",2022,339940,0.05358820425903158
+1701,"Fabricación de pasta de madera, papel y cartón (fabricación de papel esténcil)",2817,339940,0.05358820425903158
+1701,"Fabricación de pasta de madera, papel y cartón (fabricación de papel esténcil)",2819,339940,0.05358820425903158
+1701,"Fabricación de pasta de madera, papel y cartón (fabricación de papel esténcil)",3290,339940,0.05358820425903158
+1702,Fabricación de papel y cartón ondulado y de envases de papel y cartón (fabricación de productos de papel troquelado),1399,322220,0.08675489184272508
+1702,Fabricación de papel y cartón ondulado y de envases de papel y cartón (fabricación de productos de papel troquelado),2220,322220,0.08675489184272508
+1702,Fabricación de papel y cartón ondulado y de envases de papel y cartón (fabricación de productos de papel troquelado),2399,322122,0.1763366284758311
+1702,Fabricación de papel y cartón ondulado y de envases de papel y cartón (fabricación de productos de papel troquelado),2420,322220,0.08675489184272508
+1702,Fabricación de papel y cartón ondulado y de envases de papel y cartón (fabricación de productos de papel troquelado),2599,322220,0.08675489184272508
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),1629,"339940,339999",0.05358820425903158
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),1399,"339940,322220,339999",0.05358820425903158
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),1313,323119,1.0038467021565658
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),2220,"322220,339999",0.08675489184272508
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),2399,"322122,339999",0.1763366284758311
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),2420,322220,0.08675489184272508
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),2599,"322220,339999",0.08675489184272508
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),1811,323119,1.0038467021565658
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),8219,323119,1.0038467021565658
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),2022,339940,0.05358820425903158
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),2817,339940,0.05358820425903158
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),2819,"339940,339999",0.05358820425903158
+1709,Fabricación de otros artículos de papel y cartón (fabricación de juntas de papel y cartón),3290,"339940,339999",0.05358820425903158
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),2011,325999,0.1545991668118674
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),1701,322122,0.1763366284758311
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),1702,322122,0.1763366284758311
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),1709,"322122,339999",0.1763366284758311
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),2022,325999,0.1545991668118674
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),2029,325999,0.1545991668118674
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),2023,"325999,339999",0.1545991668118674
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),2817,325999,0.1545991668118674
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),8292,325999,0.1545991668118674
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),2395,327999,0.00665283299805167
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),2310,327999,0.00665283299805167
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),3211,327999,0.00665283299805167
+2399,Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de juntas de minerales no metálicos),2813,336340,0.05003027891941421
+2420,Fabricación de metales preciosos básicos y de otros metales no ferrosos (fabricación de tubos y conexiones de metales no ferrosos),1399,322220,0.08675489184272508
+2420,Fabricación de metales preciosos básicos y de otros metales no ferrosos (fabricación de tubos y conexiones de metales no ferrosos),2220,322220,0.08675489184272508
+2420,Fabricación de metales preciosos básicos y de otros metales no ferrosos (fabricación de tubos y conexiones de metales no ferrosos),1701,322220,0.08675489184272508
+2420,Fabricación de metales preciosos básicos y de otros metales no ferrosos (fabricación de tubos y conexiones de metales no ferrosos),1702,322220,0.08675489184272508
+2420,Fabricación de metales preciosos básicos y de otros metales no ferrosos (fabricación de tubos y conexiones de metales no ferrosos),1709,322220,0.08675489184272508
+2420,Fabricación de metales preciosos básicos y de otros metales no ferrosos (fabricación de tubos y conexiones de metales no ferrosos),2023,332999,0.5765544904795036
+2420,Fabricación de metales preciosos básicos y de otros metales no ferrosos (fabricación de tubos y conexiones de metales no ferrosos),2410,"332999,332910",0.5765544904795036
+2420,Fabricación de metales preciosos básicos y de otros metales no ferrosos (fabricación de tubos y conexiones de metales no ferrosos),2593,332999,0.5765544904795036
+2420,Fabricación de metales preciosos básicos y de otros metales no ferrosos (fabricación de tubos y conexiones de metales no ferrosos),2819,332910,0.29250532774950255
+2420,Fabricación de metales preciosos básicos y de otros metales no ferrosos (fabricación de tubos y conexiones de metales no ferrosos),2812,332910,0.29250532774950255
+2420,Fabricación de metales preciosos básicos y de otros metales no ferrosos (fabricación de tubos y conexiones de metales no ferrosos),2813,332910,0.29250532774950255
+2420,Fabricación de metales preciosos básicos y de otros metales no ferrosos (fabricación de tubos y conexiones de metales no ferrosos),2520,332999,0.5765544904795036
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),1399,"322220,339999",0.08675489184272508
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),1392,337920,0.001973917482938408
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),1701,322220,0.08675489184272508
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),1702,322220,0.08675489184272508
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),1709,"322220,339999",0.08675489184272508
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),2023,"332999,339999",0.5765544904795036
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),2591,332110,0.15389245561427217
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),2593,"337920,332999,332212",0.001973917482938408
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),2511,332320,0.32130990138941856
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),3099,332610,0.09582029065325702
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),2520,332999,0.5765544904795036
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),2826,339992,0.02753736735457285
+2599,Fabricación de otros productos elaborados de metal n.c.p. (fabricación de marcos de metal),3290,"339992,339999",0.02753736735457285
+1811,Impresión (fabricación de señalamientos impresos),1313,323119,1.0038467021565658
+1811,Impresión (fabricación de señalamientos impresos),1709,323119,1.0038467021565658
+1811,Impresión (fabricación de señalamientos impresos),8219,323119,1.0038467021565658
+8219,"Fotocopiado, preparación de documentos y otras actividades especializadas de apoyo de oficina (servicios de acceso a computadoras)",1313,323119,1.0038467021565658
+8219,"Fotocopiado, preparación de documentos y otras actividades especializadas de apoyo de oficina (servicios de acceso a computadoras)",1709,323119,1.0038467021565658
+8219,"Fotocopiado, preparación de documentos y otras actividades especializadas de apoyo de oficina (servicios de acceso a computadoras)",1811,323119,1.0038467021565658
+1910,Fabricación de productos de hornos de coque (fabricación de destilados de alquitrán),2011,325190,0.1753862237618237
+1910,Fabricación de productos de hornos de coque (fabricación de destilados de alquitrán),2022,325190,0.1753862237618237
+1910,Fabricación de productos de hornos de coque (fabricación de destilados de alquitrán),2029,325190,0.1753862237618237
+1910,Fabricación de productos de hornos de coque (fabricación de destilados de alquitrán),2100,325190,0.1753862237618237
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",2011,"325190,325999",0.1753862237618237
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",1629,339940,0.05358820425903158
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",1399,339940,0.05358820425903158
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",1701,339940,0.05358820425903158
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",1709,339940,0.05358820425903158
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",2399,325999,0.1545991668118674
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",1910,325190,0.1753862237618237
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",2029,"325190,325999,325520",0.1753862237618237
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",2100,325190,0.1753862237618237
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",2023,325999,0.1545991668118674
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",2817,"325999,339940",0.1545991668118674
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",8292,325999,0.1545991668118674
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",2819,339940,0.05358820425903158
+2022,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pinturas artísticas)",3290,339940,0.05358820425903158
+2029,"Fabricación de otros productos químicos n.c.p. (fabricación de carbón activado, tintas para escritura, dibujo y calzado, fuegos artificiales y bengalas, anticongelantes sintéticos, agentes químicos, la extracción y procesamiento de aceites esenciales y concentrados de origen vegetal para uso industrial, procesamiento de grasas y aceites de origen animal no comestibles, y otros productos químicos n.c.p.*)",2011,"325190,325610,325999",0.1753862237618237
+2029,"Fabricación de otros productos químicos n.c.p. (fabricación de carbón activado, tintas para escritura, dibujo y calzado, fuegos artificiales y bengalas, anticongelantes sintéticos, agentes químicos, la extracción y procesamiento de aceites esenciales y concentrados de origen vegetal para uso industrial, procesamiento de grasas y aceites de origen animal no comestibles, y otros productos químicos n.c.p.*)",2399,325999,0.1545991668118674
+2029,"Fabricación de otros productos químicos n.c.p. (fabricación de carbón activado, tintas para escritura, dibujo y calzado, fuegos artificiales y bengalas, anticongelantes sintéticos, agentes químicos, la extracción y procesamiento de aceites esenciales y concentrados de origen vegetal para uso industrial, procesamiento de grasas y aceites de origen animal no comestibles, y otros productos químicos n.c.p.*)",1910,325190,0.1753862237618237
+2029,"Fabricación de otros productos químicos n.c.p. (fabricación de carbón activado, tintas para escritura, dibujo y calzado, fuegos artificiales y bengalas, anticongelantes sintéticos, agentes químicos, la extracción y procesamiento de aceites esenciales y concentrados de origen vegetal para uso industrial, procesamiento de grasas y aceites de origen animal no comestibles, y otros productos químicos n.c.p.*)",2022,"325190,325999,325520",0.1753862237618237
+2029,"Fabricación de otros productos químicos n.c.p. (fabricación de carbón activado, tintas para escritura, dibujo y calzado, fuegos artificiales y bengalas, anticongelantes sintéticos, agentes químicos, la extracción y procesamiento de aceites esenciales y concentrados de origen vegetal para uso industrial, procesamiento de grasas y aceites de origen animal no comestibles, y otros productos químicos n.c.p.*)",2100,"325190,325412",0.1753862237618237
+2029,"Fabricación de otros productos químicos n.c.p. (fabricación de carbón activado, tintas para escritura, dibujo y calzado, fuegos artificiales y bengalas, anticongelantes sintéticos, agentes químicos, la extracción y procesamiento de aceites esenciales y concentrados de origen vegetal para uso industrial, procesamiento de grasas y aceites de origen animal no comestibles, y otros productos químicos n.c.p.*)",2021,325610,0.3082235595580862
+2029,"Fabricación de otros productos químicos n.c.p. (fabricación de carbón activado, tintas para escritura, dibujo y calzado, fuegos artificiales y bengalas, anticongelantes sintéticos, agentes químicos, la extracción y procesamiento de aceites esenciales y concentrados de origen vegetal para uso industrial, procesamiento de grasas y aceites de origen animal no comestibles, y otros productos químicos n.c.p.*)",2023,"325999,325610",0.1545991668118674
+2029,"Fabricación de otros productos químicos n.c.p. (fabricación de carbón activado, tintas para escritura, dibujo y calzado, fuegos artificiales y bengalas, anticongelantes sintéticos, agentes químicos, la extracción y procesamiento de aceites esenciales y concentrados de origen vegetal para uso industrial, procesamiento de grasas y aceites de origen animal no comestibles, y otros productos químicos n.c.p.*)",2817,325999,0.1545991668118674
+2029,"Fabricación de otros productos químicos n.c.p. (fabricación de carbón activado, tintas para escritura, dibujo y calzado, fuegos artificiales y bengalas, anticongelantes sintéticos, agentes químicos, la extracción y procesamiento de aceites esenciales y concentrados de origen vegetal para uso industrial, procesamiento de grasas y aceites de origen animal no comestibles, y otros productos químicos n.c.p.*)",8292,325999,0.1545991668118674
+2100,"Fabricación de productos farmacéuticos, sustancias químicas medicinales y productos botánicos de uso farmacéutico (fabricación de material de curación desechable)",2011,325190,0.1753862237618237
+2100,"Fabricación de productos farmacéuticos, sustancias químicas medicinales y productos botánicos de uso farmacéutico (fabricación de material de curación desechable)",1910,325190,0.1753862237618237
+2100,"Fabricación de productos farmacéuticos, sustancias químicas medicinales y productos botánicos de uso farmacéutico (fabricación de material de curación desechable)",2022,325190,0.1753862237618237
+2100,"Fabricación de productos farmacéuticos, sustancias químicas medicinales y productos botánicos de uso farmacéutico (fabricación de material de curación desechable)",2029,"325190,325412",0.1753862237618237
+2021,Fabricación de plaguicidas y otros productos químicos de uso agropecuario (fabricación de desinfectantes de uso agropecuario),2011,325610,0.3082235595580862
+2021,Fabricación de plaguicidas y otros productos químicos de uso agropecuario (fabricación de desinfectantes de uso agropecuario),2029,325610,0.3082235595580862
+2021,Fabricación de plaguicidas y otros productos químicos de uso agropecuario (fabricación de desinfectantes de uso agropecuario),2023,325610,0.3082235595580862
+2023,"Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de mezclas aromáticas)",2011,"325999,325610",0.1545991668118674
+2023,"Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de mezclas aromáticas)",2399,"325999,339999",0.1545991668118674
+2023,"Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de mezclas aromáticas)",2420,332999,0.5765544904795036
+2023,"Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de mezclas aromáticas)",2599,"332999,339999",0.5765544904795036
+2023,"Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de mezclas aromáticas)",2022,325999,0.1545991668118674
+2023,"Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de mezclas aromáticas)",2029,"325999,325610",0.1545991668118674
+2023,"Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de mezclas aromáticas)",2021,325610,0.3082235595580862
+2023,"Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de mezclas aromáticas)",2817,325999,0.1545991668118674
+2023,"Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de mezclas aromáticas)",8292,325999,0.1545991668118674
+2023,"Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de mezclas aromáticas)",2410,332999,0.5765544904795036
+2023,"Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de mezclas aromáticas)",2593,332999,0.5765544904795036
+2023,"Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de mezclas aromáticas)",2520,332999,0.5765544904795036
+2817,"Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación de sacapuntas, perforadoras y engrapadoras)",2011,325999,0.1545991668118674
+2817,"Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación de sacapuntas, perforadoras y engrapadoras)",1629,339940,0.05358820425903158
+2817,"Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación de sacapuntas, perforadoras y engrapadoras)",1399,339940,0.05358820425903158
+2817,"Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación de sacapuntas, perforadoras y engrapadoras)",1701,339940,0.05358820425903158
+2817,"Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación de sacapuntas, perforadoras y engrapadoras)",1709,339940,0.05358820425903158
+2817,"Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación de sacapuntas, perforadoras y engrapadoras)",2399,325999,0.1545991668118674
+2817,"Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación de sacapuntas, perforadoras y engrapadoras)",2022,"325999,339940",0.1545991668118674
+2817,"Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación de sacapuntas, perforadoras y engrapadoras)",2029,325999,0.1545991668118674
+2817,"Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación de sacapuntas, perforadoras y engrapadoras)",2023,325999,0.1545991668118674
+2817,"Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación de sacapuntas, perforadoras y engrapadoras)",8292,325999,0.1545991668118674
+2817,"Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación de sacapuntas, perforadoras y engrapadoras)",2819,"339940,333319",0.05358820425903158
+2817,"Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación de sacapuntas, perforadoras y engrapadoras)",3290,"339940,333319",0.05358820425903158
+8292,Actividades de envasado y empaquetado (servicios de empacado y etiquetado),2011,325999,0.1545991668118674
+8292,Actividades de envasado y empaquetado (servicios de empacado y etiquetado),2399,325999,0.1545991668118674
+8292,Actividades de envasado y empaquetado (servicios de empacado y etiquetado),2022,325999,0.1545991668118674
+8292,Actividades de envasado y empaquetado (servicios de empacado y etiquetado),2029,325999,0.1545991668118674
+8292,Actividades de envasado y empaquetado (servicios de empacado y etiquetado),2023,325999,0.1545991668118674
+8292,Actividades de envasado y empaquetado (servicios de empacado y etiquetado),2817,325999,0.1545991668118674
+3100,Fabricación de muebles (fabricación de colchones de muelles y rellenos),2219,337910,0.026733178750412756
+3100,Fabricación de muebles (fabricación de colchones de muelles y rellenos),2220,"326198,326194,337910",0.022590388971406222
+3100,Fabricación de muebles (fabricación de colchones de muelles y rellenos),1622,337210,0.10512938298020112
+3100,Fabricación de muebles (fabricación de colchones de muelles y rellenos),2720,326198,0.022590388971406222
+3100,Fabricación de muebles (fabricación de colchones de muelles y rellenos),2511,337210,0.10512938298020112
+3100,Fabricación de muebles (fabricación de colchones de muelles y rellenos),3250,337120,0.2670880939877154
+2720,"Fabricación de pilas, baterías y acumuladores (fabricación de acumuladores y pilas)",2220,326198,0.022590388971406222
+2720,"Fabricación de pilas, baterías y acumuladores (fabricación de acumuladores y pilas)",3100,326198,0.022590388971406222
+2392,Fabricación de materiales de construcción de arcilla (fabricación de azulejos y losetas no refractarias),2395,327121,0.0038503575593119553
+2395,"Fabricación de artículos de hormigón, cemento y yeso (fabricación de productos de asbesto y fibrocemento, mortero y pegazulejo)",2399,327999,0.00665283299805167
+2395,"Fabricación de artículos de hormigón, cemento y yeso (fabricación de productos de asbesto y fibrocemento, mortero y pegazulejo)",2392,327121,0.0038503575593119553
+2395,"Fabricación de artículos de hormigón, cemento y yeso (fabricación de productos de asbesto y fibrocemento, mortero y pegazulejo)",2310,327999,0.00665283299805167
+2395,"Fabricación de artículos de hormigón, cemento y yeso (fabricación de productos de asbesto y fibrocemento, mortero y pegazulejo)",3211,327999,0.00665283299805167
+2310,Fabricación de vidrio y productos de vidrio (fabricación de productos aislantes de fibra de vidrio),2399,327999,0.00665283299805167
+2310,Fabricación de vidrio y productos de vidrio (fabricación de productos aislantes de fibra de vidrio),2395,327999,0.00665283299805167
+2310,Fabricación de vidrio y productos de vidrio (fabricación de productos aislantes de fibra de vidrio),3211,327999,0.00665283299805167
+3211,Fabricación de joyas y artículos conexos (fabricación de orfebrería y joyería de metales y piedras preciosos),2399,327999,0.00665283299805167
+3211,Fabricación de joyas y artículos conexos (fabricación de orfebrería y joyería de metales y piedras preciosos),2395,327999,0.00665283299805167
+3211,Fabricación de joyas y artículos conexos (fabricación de orfebrería y joyería de metales y piedras preciosos),2310,327999,0.00665283299805167
+3211,Fabricación de joyas y artículos conexos (fabricación de orfebrería y joyería de metales y piedras preciosos),2592,339912,0.047325280887239356
+2410,Industrias básicas de hierro y acero (fabricación de tubos y conexiones de hierro y acero),2420,"332999,332910",0.5765544904795036
+2410,Industrias básicas de hierro y acero (fabricación de tubos y conexiones de hierro y acero),2023,332999,0.5765544904795036
+2410,Industrias básicas de hierro y acero (fabricación de tubos y conexiones de hierro y acero),2593,332999,0.5765544904795036
+2410,Industrias básicas de hierro y acero (fabricación de tubos y conexiones de hierro y acero),2819,332910,0.29250532774950255
+2410,Industrias básicas de hierro y acero (fabricación de tubos y conexiones de hierro y acero),2812,332910,0.29250532774950255
+2410,Industrias básicas de hierro y acero (fabricación de tubos y conexiones de hierro y acero),2813,332910,0.29250532774950255
+2410,Industrias básicas de hierro y acero (fabricación de tubos y conexiones de hierro y acero),2520,332999,0.5765544904795036
+2823,Fabricación de maquinaria metalúrgica (fabricación de laminadoras y troqueladoras de metales),2825,333249,0.0217374616639637
+2823,Fabricación de maquinaria metalúrgica (fabricación de laminadoras y troqueladoras de metales),3250,333249,0.0217374616639637
+2591,"Forja, prensado, estampado y laminado de metales; pulvimetalurgia (fabricación de piezas metálicas troqueladas para vehículos automotrices)",2599,332110,0.15389245561427217
+2593,"Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de cortineros y accesorios metálicos)",1629,337920,0.001973917482938408
+2593,"Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de cortineros y accesorios metálicos)",1392,337920,0.001973917482938408
+2593,"Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de cortineros y accesorios metálicos)",2220,337920,0.001973917482938408
+2593,"Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de cortineros y accesorios metálicos)",2420,332999,0.5765544904795036
+2593,"Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de cortineros y accesorios metálicos)",2599,"337920,332999,332212",0.001973917482938408
+2593,"Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de cortineros y accesorios metálicos)",2023,332999,0.5765544904795036
+2593,"Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de cortineros y accesorios metálicos)",2410,332999,0.5765544904795036
+2593,"Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de cortineros y accesorios metálicos)",2790,332211,0.01803332021449903
+2593,"Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de cortineros y accesorios metálicos)",2816,"332211,333120",0.01803332021449903
+2593,"Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de cortineros y accesorios metálicos)",2819,"332211,333120",0.01803332021449903
+2593,"Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de cortineros y accesorios metálicos)",2821,"332211,333120",0.01803332021449903
+2593,"Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de cortineros y accesorios metálicos)",2520,332999,0.5765544904795036
+2790,Fabricación de otros tipos de equipo eléctrico (fabricación de anuncios y señalamientos luminosos),2593,332211,0.01803332021449903
+2790,Fabricación de otros tipos de equipo eléctrico (fabricación de anuncios y señalamientos luminosos),2816,332211,0.01803332021449903
+2790,Fabricación de otros tipos de equipo eléctrico (fabricación de anuncios y señalamientos luminosos),2819,"332211,333319",0.01803332021449903
+2790,Fabricación de otros tipos de equipo eléctrico (fabricación de anuncios y señalamientos luminosos),2821,332211,0.01803332021449903
+2790,Fabricación de otros tipos de equipo eléctrico (fabricación de anuncios y señalamientos luminosos),2814,333610,0.34926154772189205
+2790,Fabricación de otros tipos de equipo eléctrico (fabricación de anuncios y señalamientos luminosos),2811,333610,0.34926154772189205
+2790,Fabricación de otros tipos de equipo eléctrico (fabricación de anuncios y señalamientos luminosos),2910,333610,0.34926154772189205
+2790,Fabricación de otros tipos de equipo eléctrico (fabricación de anuncios y señalamientos luminosos),3091,333610,0.34926154772189205
+2790,Fabricación de otros tipos de equipo eléctrico (fabricación de anuncios y señalamientos luminosos),2710,"335312,333991",0.06869720227658484
+2816,Fabricación de equipo de elevación y manipulación (fabricación de mecanismos para levantamiento de remolques),2593,"332211,333120",0.01803332021449903
+2816,Fabricación de equipo de elevación y manipulación (fabricación de mecanismos para levantamiento de remolques),2790,332211,0.01803332021449903
+2816,Fabricación de equipo de elevación y manipulación (fabricación de mecanismos para levantamiento de remolques),2819,"332211,333120,333999",0.01803332021449903
+2816,Fabricación de equipo de elevación y manipulación (fabricación de mecanismos para levantamiento de remolques),2821,"332211,333120",0.01803332021449903
+2816,Fabricación de equipo de elevación y manipulación (fabricación de mecanismos para levantamiento de remolques),2812,333999,0.3767989150764649
+2816,Fabricación de equipo de elevación y manipulación (fabricación de mecanismos para levantamiento de remolques),2818,"333999,333120",0.3767989150764649
+2816,Fabricación de equipo de elevación y manipulación (fabricación de mecanismos para levantamiento de remolques),2829,333999,0.3767989150764649
+2816,Fabricación de equipo de elevación y manipulación (fabricación de mecanismos para levantamiento de remolques),2815,333999,0.3767989150764649
+2816,Fabricación de equipo de elevación y manipulación (fabricación de mecanismos para levantamiento de remolques),3250,333999,0.3767989150764649
+2816,Fabricación de equipo de elevación y manipulación (fabricación de mecanismos para levantamiento de remolques),2910,336210,0.11728968944916736
+2816,Fabricación de equipo de elevación y manipulación (fabricación de mecanismos para levantamiento de remolques),2920,336210,0.11728968944916736
+2816,Fabricación de equipo de elevación y manipulación (fabricación de mecanismos para levantamiento de remolques),2930,336210,0.11728968944916736
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",1629,"339940,339999",0.05358820425903158
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",1399,"339940,339999",0.05358820425903158
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",1701,339940,0.05358820425903158
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",1709,"339940,339999",0.05358820425903158
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2420,332910,0.29250532774950255
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2022,339940,0.05358820425903158
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2817,"339940,333319",0.05358820425903158
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2410,332910,0.29250532774950255
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2593,"332211,333120",0.01803332021449903
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2790,"332211,333319",0.01803332021449903
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2816,"332211,333120,333999",0.01803332021449903
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2821,"332211,333120",0.01803332021449903
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2512,"332420,333411",0.1639326284904527
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2812,"333999,332910",0.3767989150764649
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2813,"336390,332910,333910,333411",0.09979249497077504
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2818,"333999,333120",0.3767989150764649
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2825,"333243,333319",0.13980697036564993
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2829,"333999,333319",0.3767989150764649
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2815,"333999,333411",0.3767989150764649
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",3250,333999,0.3767989150764649
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",3290,"339940,333319,339999",0.05358820425903158
+2819,"Fabricación de otros tipos de maquinaria de uso general (fabricación de extintores, y de juntas hechas de una combinación de materiales)",2930,336390,0.09979249497077504
+2821,Fabricación de maquinaria agropecuaria y forestal (fabricación de maquinaria y equipo forestal),2593,"332211,333120",0.01803332021449903
+2821,Fabricación de maquinaria agropecuaria y forestal (fabricación de maquinaria y equipo forestal),2790,332211,0.01803332021449903
+2821,Fabricación de maquinaria agropecuaria y forestal (fabricación de maquinaria y equipo forestal),2816,"332211,333120",0.01803332021449903
+2821,Fabricación de maquinaria agropecuaria y forestal (fabricación de maquinaria y equipo forestal),2819,"332211,333120",0.01803332021449903
+2511,Fabricación de productos metálicos para uso estructural (fabricación de mamparas de metal),1622,337210,0.10512938298020112
+2511,Fabricación de productos metálicos para uso estructural (fabricación de mamparas de metal),2599,332320,0.32130990138941856
+2511,Fabricación de productos metálicos para uso estructural (fabricación de mamparas de metal),3100,337210,0.10512938298020112
+3011,Construcción de buques y estructuras flotantes (fabricación de plataformas flotantes para perforación de pozos petroleros),1399,336360,0.04742275829380421
+3011,Construcción de buques y estructuras flotantes (fabricación de plataformas flotantes para perforación de pozos petroleros),1392,336360,0.04742275829380421
+3011,Construcción de buques y estructuras flotantes (fabricación de plataformas flotantes para perforación de pozos petroleros),2220,336360,0.04742275829380421
+3011,Construcción de buques y estructuras flotantes (fabricación de plataformas flotantes para perforación de pozos petroleros),3020,336360,0.04742275829380421
+3011,Construcción de buques y estructuras flotantes (fabricación de plataformas flotantes para perforación de pozos petroleros),3030,336360,0.04742275829380421
+3011,Construcción de buques y estructuras flotantes (fabricación de plataformas flotantes para perforación de pozos petroleros),2930,336360,0.04742275829380421
+2512,"Fabricación de tanques, depósitos y recipientes de metal (fabricación de radiadores y calderas de calefacción central)",2819,"332420,333411",0.1639326284904527
+3099,"Fabricación de otros tipos de equipo de transporte n.c.p. (fabricación de vehículos de tracción animal, y otro equipo de transporte n.c.p.*)",2599,332610,0.09582029065325702
+2592,Tratamiento y revestimiento de metales; maquinado (grabado y enchapado de joyas),3211,339912,0.047325280887239356
+2812,Fabricación de equipo de propulsión de fluidos (fabricación de cilindros hidráulicos y neumáticos),2420,332910,0.29250532774950255
+2812,Fabricación de equipo de propulsión de fluidos (fabricación de cilindros hidráulicos y neumáticos),2410,332910,0.29250532774950255
+2812,Fabricación de equipo de propulsión de fluidos (fabricación de cilindros hidráulicos y neumáticos),2816,333999,0.3767989150764649
+2812,Fabricación de equipo de propulsión de fluidos (fabricación de cilindros hidráulicos y neumáticos),2819,"333999,332910",0.3767989150764649
+2812,Fabricación de equipo de propulsión de fluidos (fabricación de cilindros hidráulicos y neumáticos),2813,332910,0.29250532774950255
+2812,Fabricación de equipo de propulsión de fluidos (fabricación de cilindros hidráulicos y neumáticos),2818,333999,0.3767989150764649
+2812,Fabricación de equipo de propulsión de fluidos (fabricación de cilindros hidráulicos y neumáticos),2829,333999,0.3767989150764649
+2812,Fabricación de equipo de propulsión de fluidos (fabricación de cilindros hidráulicos y neumáticos),2815,333999,0.3767989150764649
+2812,Fabricación de equipo de propulsión de fluidos (fabricación de cilindros hidráulicos y neumáticos),3250,333999,0.3767989150764649
+2813,"Fabricación de otras bombas, compresores, grifos y válvulas (fabricación de bombas para laboratorio)",2399,336340,0.05003027891941421
+2813,"Fabricación de otras bombas, compresores, grifos y válvulas (fabricación de bombas para laboratorio)",2420,332910,0.29250532774950255
+2813,"Fabricación de otras bombas, compresores, grifos y válvulas (fabricación de bombas para laboratorio)",2410,332910,0.29250532774950255
+2813,"Fabricación de otras bombas, compresores, grifos y válvulas (fabricación de bombas para laboratorio)",2819,"336390,332910,333910,333411",0.09979249497077504
+2813,"Fabricación de otras bombas, compresores, grifos y válvulas (fabricación de bombas para laboratorio)",2812,332910,0.29250532774950255
+2813,"Fabricación de otras bombas, compresores, grifos y válvulas (fabricación de bombas para laboratorio)",3250,339111,0.011867874249271661
+2813,"Fabricación de otras bombas, compresores, grifos y válvulas (fabricación de bombas para laboratorio)",3290,339111,0.011867874249271661
+2813,"Fabricación de otras bombas, compresores, grifos y válvulas (fabricación de bombas para laboratorio)",2740,336320,0.031875111946709105
+2813,"Fabricación de otras bombas, compresores, grifos y válvulas (fabricación de bombas para laboratorio)",2930,"336320,336310,336390,336330,336340",0.031875111946709105
+2813,"Fabricación de otras bombas, compresores, grifos y válvulas (fabricación de bombas para laboratorio)",3092,339111,0.011867874249271661
+2814,"Fabricación de cojinetes, engranajes, trenes de engranajes y piezas de transmisión (fabricación de transmisiones de fuerza motriz)",2790,333610,0.34926154772189205
+2814,"Fabricación de cojinetes, engranajes, trenes de engranajes y piezas de transmisión (fabricación de transmisiones de fuerza motriz)",2811,333610,0.34926154772189205
+2814,"Fabricación de cojinetes, engranajes, trenes de engranajes y piezas de transmisión (fabricación de transmisiones de fuerza motriz)",2910,333610,0.34926154772189205
+2814,"Fabricación de cojinetes, engranajes, trenes de engranajes y piezas de transmisión (fabricación de transmisiones de fuerza motriz)",3091,333610,0.34926154772189205
+2520,Fabricación de armas y municiones ,2420,332999,0.5765544904795036
+2520,Fabricación de armas y municiones ,2599,332999,0.5765544904795036
+2520,Fabricación de armas y municiones ,2023,332999,0.5765544904795036
+2520,Fabricación de armas y municiones ,2410,332999,0.5765544904795036
+2520,Fabricación de armas y municiones ,2593,332999,0.5765544904795036
+2818,Fabricación de herramientas de mano motorizadas (fabricación de herramientas manuales con motor),2816,"333999,333120",0.3767989150764649
+2818,Fabricación de herramientas de mano motorizadas (fabricación de herramientas manuales con motor),2819,"333999,333120",0.3767989150764649
+2818,Fabricación de herramientas de mano motorizadas (fabricación de herramientas manuales con motor),2812,333999,0.3767989150764649
+2818,Fabricación de herramientas de mano motorizadas (fabricación de herramientas manuales con motor),2829,333999,0.3767989150764649
+2818,Fabricación de herramientas de mano motorizadas (fabricación de herramientas manuales con motor),2815,333999,0.3767989150764649
+2818,Fabricación de herramientas de mano motorizadas (fabricación de herramientas manuales con motor),3250,333999,0.3767989150764649
+2825,"Fabricación de maquinaria para la elaboración de alimentos, bebidas y tabaco (fabricación de maquinaria para la preparación de alimentos en hoteles y restaurantes)",2823,333249,0.0217374616639637
+2825,"Fabricación de maquinaria para la elaboración de alimentos, bebidas y tabaco (fabricación de maquinaria para la preparación de alimentos en hoteles y restaurantes)",2819,"333243,333319",0.13980697036564993
+2825,"Fabricación de maquinaria para la elaboración de alimentos, bebidas y tabaco (fabricación de maquinaria para la preparación de alimentos en hoteles y restaurantes)",3250,333249,0.0217374616639637
+2826,"Fabricación de maquinaria para la elaboración de productos textiles, prendas de vestir y cueros (fabricación de agujas para coser de uso industrial)",2599,339992,0.02753736735457285
+2826,"Fabricación de maquinaria para la elaboración de productos textiles, prendas de vestir y cueros (fabricación de agujas para coser de uso industrial)",3290,"339992,333319",0.02753736735457285
+3020,Fabricación de locomotoras y material rodante (fabricación de equipo para el transporte ferroviario),1399,336360,0.04742275829380421
+3020,Fabricación de locomotoras y material rodante (fabricación de equipo para el transporte ferroviario),1392,336360,0.04742275829380421
+3020,Fabricación de locomotoras y material rodante (fabricación de equipo para el transporte ferroviario),2220,336360,0.04742275829380421
+3020,Fabricación de locomotoras y material rodante (fabricación de equipo para el transporte ferroviario),3011,336360,0.04742275829380421
+3020,Fabricación de locomotoras y material rodante (fabricación de equipo para el transporte ferroviario),3030,336360,0.04742275829380421
+3020,Fabricación de locomotoras y material rodante (fabricación de equipo para el transporte ferroviario),2930,336360,0.04742275829380421
+2829,Fabricación de otros tipos de maquinaria de uso especial (fabricación de equipo de boliche),2219,339920,0.0031680157133579384
+2829,Fabricación de otros tipos de maquinaria de uso especial (fabricación de equipo de boliche),2816,333999,0.3767989150764649
+2829,Fabricación de otros tipos de maquinaria de uso especial (fabricación de equipo de boliche),2819,"333999,333319",0.3767989150764649
+2829,Fabricación de otros tipos de maquinaria de uso especial (fabricación de equipo de boliche),2812,333999,0.3767989150764649
+2829,Fabricación de otros tipos de maquinaria de uso especial (fabricación de equipo de boliche),2818,333999,0.3767989150764649
+2829,Fabricación de otros tipos de maquinaria de uso especial (fabricación de equipo de boliche),2815,"333999,333246",0.3767989150764649
+2829,Fabricación de otros tipos de maquinaria de uso especial (fabricación de equipo de boliche),3250,"333999,333249",0.3767989150764649
+2829,Fabricación de otros tipos de maquinaria de uso especial (fabricación de equipo de boliche),3230,339920,0.0031680157133579384
+2829,Fabricación de otros tipos de maquinaria de uso especial (fabricación de equipo de boliche),3240,339920,0.0031680157133579384
+2815,"Fabricación de hornos, hogares y quemadores (fabricación de hornos de uso médico y de uso industrial general)",2816,333999,0.3767989150764649
+2815,"Fabricación de hornos, hogares y quemadores (fabricación de hornos de uso médico y de uso industrial general)",2819,"333999,333411",0.3767989150764649
+2815,"Fabricación de hornos, hogares y quemadores (fabricación de hornos de uso médico y de uso industrial general)",2812,333999,0.3767989150764649
+2815,"Fabricación de hornos, hogares y quemadores (fabricación de hornos de uso médico y de uso industrial general)",2818,333999,0.3767989150764649
+2815,"Fabricación de hornos, hogares y quemadores (fabricación de hornos de uso médico y de uso industrial general)",2829,"333999,333246",0.3767989150764649
+2815,"Fabricación de hornos, hogares y quemadores (fabricación de hornos de uso médico y de uso industrial general)",3250,333999,0.3767989150764649
+3250,Fabricación de instrumentos y materiales médicos y odontológicos (fabricación de artículos oftálmicos),3100,337120,0.2670880939877154
+3250,Fabricación de instrumentos y materiales médicos y odontológicos (fabricación de artículos oftálmicos),2823,333249,0.0217374616639637
+3250,Fabricación de instrumentos y materiales médicos y odontológicos (fabricación de artículos oftálmicos),2816,333999,0.3767989150764649
+3250,Fabricación de instrumentos y materiales médicos y odontológicos (fabricación de artículos oftálmicos),2819,333999,0.3767989150764649
+3250,Fabricación de instrumentos y materiales médicos y odontológicos (fabricación de artículos oftálmicos),2812,333999,0.3767989150764649
+3250,Fabricación de instrumentos y materiales médicos y odontológicos (fabricación de artículos oftálmicos),2813,339111,0.011867874249271661
+3250,Fabricación de instrumentos y materiales médicos y odontológicos (fabricación de artículos oftálmicos),2818,333999,0.3767989150764649
+3250,Fabricación de instrumentos y materiales médicos y odontológicos (fabricación de artículos oftálmicos),2825,333249,0.0217374616639637
+3250,Fabricación de instrumentos y materiales médicos y odontológicos (fabricación de artículos oftálmicos),2829,"333999,333249",0.3767989150764649
+3250,Fabricación de instrumentos y materiales médicos y odontológicos (fabricación de artículos oftálmicos),2815,333999,0.3767989150764649
+3250,Fabricación de instrumentos y materiales médicos y odontológicos (fabricación de artículos oftálmicos),3290,339111,0.011867874249271661
+3250,Fabricación de instrumentos y materiales médicos y odontológicos (fabricación de artículos oftálmicos),3092,339111,0.011867874249271661
+3030,"Fabricación de aeronaves, naves espaciales y maquinaria conexa (fabricación de aeronaves)",1399,336360,0.04742275829380421
+3030,"Fabricación de aeronaves, naves espaciales y maquinaria conexa (fabricación de aeronaves)",1392,336360,0.04742275829380421
+3030,"Fabricación de aeronaves, naves espaciales y maquinaria conexa (fabricación de aeronaves)",2220,336360,0.04742275829380421
+3030,"Fabricación de aeronaves, naves espaciales y maquinaria conexa (fabricación de aeronaves)",3011,336360,0.04742275829380421
+3030,"Fabricación de aeronaves, naves espaciales y maquinaria conexa (fabricación de aeronaves)",3020,336360,0.04742275829380421
+3030,"Fabricación de aeronaves, naves espaciales y maquinaria conexa (fabricación de aeronaves)",2651,334220,0.1497252964836244
+3030,"Fabricación de aeronaves, naves espaciales y maquinaria conexa (fabricación de aeronaves)",2630,334220,0.1497252964836244
+3030,"Fabricación de aeronaves, naves espaciales y maquinaria conexa (fabricación de aeronaves)",2930,336360,0.04742275829380421
+3290,Otras industrias manufactureras n.c.p. (taxidermistas),1629,"339940,339999",0.05358820425903158
+3290,Otras industrias manufactureras n.c.p. (taxidermistas),1399,"339940,339999",0.05358820425903158
+3290,Otras industrias manufactureras n.c.p. (taxidermistas),1701,339940,0.05358820425903158
+3290,Otras industrias manufactureras n.c.p. (taxidermistas),1709,"339940,339999",0.05358820425903158
+3290,Otras industrias manufactureras n.c.p. (taxidermistas),2599,"339992,339999",0.02753736735457285
+3290,Otras industrias manufactureras n.c.p. (taxidermistas),2022,339940,0.05358820425903158
+3290,Otras industrias manufactureras n.c.p. (taxidermistas),2817,"339940,333319",0.05358820425903158
+3290,Otras industrias manufactureras n.c.p. (taxidermistas),2819,"339940,333319,339999",0.05358820425903158
+3290,Otras industrias manufactureras n.c.p. (taxidermistas),2813,339111,0.011867874249271661
+3290,Otras industrias manufactureras n.c.p. (taxidermistas),2826,"339992,333319",0.02753736735457285
+3290,Otras industrias manufactureras n.c.p. (taxidermistas),3250,339111,0.011867874249271661
+3290,Otras industrias manufactureras n.c.p. (taxidermistas),3092,339111,0.011867874249271661
+2811,"Fabricación de motores y turbinas, excepto motores para aeronaves, vehículos automotores y motocicletas (fabricación de pistones y válvulas para motores automotrices)",2790,333610,0.34926154772189205
+2811,"Fabricación de motores y turbinas, excepto motores para aeronaves, vehículos automotores y motocicletas (fabricación de pistones y válvulas para motores automotrices)",2814,333610,0.34926154772189205
+2811,"Fabricación de motores y turbinas, excepto motores para aeronaves, vehículos automotores y motocicletas (fabricación de pistones y válvulas para motores automotrices)",2910,"333610,336310",0.34926154772189205
+2811,"Fabricación de motores y turbinas, excepto motores para aeronaves, vehículos automotores y motocicletas (fabricación de pistones y válvulas para motores automotrices)",3091,333610,0.34926154772189205
+2910,Fabricación de vehículos automotores (fabricación de carros de golf y go-karts),2790,333610,0.34926154772189205
+2910,Fabricación de vehículos automotores (fabricación de carros de golf y go-karts),2816,336210,0.11728968944916736
+2910,Fabricación de vehículos automotores (fabricación de carros de golf y go-karts),2814,333610,0.34926154772189205
+2910,Fabricación de vehículos automotores (fabricación de carros de golf y go-karts),2811,"333610,336310",0.34926154772189205
+2910,Fabricación de vehículos automotores (fabricación de carros de golf y go-karts),3091,333610,0.34926154772189205
+2910,Fabricación de vehículos automotores (fabricación de carros de golf y go-karts),2920,336210,0.11728968944916736
+3091,Fabricación de motocicletas (fabricación de motocicletas),2790,333610,0.34926154772189205
+3091,Fabricación de motocicletas (fabricación de motocicletas),2814,333610,0.34926154772189205
+3091,Fabricación de motocicletas (fabricación de motocicletas),2811,333610,0.34926154772189205
+3091,Fabricación de motocicletas (fabricación de motocicletas),2910,333610,0.34926154772189205
+2710,"Fabricación de motores, generadores y transformadores eléctricos y aparatos de distribución y control de la energía eléctrica (fabricación de equipo y aparatos de distribución de energía eléctrica)",2790,"335312,333991",0.06869720227658484
+2651,"Fabricación de equipo de medición, prueba, navegación y control (fabricación de equipo para medir, verificar y navegar)",3030,334220,0.1497252964836244
+2651,"Fabricación de equipo de medición, prueba, navegación y control (fabricación de equipo para medir, verificar y navegar)",2652,334519,0.08970358339131208
+2651,"Fabricación de equipo de medición, prueba, navegación y control (fabricación de equipo para medir, verificar y navegar)",2660,334519,0.08970358339131208
+2630,"Fabricación de equipo de comunicaciones (fabricación de unidades de control remoto, alarmas y detectores de fuego)",3030,334220,0.1497252964836244
+2640,Fabricación de aparatos electrónicos de consumo (fabricación de videojuegos),3092,339930,0.023760117850184538
+2640,Fabricación de aparatos electrónicos de consumo (fabricación de videojuegos),3240,339930,0.023760117850184538
+2652,Fabricación de relojes (fabricación de parquímetros),2651,334519,0.08970358339131208
+2652,Fabricación de relojes (fabricación de parquímetros),2660,334519,0.08970358339131208
+2660,Fabricación de equipo de irradiación y equipo electrónico de uso médico y terapéutico ,2651,334519,0.08970358339131208
+2660,Fabricación de equipo de irradiación y equipo electrónico de uso médico y terapéutico ,2652,334519,0.08970358339131208
+2740,Fabricación de equipo eléctrico de iluminación (fabricación de equipo eléctrico para vehículos automotores),2813,336320,0.031875111946709105
+2740,Fabricación de equipo eléctrico de iluminación (fabricación de equipo eléctrico para vehículos automotores),2930,336320,0.031875111946709105
+2920,Fabricación de carrocerías para vehículos automotores; fabricación de remolques y semirremolques (servicios de blindaje y de adaptación de automóviles y camiones),2816,336210,0.11728968944916736
+2920,Fabricación de carrocerías para vehículos automotores; fabricación de remolques y semirremolques (servicios de blindaje y de adaptación de automóviles y camiones),2910,336210,0.11728968944916736
+2920,Fabricación de carrocerías para vehículos automotores; fabricación de remolques y semirremolques (servicios de blindaje y de adaptación de automóviles y camiones),2930,336210,0.11728968944916736
+2930,"Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de partes para carros de golf y go-karts)",1399,336360,0.04742275829380421
+2930,"Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de partes para carros de golf y go-karts)",1392,336360,0.04742275829380421
+2930,"Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de partes para carros de golf y go-karts)",2220,336360,0.04742275829380421
+2930,"Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de partes para carros de golf y go-karts)",2816,336210,0.11728968944916736
+2930,"Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de partes para carros de golf y go-karts)",2819,336390,0.09979249497077504
+2930,"Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de partes para carros de golf y go-karts)",3011,336360,0.04742275829380421
+2930,"Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de partes para carros de golf y go-karts)",2813,"336320,336310,336390,336330,336340",0.031875111946709105
+2930,"Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de partes para carros de golf y go-karts)",3020,336360,0.04742275829380421
+2930,"Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de partes para carros de golf y go-karts)",3030,336360,0.04742275829380421
+2930,"Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de partes para carros de golf y go-karts)",2740,336320,0.031875111946709105
+2930,"Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de partes para carros de golf y go-karts)",2920,336210,0.11728968944916736
+3315,"Reparación de equipo de transporte, excepto vehículos automotores (reparación de embarcaciones recreativas)",5223,488190,0.5539884708597386
+3315,"Reparación de equipo de transporte, excepto vehículos automotores (reparación de embarcaciones recreativas)",5222,488390,0.0005117563844655132
+3315,"Reparación de equipo de transporte, excepto vehículos automotores (reparación de embarcaciones recreativas)",5229,488390,0.0005117563844655132
+3315,"Reparación de equipo de transporte, excepto vehículos automotores (reparación de embarcaciones recreativas)",3311,811499,0.028512141420221446
+3315,"Reparación de equipo de transporte, excepto vehículos automotores (reparación de embarcaciones recreativas)",9522,811499,0.028512141420221446
+3315,"Reparación de equipo de transporte, excepto vehículos automotores (reparación de embarcaciones recreativas)",9529,811499,0.028512141420221446
+3092,Fabricación de bicicletas y vehículos de transporte para personas con discapacidad física (fabricación de carriolas),2813,339111,0.011867874249271661
+3092,Fabricación de bicicletas y vehículos de transporte para personas con discapacidad física (fabricación de carriolas),3250,339111,0.011867874249271661
+3092,Fabricación de bicicletas y vehículos de transporte para personas con discapacidad física (fabricación de carriolas),3290,339111,0.011867874249271661
+3092,Fabricación de bicicletas y vehículos de transporte para personas con discapacidad física (fabricación de carriolas),2640,339930,0.023760117850184538
+3092,Fabricación de bicicletas y vehículos de transporte para personas con discapacidad física (fabricación de carriolas),3240,339930,0.023760117850184538
+3230,Fabricación de artículos de deporte ,2219,339920,0.0031680157133579384
+3230,Fabricación de artículos de deporte ,2829,339920,0.0031680157133579384
+3230,Fabricación de artículos de deporte ,3240,339920,0.0031680157133579384
+3240,Fabricación de juegos y juguetes (fabricación de máquinas de juegos que operan con monedas),2219,"339920,339999",0.0031680157133579384
+3240,Fabricación de juegos y juguetes (fabricación de máquinas de juegos que operan con monedas),2829,339920,0.0031680157133579384
+3240,Fabricación de juegos y juguetes (fabricación de máquinas de juegos que operan con monedas),2640,339930,0.023760117850184538
+3240,Fabricación de juegos y juguetes (fabricación de máquinas de juegos que operan con monedas),3092,339930,0.023760117850184538
+3240,Fabricación de juegos y juguetes (fabricación de máquinas de juegos que operan con monedas),3230,339920,0.0031680157133579384
+4630,"Venta al por mayor de alimentos, bebidas y tabaco (comercio al por mayor de productos de tabaco)",4620,431220,0.00818810215144821
+4620,Venta al por mayor de materias primas agropecuarias y animales vivos (comercio al por mayor de ganado y aves en pie),4630,431220,0.00818810215144821
+4620,Venta al por mayor de materias primas agropecuarias y animales vivos (comercio al por mayor de ganado y aves en pie),4669,"434112,434111",0.045887489140407675
+4649,Venta al por mayor de otros enseres domésticos (comercio al por mayor de instrumental médico y ortopédico),4659,"435313,435311",0.46521092283079263
+4652,"Venta al por mayor de equipo, partes y piezas electrónicos y de telecomunicaciones (comercio al por mayor de componentes electrónicos)",4651,435411,1.8001883750881866
+4669,"Venta al por mayor de desperdicios, desechos y chatarra y otros productos n.c.p. (comercio al por mayor de madera, polietileno, fibras textiles, y otros materiales de desecho para reciclaje n.c.p.*)",4620,"434112,434111",0.045887489140407675
+4659,"Venta al por mayor de otros tipos de maquinaria y equipo (comercio al por mayor de equipo industrial de alta seguridad, patines de carga, gatos hidráulicos, extintores, tanques estacionarios de gas, montacargas, escaleras eléctricas y contenedores de uso industrial, y otro equipo de uso general n.c.p.*)",4649,"435313,435311",0.46521092283079263
+4651,"Venta al por mayor de ordenadores (computadoras), equipo periférico y programas de informática ",4652,435411,1.8001883750881866
+4772,"Venta al por menor de productos farmacéuticos y médicos, cosméticos y artículos de tocador en comercios especializados (comercio al por menor de artículos de perfumería y cosméticos en comercios especializados)",4789,465111,0.32235778350999084
+4789,"Venta al por menor de otros productos en puestos de venta y mercados (comercio al por menor de llantas y cámaras para automóviles, camionetas y camiones en puestos de venta y mercados)",4772,465111,0.32235778350999084
+4789,"Venta al por menor de otros productos en puestos de venta y mercados (comercio al por menor de llantas y cámaras para automóviles, camionetas y camiones en puestos de venta y mercados)",4762,465211,0.06284855788269325
+4789,"Venta al por menor de otros productos en puestos de venta y mercados (comercio al por menor de llantas y cámaras para automóviles, camionetas y camiones en puestos de venta y mercados)",4764,"465212,465213",0.11007636136336775
+4789,"Venta al por menor de otros productos en puestos de venta y mercados (comercio al por menor de llantas y cámaras para automóviles, camionetas y camiones en puestos de venta y mercados)",4763,465215,0.18230711962792875
+4789,"Venta al por menor de otros productos en puestos de venta y mercados (comercio al por menor de llantas y cámaras para automóviles, camionetas y camiones en puestos de venta y mercados)",4761,"465313,465312,465311",0.02466178386090949
+4789,"Venta al por menor de otros productos en puestos de venta y mercados (comercio al por menor de llantas y cámaras para automóviles, camionetas y camiones en puestos de venta y mercados)",4742,466112,0.42955856137969517
+4762,Venta al por menor de grabaciones de música y de video en comercios especializados ,4789,465211,0.06284855788269325
+4764,Venta al por menor de juegos y juguetes en comercios especializados (comercio al por menor de bicicletas en comercios especializados),4789,"465212,465213",0.11007636136336775
+4763,Venta al por menor de equipo de deporte en comercios especializados ,4789,465215,0.18230711962792875
+4759,"Venta al por menor de aparatos eléctricos de uso doméstico, muebles, equipo de iluminación y otros enseres domésticos en comercios especializados (comercio al por menor de lámparas ornamentales y candiles en comercios especializados)",4742,466112,0.42955856137969517
+4761,"Venta al por menor de libros, periódicos y artículos de papelería en comercios especializados (comercio al por menor de periódicos y revistas en comercios especializados)",4789,"465313,465312,465311",0.02466178386090949
+4799,"Otras actividades de venta al por menor no realizadas en comercios, puestos de venta o mercados (comercio al por menor de puerta en puerta, en máquinas expendedoras y otras formas de comercio fuera de tienda n.c.p.*)",4730,468420,0.05081009817193309
+4742,Venta al por menor de equipo de sonido y de video en comercios especializados ,4789,466112,0.42955856137969517
+4742,Venta al por menor de equipo de sonido y de video en comercios especializados ,4759,466112,0.42955856137969517
+4730,"Venta al por menor de combustibles para vehículos automotores en comercios especializados (comercio al por menor de aceites y grasas lubricantes, aditivos y similares en comercios especializados)",4799,468420,0.05081009817193309
+5223,"Actividades de servicios vinculadas al transporte aéreo (inspección y realización de pruebas a las aeronaves, y otros servicios relacionados con el transporte aéreo n.c.p.*)",3315,488190,0.5539884708597386
+5224,Manipulación de la carga (servicios de báscula para el transporte),5229,488493,0.0004630176811830833
+5222,Actividades de servicios vinculadas al transporte acuático (avituallamiento y otros servicios relacionados con el transporte por agua n.c.p.*),8129,488390,0.0005117563844655132
+5222,Actividades de servicios vinculadas al transporte acuático (avituallamiento y otros servicios relacionados con el transporte por agua n.c.p.*),3315,488390,0.0005117563844655132
+5222,Actividades de servicios vinculadas al transporte acuático (avituallamiento y otros servicios relacionados con el transporte por agua n.c.p.*),5229,488390,0.0005117563844655132
+5229,"Otras actividades de apoyo al transporte (servicio de empacado y embalaje para el transporte, y otros servicios relacionados con el transporte n.c.p.*)",910,488990,0.10605541834256729
+5229,"Otras actividades de apoyo al transporte (servicio de empacado y embalaje para el transporte, y otros servicios relacionados con el transporte n.c.p.*)",8129,488390,0.0005117563844655132
+5229,"Otras actividades de apoyo al transporte (servicio de empacado y embalaje para el transporte, y otros servicios relacionados con el transporte n.c.p.*)",3315,488390,0.0005117563844655132
+5229,"Otras actividades de apoyo al transporte (servicio de empacado y embalaje para el transporte, y otros servicios relacionados con el transporte n.c.p.*)",5224,488493,0.0004630176811830833
+5229,"Otras actividades de apoyo al transporte (servicio de empacado y embalaje para el transporte, y otros servicios relacionados con el transporte n.c.p.*)",5222,488390,0.0005117563844655132
+6010,Transmisiones de radio (edición y difusión por internet de programación de radio),6120,515110,0.32813331984895877
+6120,Actividades de telecomunicaciones inalámbricas (operadores de servicios de telecomunicaciones inalámbricas),6010,515110,0.32813331984895877
+6120,Actividades de telecomunicaciones inalámbricas (operadores de servicios de telecomunicaciones inalámbricas),6020,515210,0.06711319441990586
+6020,Programación y transmisiones de televisión (edición y difusión por internet de programación de televisión),6120,515210,0.06711319441990586
+6492,Otras actividades de concesión de crédito (operación y promoción de tarjetas de crédito no bancarias y de financiamiento de bienes duraderos),6499,522460,0.2553420664966498
+6499,"Otras actividades de servicios financieros, excepto las de seguros y fondos de pensiones, n.c.p. (suscripción de permutas financieras, opciones y otros instrumentos de cobertura)",6492,522460,0.2553420664966498
+6511,Seguros de vida ,6520,524110,0.33351894656166725
+6520,Reaseguros ,6511,524110,0.33351894656166725
+6621,Evaluación de riesgos y daños ,6622,524210,0.06165445965227372
+6622,Actividades de agentes y corredores de seguros ,6621,524210,0.06165445965227372
+6629,Otras actividades auxiliares de las actividades de seguros y fondos de pensiones (servicios de consultoría actuarial),7020,541610,4.438901770798937
+7710,"Alquiler y arrendamiento de vehículos automotores (alquiler de autobuses, minibuses y remolques sin chofer)",7730,532122,0.0011697288787783156
+6491,"Arrendamiento financiero (alquiler de autobuses, minibuses y remolques combinado con arrendamiento financiero)",7730,532122,0.0011697288787783156
+7730,"Alquiler y arrendamiento de otros tipos de maquinaria, equipo y bienes tangibles (alquiler de maquinaria y equipo comercial y de servicios)",7710,532122,0.0011697288787783156
+7730,"Alquiler y arrendamiento de otros tipos de maquinaria, equipo y bienes tangibles (alquiler de maquinaria y equipo comercial y de servicios)",6491,532122,0.0011697288787783156
+7730,"Alquiler y arrendamiento de otros tipos de maquinaria, equipo y bienes tangibles (alquiler de maquinaria y equipo comercial y de servicios)",7729,"532289,532310",0.0021932416477093417
+7730,"Alquiler y arrendamiento de otros tipos de maquinaria, equipo y bienes tangibles (alquiler de maquinaria y equipo comercial y de servicios)",7721,532289,0.0021932416477093417
+7730,"Alquiler y arrendamiento de otros tipos de maquinaria, equipo y bienes tangibles (alquiler de maquinaria y equipo comercial y de servicios)",7722,532289,0.0021932416477093417
+7729,Alquiler y arrendamiento de otros efectos personales y enseres domésticos (renta de equipo y aparatos de uso doméstico),7730,"532289,532310",0.0021932416477093417
+7729,Alquiler y arrendamiento de otros efectos personales y enseres domésticos (renta de equipo y aparatos de uso doméstico),7721,532289,0.0021932416477093417
+7729,Alquiler y arrendamiento de otros efectos personales y enseres domésticos (renta de equipo y aparatos de uso doméstico),7722,532289,0.0021932416477093417
+7721,Alquiler y arrendamiento de equipo recreativo y deportivo ,7730,532289,0.0021932416477093417
+7721,Alquiler y arrendamiento de equipo recreativo y deportivo ,7729,532289,0.0021932416477093417
+7721,Alquiler y arrendamiento de equipo recreativo y deportivo ,7722,532289,0.0021932416477093417
+7722,Alquiler de cintas de video y discos ,7730,532289,0.0021932416477093417
+7722,Alquiler de cintas de video y discos ,7729,532289,0.0021932416477093417
+7722,Alquiler de cintas de video y discos ,7721,532289,0.0021932416477093417
+7120,Ensayos y análisis técnicos (servicios de verificación vehicular),4520,811199,0.05968054216933531
+6201,Programación informática ,6202,541510,3.466199100039844
+6201,Programación informática ,6209,541510,3.466199100039844
+6202,Consultoría de informática y gestión de instalaciones informáticas ,6201,541510,3.466199100039844
+6202,Consultoría de informática y gestión de instalaciones informáticas ,6209,541510,3.466199100039844
+6209,Otras actividades de tecnología de la información y de servicios informáticos ,6201,541510,3.466199100039844
+6209,Otras actividades de tecnología de la información y de servicios informáticos ,6202,541510,3.466199100039844
+7020,Actividades de consultoría de gestión (agencias de relaciones públicas),6629,541610,4.438901770798937
+7490,"Otras actividades profesionales, científicas y técnicas n.c.p. (agentes y representantes de artistas, deportistas y similares)",240,541690,0.41340168124156973
+7490,"Otras actividades profesionales, científicas y técnicas n.c.p. (agentes y representantes de artistas, deportistas y similares)",8030,541990,0.08300201168997798
+8030,Actividades de investigación (servicios de investigación y detectives privados),7490,541990,0.08300201168997798
+8030,Actividades de investigación (servicios de investigación y detectives privados),8010,561610,2.0064505673794293
+7990,Otros servicios de reservas y actividades conexas (guía de turistas por cuenta propia),9329,713998,0.018691292708811837
+7990,Otros servicios de reservas y actividades conexas (guía de turistas por cuenta propia),9319,713998,0.018691292708811837
+7990,Otros servicios de reservas y actividades conexas (guía de turistas por cuenta propia),9312,713998,0.018691292708811837
+8010,Actividades de seguridad privada ,8030,561610,2.0064505673794293
+8121,Limpieza general de edificios ,8129,561720,2.8726835408180547
+8510,Enseñanza preescolar y primaria (escuelas del sector público de enseñanza primaria para necesidades especiales),8521,"611181,611182",0.01747282512675109
+8510,Enseñanza preescolar y primaria (escuelas del sector público de enseñanza primaria para necesidades especiales),8522,"611181,611182",0.01747282512675109
+8521,Enseñanza secundaria de formación general (escuelas del sector público de enseñanza secundaria para necesidades especiales),8510,"611181,611182",0.01747282512675109
+8521,Enseñanza secundaria de formación general (escuelas del sector público de enseñanza secundaria para necesidades especiales),8522,"611181,611182",0.01747282512675109
+8522,Enseñanza secundaria técnica y vocacional (escuelas del sector público de enseñanza técnica y profesional para necesidades especiales),8510,"611181,611182",0.01747282512675109
+8522,Enseñanza secundaria técnica y vocacional (escuelas del sector público de enseñanza técnica y profesional para necesidades especiales),8521,"611181,611182",0.01747282512675109
+8620,"Actividades de médicos y odontólogos (servicios de cirugía ambulatoria, diálisis renal y otros servicios médicos con tratamiento que no requieren hospitalización del sector público n.c.p.*)",8690,"621421,621412,621411,621491,621422,621492",0.0028755834936633595
+8690,"Otras actividades de atención de la salud humana (servicios de bancos de órganos, bancos de sangre y otros servicios auxiliares al tratamiento médico prestados por el sector público)",8620,"621421,621412,621411,621491,621422,621492",0.0028755834936633595
+9000,"Actividades creativas, artísticas y de entretenimiento (actores, escritores, compositores, músicos, bailarines, magos, acróbatas, pintores, caricaturistas, restauradores de obra de arte y periodistas)",9319,"711320,711311,711312",0.05648815710433616
+9329,Otras actividades de esparcimiento y recreativas n.c.p. (salones de baile sin venta de bebidas alcohólicas y operadores de juegos del sector público),7990,713998,0.018691292708811837
+9319,"Otras actividades deportivas (operadores de pistas de carritos, campos de golf miniatura, esquí acuático, recorridos por ríos y en balsas, y otros servicios recreativos prestados por el sector público n.c.p.*)",7990,713998,0.018691292708811837
+9319,"Otras actividades deportivas (operadores de pistas de carritos, campos de golf miniatura, esquí acuático, recorridos por ríos y en balsas, y otros servicios recreativos prestados por el sector público n.c.p.*)",9000,"711320,711311,711312",0.05648815710433616
+9312,Actividades de clubes deportivos (salas de tiro al blanco del sector público),7990,713998,0.018691292708811837
+4520,"Mantenimiento y reparación de vehículos automotores (polarizado de cristales, impermeabilización de automóviles y camiones, cambio de aceite, y otros servicios de reparación y mantenimiento de automóviles y camiones n.c.p.*)",7120,811199,0.05968054216933531
+3312,Reparación de maquinaria (reparación de herramientas de mano con motor),9522,811410,0.017838365401369315
+3311,Reparación de productos elaborados de metal (reparación de armas de fuego para deporte y caza),3315,811499,0.028512141420221446
+3311,Reparación de productos elaborados de metal (reparación de armas de fuego para deporte y caza),9522,811499,0.028512141420221446
+3311,Reparación de productos elaborados de metal (reparación de armas de fuego para deporte y caza),9529,811499,0.028512141420221446
+9522,Reparación de aparatos de uso doméstico y equipo doméstico y de jardinería (reparación de motores fuera de borda),3315,811499,0.028512141420221446
+9522,Reparación de aparatos de uso doméstico y equipo doméstico y de jardinería (reparación de motores fuera de borda),3312,811410,0.017838365401369315
+9522,Reparación de aparatos de uso doméstico y equipo doméstico y de jardinería (reparación de motores fuera de borda),3311,811499,0.028512141420221446
+9522,Reparación de aparatos de uso doméstico y equipo doméstico y de jardinería (reparación de motores fuera de borda),9529,811499,0.028512141420221446
+9529,"Reparación de otros efectos personales y enseres domésticos (reparación de persianas, aparatos no eléctricos, instrumentos musicales, joyas, paraguas, sombreros, y otros artículos para el hogar y personales n.c.p.*)",3315,811499,0.028512141420221446
+9529,"Reparación de otros efectos personales y enseres domésticos (reparación de persianas, aparatos no eléctricos, instrumentos musicales, joyas, paraguas, sombreros, y otros artículos para el hogar y personales n.c.p.*)",3311,811499,0.028512141420221446
+9529,"Reparación de otros efectos personales y enseres domésticos (reparación de persianas, aparatos no eléctricos, instrumentos musicales, joyas, paraguas, sombreros, y otros artículos para el hogar y personales n.c.p.*)",9522,811499,0.028512141420221446
