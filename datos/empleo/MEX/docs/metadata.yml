@@ -1,0 +1,12 @@
+date:        2023-12-13
+variable :
+  name : empleo_imss_mex
+  titulo : Datos de empleo para México provenientes del IMSS
+  clasificacion : imss
+  units : Personal ocupado
+  label-0 : mes
+  label-1 : entidad
+  label-2 : actividad_economica  
+resources:
+    - url: http://datos.imss.gob.mx/dataset/
+      descrip: Datos provenientes de IMSS correspondientes al periodo 2011-2023.

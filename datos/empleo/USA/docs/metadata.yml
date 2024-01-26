@@ -1,0 +1,11 @@
+date:        2023-12-13
+variable :
+  name : empleo_cbp_mex
+  titulo : Datos de empleo para USA provenientes del County Bussiness Patterns
+  clasificacion : scian
+  units : Personal ocupado
+  label-0 : msa
+  label-1 : actividad_economica  
+resources:
+    - url: https://www.census.gov/programs-surveys/cbp/data/datasets.html
+      descrip: Datos provenientes de County Bussiness Patterns correspondientes al periodo 2011-2021.

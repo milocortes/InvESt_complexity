@@ -1,0 +1,277 @@
+sector_economico_4_4_pos,descripción sector_economico_4
+101,Agricultura
+201,Cría y explotación de ganado y otras clases de animales
+301,Explotación de bosques madereros; extracción de productos forestales no maderables y servicios de explotación forestal
+401,Pesca de altura y costera
+402,Pesca en aguas interiores
+403,Acuicultura
+404,Trabajos de buceo
+500,Caza
+1101,"Extracción y beneficio de carbón mineral, grafito y minerales no metálicos en minas de profundidad"
+1102,Beneficio de minerales no metálicos
+1103,Extracción y beneficio de azufre
+1104,"Extracción y beneficio de minerales no metálicos, en minas a cielo abierto"
+1201,Exploración y extracción de petróleo crudo y gas natural
+1301,"Extracción y beneficio de minerales metálicos, en minas de profundidad"
+1302,Beneficio de minerales metálicos
+1303,"Extracción y beneficio de minerales metálicos, en minas a cielo abierto"
+1401,Explotación y/o beneficio de yacimientos de sal
+2001,"Elaboración y preparación de productos alimenticios a base de frutas y legumbres, su conservación, envasado y/o empacado"
+2002,"Beneficio de otros granos, fabricación y envasado"
+2003,Producción de azúcar
+2004,Matanza de ganado y aves
+2005,"Elaboración, preparación, conservación, envasado y/o empacado de carnes y sus derivados"
+2006,"Elaboración, preparación, conservación, envasado y/o empacado de productos lácteos"
+2007,"Elaboración, preparación, conservación, envasado y/o empacado de pescados, mariscos y otros productos marinos"
+2008,Elaboración de productos a base de cereales
+2009,"Elaboración de chocolates, dulces, confituras, jarabes, concentrados y colorantes para alimentos"
+2010,Elaboración de alimentos para animales
+2011,Fabricación de aceites y grasas vegetales alimenticias
+2012,"Fabricación de almidones, féculas, levaduras, malta y productos similares"
+2013,"Elaboración, preparación, envasado y/o empacado de otros productos alimenticios"
+2014,"Elaboración, preparación, envasado y/o empacado de productos alimenticios, sin maquinaria ni equipo motorizado"
+2015,"Fabricación de productos a base de cereales, con procesos continuos automatizados"
+2016,Fabricación de harinas y productos de molino a base de cereales y leguminosas
+2101,Elaboración y/o envase de bebidas alcohólicas
+2102,Elaboración de cerveza y malta
+2103,"Elaboración y/o envase de refrescos, aguas gaseosas y purificadas"
+2200,Beneficio y/o fabricación de productos de tabaco
+2301,"Fabricación, preparación, hilado, tejido y acabado de textiles de fibras blandas"
+2302,"Trabajos de blanqueo, teñido, estampado, impermeabilizado y acabado de hilados y tejidos de fibras blandas"
+2303,Fabricación de tejidos y artículos de punto
+2304,"Fabricación, preparación, hilado, tejido y acabado de textiles de fibras duras"
+2305,Trabajos de hilados y/o tejidos sin maquinaria ni equipo motorizado
+2306,Fabricación de tejidos de fibras blandas con telares automáticos sin lanzadera
+2307,Fabricación de hilados con máquinas de turbina
+2401,Confección de prendas de vestir a la medida
+2402,Confección de prendas de vestir
+2403,Otros artículos confeccionados con textiles y materiales diversos
+2501,"Fabricación de calzado, con maquinaria y/o equipo motorizado"
+2502,"Fabricación de calzado, sin maquinaria ni equipo motorizado"
+2503,Curtido y acabado de cuero y piel
+2504,"Manufactura de artículos de cuero, piel y sucedáneos, en forma artesanal"
+2505,"Fabricación de artículos de cuero, piel y sucedáneos"
+2506,"Curtido y acabado de cuero y piel, con uso exclusivo de maquinaria y/o equipo motorizado"
+2601,Fabricación de productos de aserradero
+2602,Fabricación de artículos y accesorios de madera
+2603,"Manufactura de artículos de corcho, palma, vara, carrizo y mimbre"
+2604,"Fabricación de artículos de corcho, palma, vara, carrizo y mimbre"
+2701,Fabricación y/o reparación de muebles de madera y sus partes
+2801,Fabricación de papel y/o cartón y sus derivados
+2802,Fabricación de artículos a base de papel y/o cartón
+2901,"Industrias editoriales, de impresión, encuadernación y actividades conexas"
+3001,Fabricación de sustancias químicas e industriales; excepto abonos
+3002,"Fabricación de abonos, fertilizantes y plaguicidas"
+3003,Fabricación de resinas sintéticas y plastificantes
+3004,Industria de las pinturas
+3005,Industrias químico-farmacéuticas y de medicamentos
+3007,Fabricación de productos químicos para limpieza y aromatizantes ambientales
+3008,Fabricación de perfumes y cosméticos
+3009,"Fabricación de aceites y grasas vegetales y animales no comestibles, para usos industriales"
+3010,"Fabricación de velas, veladoras y similares"
+3012,Fabricación de cerillos
+3013,Fabricación de explosivos y fuegos artificiales
+3014,Otros productos de las industrias químicas conexas
+3016,Fabricación de fibras artificiales y sintéticas
+3101,Refinación del petróleo crudo y petroquímica básica
+3102,Fabricación de lubricantes y aditivos
+3103,Fabricación de productos a base de asfalto y sus mezclas
+3201,Fabricación de productos de hule
+3202,Fabricación de productos de plástico
+3203,Fabricación de productos de látex
+3301,Manufactura de artículos de alfarería y cerámica
+3302,"Fabricación de muebles sanitarios, loza, porcelana y artículos refractarios"
+3303,Fabricación de vidrio y/o productos de vidrio
+3305,Fabricación de productos de arcilla para la construcción
+3306,Fabricación de cal y yeso
+3307,Fabricación de productos a base de asbesto
+3308,Fabricación de productos abrasivos
+3309,"Fabricación de granito artificial, productos de mármol y otras piedras"
+3310,Fabricación de productos y partes preconstruidas de concreto
+3312,"Fabricación de azulejos, con procesos continuos automatizados"
+3313,"Fabricación de vidrio y/o productos de vidrio, con procesos continuos automatizados"
+3315,Fabricación de productos de asbesto-cemento
+3316,Fabricación de cemento
+3317,Fabricación de concreto premezclado
+3401,"Industrias básicas del hierro, acero y metales no ferrosos"
+3402,"Industrias básicas del hierro, acero y metales no ferrosos, con procesos automatizados"
+3501,"Fabricación de utensilios agrícolas, herramientas y artículos de ferretería y cerrajería"
+3502,"Fabricación y/o reparación de puertas, ventanas, cortinas metálicas y otros trabajos de herrería"
+3503,"Fabricación, ensamble y/o reparación de muebles metálicos y sus partes"
+3504,"Fabricación y/o reparación de estructuras metálicas, tanques, calderas y similares"
+3505,"Fabricación de envases metálicos, corcholatas y tapas"
+3506,Fabricación de alambres y otros productos de alambre
+3507,Trabajos de tratamientos térmicos y galvanoplastia
+3508,"Fabricación de agujas, alfileres, cierres, botones y navajas para rasurar"
+3509,"Fabricación de baterías de cocina, cucharas, cuchillos y tenedores"
+3510,Fabricación de otros productos metálicos maquinados
+3511,"Tratamientos térmicos y galvanoplastia, con procesos continuos automatizados"
+3601,"Fabricación y/o ensamble de maquinaria, equipos e implementos para labores agropecuarias"
+3602,"Fabricación y/o ensamble de maquinaria, equipo e implementos para las industrias de alimentos, bebidas, tabacalera, textil, calzado, madera, cuero, impresión, hule, plástico, productos de minerales no metálicos (excepto cemento), metal mecánica y maquinar"
+3603,"Fabricación y/o ensamble de maquinaria, equipo e implementos para las industrias de la construcción, extractivas, papel, cemento, petroquímica básica, química; metálicas básicas del hierro, del acero y de metales no ferrosos"
+3604,"Fabricación y/o ensamble de máquinas de coser, oficina, cómputo y sus partes"
+3605,Reparación y ensamble de máquinas de coser y de oficina
+3606,"Fabricación de partes y piezas sueltas, para maquinaria y equipo en general"
+3607,Reparación y/o mantenimiento de maquinaria y equipo en general
+3701,Fabricación y/o ensamble de maquinaria y equipo para generación y transformación de energía eléctrica
+3702,"Fabricación y/o ensamble de equipo y aparatos de radio, televisión y comunicaciones"
+3703,"Fabricación y/o grabado de discos y cintas magnéticas para sonidos, imágenes y datos"
+3704,Fabricación y/o ensamble de aparatos eléctricos y sus partes para uso doméstico
+3705,"Fabricación, reconstrucción y/o ensamble de acumuladores eléctricos"
+3706,"Fabricación y/o ensamble de pilas (secas), componentes eléctricos y electrónicos diversos"
+3707,Fabricación y/o ensamble de lámparas (focos) y tubos al vacío para alumbrado eléctrico
+3708,Fabricación de conductores eléctricos
+3709,"Fabricación y/o ensamble de aparatos, accesorios eléctricos o electrónicos, para empalme, corte, protección y conexión"
+3710,Fabricación de luminarias y anuncios luminosos
+3711,Fabricación en serie o con procesos continuos de acumuladores eléctricos
+3712,"Fabricación y/o ensamble de refrigeradores, estufas, lavadoras, secadoras y otros aparatos de línea blanca"
+3801,Fabricación y/o ensamble de aeronaves
+3802,Fabricación y/o ensamble de carrocerías para vehículos de transporte
+3803,"Fabricación y/o ensamble de partes y accesorios para automóviles, autobuses, camiones, motocicletas y bicicletas"
+3804,Fabricación y/o ensamble de partes para el sistema eléctrico de vehículos automóviles
+3805,Fabricación y/o ensamble de bicicletas y otros vehículos de pedal
+3806,"Fabricación, ensamble y/o reparación de carros de ferrocarril, equipo ferroviario y sus partes"
+3807,"Fabricación, ensamble y/o reparación de embarcaciones"
+3808,"Fabricación y/o ensamble de automóviles, autobuses, camiones y motocicletas"
+3809,"Fabricación y/o ensamble de motores para automóviles, autobuses y camiones"
+3810,"Fabricación de conjuntos mecánicos y sus partes para automóviles, autobuses, camiones y motocicletas"
+3900,"Fabricación, ensamble y/o reparación de equipos, aparatos científicos y profesionales e instrumentos de medida y control"
+3901,"Fabricación, ensamble y/o reparación de aparatos, instrumentos y accesorios de óptica y fotografía"
+3902,"Fabricación, montaje y/o ensamble de relojes, joyas, artículos de orfebrería y fantasía"
+3904,"Fabricación y/o ensamble de instrumentos musicales, paraguas, juguetes y artículos deportivos, con maquinaria y/o equipo motorizado"
+3905,"Fabricación y/o ensamble de instrumentos musicales, paraguas, juguetes y artículos deportivos, sin maquinaria ni equipo motorizado"
+3906,"Fabricación de lápices, gomas, plumas y bolígrafos"
+3907,Talleres de mecánica dental
+3908,"Fabricación y/o ensamble de armas de fuego portátiles, cartuchos, municiones y accesorios"
+3909,"Fabricación, ensamble y/o reparación de otros artículos manufacturados no clasificados anteriormente, sin maquinaria ni equipo motorizado"
+3910,"Fabricación, ensamble y/o reparación de otros artículos manufacturados no clasificados anteriormente, con maquinaria y/o equipo motorizado"
+4101,Construcción de edificaciones; excepto obra pública
+4102,Construcciones de obras de infraestructura y edificaciones en obra pública
+4201,"Instalaciones sanitarias, eléctricas, de gas y de aire acondicionado"
+4202,"Instalación y reparación de ascensores, escaleras electromecánicas y otros equipos para transportación"
+4203,"Instalación de ventanería, herrería, cancelería, vidrios y cristales"
+4204,Otros servicios de instalación vinculados al acabado o remodelación de obras de construcción
+5000,"Generación, transmisión y distribución de energía eléctrica"
+5100,Captación y suministro de agua potable y tratada
+6101,"Expendios de ventas al menudeo de alimentos, bebidas y/o productos del tabaco"
+6102,"Compraventa de alimentos, bebidas y/o productos del tabaco, sin transporte"
+6103,"Compraventa de alimentos, bebidas y/o productos del tabaco, con transporte"
+6104,Compraventa e introducción de animales vivos
+6201,Expendios de ventas al menudeo de prendas y accesorios de vestir y artículos para su confección
+6202,"Compraventa de prendas y accesorios de vestir y artículos para su confección, sin transporte"
+6203,"Compraventa de prendas y accesorios de vestir y artículos para su confección, con transporte"
+6204,Expendios de ventas al menudeo de artículos de uso personal
+6205,"Compraventa de artículos de uso personal, sin transporte"
+6206,"Compraventa de artículos de uso personal, con transporte"
+6207,"Expendios de ventas al menudeo de medicamentos, productos farmacéuticos, químico-farmacéuticos y de perfumería"
+6208,"Compraventa de medicamentos, productos farmacéuticos, químico-farmacéuticos y de perfumería, sin transporte"
+6209,"Compraventa de medicamentos, productos farmacéuticos, químico-farmacéuticos y de perfumería, con transporte"
+6210,"Expendios de ventas al menudeo de papelería, útiles escolares y de oficina; libros, periódicos y revistas"
+6211,"Compraventa de papelería, útiles escolares y de oficina; libros, periódicos y revistas, sin transporte"
+6212,"Compraventa de papelería, útiles escolares y de oficina; libros, periódicos y revistas, con transporte"
+6301,"Expendios de ventas al menudeo de máquinas, muebles, aparatos e instrumentos para el hogar, sus refacciones y accesorios"
+6302,"Compraventa de máquinas, muebles, aparatos e instrumentos para el hogar, sus refacciones y accesorios, sin transporte"
+6303,"Compraventa de máquinas, muebles, aparatos e instrumentos para el hogar, sus refacciones y accesorios, con transporte y/o servicios de instalación"
+6304,Expendios de ventas al menudeo de otros artículos para el hogar
+6305,"Compraventa de otros artículos para el hogar, sin transporte"
+6306,"Compraventa de otros artículos para el hogar, con transporte y/o servicios de instalación"
+6401,"Supermercados, tiendas de autoservicio y de departamentos especializados por línea de mercancías"
+6501,"Compraventa, envasado y/o distribución de gases para uso doméstico, industrial y medicinal"
+6502,"Compraventa de lubricantes y aditivos, sin transporte"
+6503,"Estaciones de venta de gasolina, diesel y compraventa de lubricantes y aditivos, con transporte"
+6504,"Compraventa de leña, carbón vegetal y mineral"
+6601,Expendios de ventas al menudeo de materias primas agropecuarias
+6602,"Compraventa de materias primas agropecuarias, sin transporte"
+6603,"Compraventa de materias primas agropecuarias, con transporte"
+6604,"Compraventa de materiales para construcción, tales como madera, aceros y productos de ferretería, sin transporte, ni preparación de mercancías"
+6605,"Compraventa de materiales para construcción tales como: madera, aceros y productos de ferretería, con transporte y/o preparación de mercancías"
+6606,"Compraventa de material eléctrico, pinturas y productos de tlapalería, sin transporte"
+6607,"Compraventa de material eléctrico, pinturas y productos de tlapalería, con transporte"
+6608,"Compraventa de vidrio plano, cristales, espejos y lunas, sin transporte ni servicios de instalación"
+6609,"Compraventa de vidrio plano, cristales, espejos y lunas, con transporte y/o servicios de instalación"
+6610,"Compraventa de fertilizantes, plaguicidas y productos químicos (no explosivos) en envases cerrados, sin transporte"
+6611,"Compraventa de fertilizantes, plaguicidas y productos químicos (no explosivos) en envases cerrados o a granel, con transporte"
+6612,"Compraventa de pieles, cueros curtidos y otros artículos de peletería, sin transporte"
+6613,"Compraventa de pieles, cueros curtidos y otros artículos de peletería, con transporte"
+6614,"Compraventa de papel y cartón nuevos, sin transporte"
+6615,"Compraventa de papel y cartón nuevos, con transporte"
+6616,"Compraventa de chatarra, fierro viejo, partes o mecanismos usados y desperdicios en general"
+6617,Compraventa de explosivos y productos de pirotecnia
+6701,Expendio de ventas al menudeo de refacciones y accesorios para maquinaria y/o equipo para la producción de bienes
+6702,"Compraventa de maquinaria, equipo y sus refacciones y/o accesorios para la producción de bienes, sin transporte"
+6703,"Compraventa de maquinaria, equipo y sus refacciones y/o accesorios para la producción de bienes, con transporte y/o servicios de reparación o mantenimiento"
+6704,"Compraventa de maquinaria, equipo y sus refacciones y/o accesorios para la producción de bienes, con servicios de instalación"
+6705,"Expendios de ventas al menudeo de equipo, mobiliario, sus partes y/o accesorios para la prestación de servicios y el comercio"
+6706,"Compraventa de equipo, mobiliario, sus partes y/o accesorios para la prestación de servicios y el comercio, sin transporte"
+6707,"Compraventa de equipo, mobiliario, sus partes y/o accesorios para la prestación de servicios y el comercio, con transporte y/o servicios de instalación, reparación y mantenimiento"
+6708,"Expendios de ventas al menudeo de aparatos e instrumentos de medición, precisión, cirugía, laboratorio y otros usos científicos"
+6709,"Compraventa de aparatos e instrumentos de medición, precisión, cirugía, laboratorio y otros usos científicos, sin transporte"
+6710,"Compraventa de aparatos e instrumentos de medición, precisión, cirugía, laboratorio y otros usos científicos, con transporte y/o servicios de instalación, reparación o mantenimiento"
+6711,"Compraventa de equipo de cómputo o de procesamiento electrónico de datos y sus periféricos, con servicios de instalación, reparación y/o mantenimiento"
+6801,"Expendios de ventas al menudeo de refacciones, accesorios y/o partes para equipo de transporte"
+6802,"Compraventa de equipo de transporte, sus refacciones, accesorios y/o partes, sin transporte"
+6803,"Compraventa de equipo de transporte, sus refacciones, accesorios y/o partes, con transporte y/o servicios de instalación, reparación o mantenimiento"
+6901,Compraventa de bienes inmuebles
+6902,Expendios de ventas al menudeo de artículos diversos no clasificados
+6903,"Compraventa de artículos diversos no clasificados, sin transporte"
+6904,"Compraventa de artículos diversos no clasificados, con transporte y/o servicios de instalación, reparación o mantenimiento"
+7101,Transporte de pasajeros
+7102,Transporte de carga
+7103,Transporte ferroviario y eléctrico
+7201,Transporte marítimo y de navegación interior y servicios diversos a bordo y/o en plataformas marinas
+7202,Servicios directamente vinculados con el transporte por agua y/o servicios de supervisión y mantenimiento en plataformas marinas
+7300,Transporte aéreo
+7400,"Administración de vías de comunicación, terminales y servicios auxiliares"
+7501,Servicios de almacenamiento y/o refrigeración
+7502,"Servicios sin transporte de agencias de gestión aduanal, de equipajes, viajes y turísticas"
+7503,Servicios de grúa y emergencia para vehículos
+7504,"Servicios de alquiler de aeronaves, carros de ferrocarril y transportes acuáticos"
+7505,"Servicios con transporte de agencias de gestión aduanal, de mensajería y paquetería, de equipajes, viajes, turísticas y otras actividades relacionadas con los transportes en general"
+7600,Comunicaciones
+8100,"Instituciones de crédito, seguros y fianzas"
+8200,Servicios colaterales a las instituciones financieras y de seguros
+8300,Servicios relacionados con inmuebles
+8401,Servicios profesionales y técnicos
+8403,Servicios de instalación de maquinaria y equipo en general
+8404,Servicios de protección y custodia
+8405,Servicios de laboratorio para la industria en general
+8501,Servicios de alquiler de maquinaria y equipo agrícola
+8502,Servicios de alquiler de maquinaria y equipo para la construcción con operadores
+8503,Servicios de alquiler de maquinaria y equipo para la construcción sin operadores
+8504,Servicios de alquiler de equipo y mobiliario a empresas
+8505,Servicios de alquiler para el público en general
+8506,"Servicios de alquiler o renta de automóviles, bicicletas y motocicletas"
+8600,Servicios de alojamiento temporal
+8701,Preparación y servicio de alimentos
+8702,Preparación y servicio de bebidas alcohólicas
+8801,Servicios recreativos
+8802,Servicios de esparcimiento
+8803,"Hipódromos, galgódromos, lienzos charros, palenques y promoción y presentación de espectáculos taurinos"
+8804,"Servicios de centros nocturnos, salones de baile y casinos"
+8805,Promoción y montaje de exposiciones de pintura y escultura
+8806,Circos y juegos electromecánicos
+8901,"Servicios de reparación, lavado, engrasado, verificación de emisión de contaminantes y estacionamiento de vehículos con servicios mecánicos y/o de hojalatería"
+8902,"Servicios de reparación de artículos de uso doméstico y personal, sin maquinaria ni equipo motorizado"
+8903,"Servicios de reparación de artículos de uso doméstico y personal, con maquinaria y/o equipo motorizado"
+8904,Servicios para el aseo personal y sanitarios
+8905,Servicios de peluquería y salones de belleza
+8906,"Servicios de aseo y limpieza, sin maquinaria ni equipo motorizado"
+8907,"Servicios de aseo y limpieza, con maquinaria y/o equipo motorizado"
+8908,Servicios de limpieza de ventanas y fachadas
+8909,"Servicios de fumigación, desinfección y control de plagas"
+8910,Aerotecnia agrícola
+8911,Servicios de revelado fotográfico
+8912,Inhumaciones y servicios conexos
+8913,Servicios domésticos
+8914,Servicios de estacionamiento y/o pensión para vehículos
+9101,"Servicios de enseñanza académica, capacitación, investigación científica y difusión cultural"
+9201,Servicios médicos
+9202,"Servicios médicos, paramédicos y auxiliares"
+9203,Servicios de asistencia social
+9204,Servicios veterinarios y auxiliares
+9301,"Asociaciones y organizaciones comerciales, profesionales, cívicas, laborales y políticas"
+9303,Organizaciones religiosas
+9401,Servicios generales de la administración pública
+9402,Seguridad pública
+9403,Seguridad social
+9900,Servicios de organizaciones internacionales y otros organismos extraterritoriales
