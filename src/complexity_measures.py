@@ -38,11 +38,12 @@ def metrics_diversity_ubiquity(pair_array : np.array,
         case "ubiquity":
             return dict(Mcp.sum(axis=0))
     
-    return 
+    #return 
 
 def RCA(df : pd.DataFrame, 
         value_col_name : str, 
         activiy_col_name : str, 
+        place_col_name : str,
         place : str, 
         sum_cp_X_cp, 
         sum_c_X_cp):
@@ -58,7 +59,7 @@ def RCA(df : pd.DataFrame,
     ---------
     """
     
-    X_cp = df.query(f"zm=='{place}'")[[activiy_col_name, value_col_name]].set_index(activiy_col_name)
+    X_cp = df.query(f"{place_col_name}=='{place}'")[[activiy_col_name, value_col_name]].set_index(activiy_col_name)
     sum_p_X_cp = X_cp[value_col_name].sum()
 
     df_RCA = ((X_cp/sum_p_X_cp)/(sum_c_X_cp/sum_cp_X_cp)).reset_index()
@@ -79,4 +80,27 @@ def proximity(Mcp_df : pd.DataFrame, col_names : list) -> pd.DataFrame:
     return pd.DataFrame(salidas, columns = col_names)
 
 def distance(place : str, activity : str, Mcp_df : pd.DataFrame, proximity_df : pd.DataFrame) -> pd.DataFrame:
-    return (1 - Mcp.loc[place]).to_numpy() @ proximity_df[activity].to_numpy()/sum(proximity_df[activity])
+    return (1 - Mcp_df.loc[place]).to_numpy() @ proximity_df[activity].to_numpy()/sum(proximity_df[activity])
+
+
+def density(place : str, activity : str, Mcp_df : pd.DataFrame, proximity_df : pd.DataFrame) -> pd.DataFrame:
+    try:
+        return Mcp_df.loc[place].to_numpy() @ proximity_df[activity].to_numpy()/sum(proximity_df[activity])
+    except:
+        return 0.0
+        
+def IO_similarity(place : str, activity : str, Mcp_df : pd.DataFrame, proximity_df : pd.DataFrame, tipo : str) -> pd.DataFrame:
+    match tipo:
+        case "input_similarity":
+            try:
+                return Mcp_df.loc[place].to_numpy() @ proximity_df[activity].to_numpy()/sum(proximity_df[activity])
+            except:
+                return 0.0
+        case "output_similarity":
+            try:
+                return Mcp_df.loc[place].to_numpy() @ proximity_df.loc[activity].to_numpy()/sum(proximity_df.loc[activity])
+            except:
+                return 0.0
+
+        
+
