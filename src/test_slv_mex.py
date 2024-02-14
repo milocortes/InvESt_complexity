@@ -117,12 +117,24 @@ for anio in range(2012, 2023):
 datos_slv_mex = pd.concat(datos_slv_mex, ignore_index=False)
 
 
-
 cdata_datos_empleo = ecomplexity(datos_slv_mex.query("anio==2020"), trade_cols)
-
 cdata_datos_empleo = cdata_datos_empleo.sort_values(by="eci", ascending=False)
-{i:j for i,j in cdata_datos_empleo[["zm_nombre", "eci"]].to_records(index = False)}
+ranking_ci = {i:j for i,j in cdata_datos_empleo[["zm_nombre", "eci"]].to_records(index = False)}
+ranking_ci
 
+## Obtenemos el ranking para el periodo 2013-2022
+acumula_ranking = []
+
+for anio in range(2013, 2022):
+    cdata_datos_empleo = ecomplexity(datos_slv_mex.query(f"anio=={anio}"), trade_cols)
+    cdata_datos_empleo = cdata_datos_empleo.sort_values(by="eci", ascending=False)
+    ranking_ci = {i:j for i,j in cdata_datos_empleo[["zm_nombre", "eci"]].to_records(index = False)}
+
+    acumula_ranking += [[anio,i+1,j] for i,j in enumerate(tuple(ranking_ci)[:10])]
+
+df_ranking = pd.DataFrame(acumula_ranking, columns = ["anio", "ranking", "unidad"])
+df_ranking["unidad"] = df_ranking["unidad"].apply(lambda x : x.replace("MΘxico", "México").replace("QuerΘtaro","Querétaro").replace("Zona metropolitana de la ","").replace("Zona metropolitana de ","").replace("Metrópoli municipal de ",""))
+df_ranking.to_csv("zm_complexity_ranking.csv", index=False)
 
 datos_slv_mex.to_csv("empleo_slv_mex_2013-2022.csv", index = False)
 
@@ -367,6 +379,7 @@ data_complexity = pd.concat(acumula_complexity, ignore_index = True)
 #### Hacemos un test de nuestros resultados vis a vis el paquete ecomplexity
 cdata_datos_empleo = ecomplexity(datos_slv_mex, trade_cols)
 cdata_datos_empleo["zm"] = cdata_datos_empleo["zm"].apply(lambda x : str(x))
+cdata_datos_empleo_todo = cdata_datos_empleo.copy()
 cdata_datos_empleo = cdata_datos_empleo.sort_values(by=["anio", "variable", "zm"])[["anio", "zm", "variable", "rca", "diversity", "ubiquity", "density", "mcp"]].reset_index(drop=True)
 
 data_complexity = data_complexity.sort_values(by=["anio", "variable", "place"]).reset_index(drop=True)
@@ -381,6 +394,97 @@ data_complexity = data_complexity.sort_values(by=["anio", "variable", "place"]).
 ## Mcp
 (cdata_datos_empleo.mcp - data_complexity.mcp).sum()
 
+### Agregamos distancia a nuestros datos del paquete ecomplexity
+cdata_datos_empleo_todo["distance"] = data_complexity["distance"]
+cdata_datos_empleo_todo.to_csv("complexity_todo_metricas.csv", index=False)
+
+#### Matriz de proximidad
+proximidad = proximity_ecomplexity(datos_slv_mex, trade_cols)
+proximidad = proximidad.query("anio==2021")[["variable_1", "variable_2", "proximity"]]
+proximidad.proximity = proximidad.proximity.replace(np.nan, 1.0)
+
+
+import networkx as nx 
+import matplotlib.pyplot as plt
+from py2cytoscape import util as cy 
+from py2cytoscape import cytoscapejs as cyjs
+import requests
+import json
+
+# empty graph/network
+G = nx.Graph()
+
+# add nodes
+for i in proximidad.variable_1.unique():
+    G.add_node(i)
+  
+# add edges    
+for in_node, out_node, w in proximidad.to_records(index = False):
+    if w!=0.0:
+        G.add_edge(in_node, out_node, key=0, weight=w)
+
+# attributes
+node_rca = {}
+node_ciiu_seccion = {}
+
+# node attributes 
+from ciiu_agregacion import ciiu_agregacion
+
+for node_name, rca_value in cdata_datos_empleo_todo.query("anio==2021 and zm=='SLV'")[["variable", "rca"]].to_records(index = False):
+    node_rca[node_name]=rca_value
+    node_ciiu_seccion[node_name] = ciiu_agregacion[node_name[:2]][1]
+
+# assign attributes to networkx G
+nx.set_node_attributes(G,node_rca,"n_rca")
+nx.set_node_attributes(G,node_ciiu_seccion,"n_seccion")
+    
+# move network from networkx to cy
+G.node = G.nodes
+cytoscape_network = cy.from_networkx(G)
+
+# Basic Setup
+PORT_NUMBER = 1234
+IP = 'localhost'
+BASE = 'http://' + IP + ':' + str(PORT_NUMBER) + '/v1/'
+HEADERS = {'Content-Type': 'application/json'}
+requests.delete(BASE + 'session')
+
+res1 = requests.post(BASE + 'networks', data=json.dumps(cytoscape_network), headers=HEADERS)
+res1_dict = res1.json()
+new_suid = res1_dict['networkSUID']
+requests.get(BASE + 'apply/layouts/force-directed/' + str(new_suid))
+
+style_name = 'Basic_Style'
+
+my_style = {
+  "title" : style_name,
+   'defaults': [{
+       'visualProperty': 'EDGE_TRANSPARENCY', 
+       'value': 255
+  }, {
+    "visualProperty" : "NODE_SIZE",
+    'value': 20
+  }, {
+    "visualProperty" : "EDGE_WIDTH",
+    'value': 1
+  },{
+       'visualProperty': 'NODE_LABEL_FONT_SIZE', 
+       'value': 12
+   },{
+       'visualProperty': 'NODE_LABEL_TRANSPARENCY', 
+       'value': 250
+   }, {
+       'visualProperty': 'NODE_TRANSPARENCY', 
+       'value': 250
+   }]
+}
+
+# Create new Visual Style
+res = requests.post(BASE + "styles", data=json.dumps(my_style), headers=HEADERS)
+new_style_name = res.json()['title']
+
+# Apply it to current netwrok
+requests.get(BASE + 'apply/styles/' + new_style_name + '/' + str(new_suid))
 
 ######## NOS OLVIDAMOS TANTITO Y HACEMOS REGRESIONES
 import numpy as np
