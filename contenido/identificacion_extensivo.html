@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Proceso de identificación de industrias clave - InvESt-Tec Monterrey</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introducción</a></li><li class="chapter-item expanded affix "><li class="part-title">Contenido</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Medidas de Complejidad</div></li><li class="chapter-item expanded "><a href="../contenido/datos_empleo.html"><strong aria-hidden="true">2.</strong> Uso de datos de empleo en el margen extensivo</a></li><li class="chapter-item expanded "><a href="../contenido/transables.html"><strong aria-hidden="true">3.</strong> Industrias transables</a></li><li class="chapter-item expanded "><a href="../contenido/identificacion_extensivo.html" class="active"><strong aria-hidden="true">4.</strong> Proceso de identificación de industrias clave</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">InvESt-Tec Monterrey</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="industrias-estratégicas-en-el-margen-extensivo"><a class="header" href="#industrias-estratégicas-en-el-margen-extensivo">Industrias estratégicas en el margen extensivo</a></h1>
+<h2 id="filtrado-de-industrias"><a class="header" href="#filtrado-de-industrias">Filtrado de industrias</a></h2>
+<p>El análisis de complejidad quedó restringido a 71 actividades de la reclasificación CIIU. Estas industrias se eligieron dado que dichas industrias contaban con datos de empleo tanto en El Salvador como en las Zonas Metropolitanas de México. Las 71 actividades elegidas se listan a continuación:</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">CIIU</th><th style="text-align: left">Nombre</th><th style="text-align: right">RCA</th><th style="text-align: left">División</th><th style="text-align: left">Sección</th></tr></thead><tbody>
+<tr><td style="text-align: left">03-X01</td><td style="text-align: left">Elaboración y conservación de pescado, crustáceos y moluscos /-/Pesca marítima (pesca de camarón en alta mar)/-/Pesca de agua dulce (pesca de camarón en agua dulce)</td><td style="text-align: right">1.86</td><td style="text-align: left">Pesca y acuicultura</td><td style="text-align: left">Agricultura, ganadería, silvicultura y pesca</td></tr>
+<tr><td style="text-align: left">06-X01</td><td style="text-align: left">Extracción de gas natural (extracción de gas natural asociado)/-/Extracción de petróleo crudo (extracción de petróleo crudo asociado)</td><td style="text-align: right">0</td><td style="text-align: left">Extracción de petróleo crudo y gas natural</td><td style="text-align: left">Explotación de minas y canteras</td></tr>
+<tr><td style="text-align: left">08-X01</td><td style="text-align: left">Extracción de sal (minería de sal)/-/Elaboración y conservación de frutas, legumbres y hortalizas (elaboración de harina de papa)/-/Elaboración de otros productos alimenticios n.c.p. (elaboración de sopas congeladas)/-/Elaboración de productos lácteos (elaboración de leche líquida)</td><td style="text-align: right">2.819</td><td style="text-align: left">Explotación de otras minas y canteras</td><td style="text-align: left">Explotación de minas y canteras</td></tr>
+<tr><td style="text-align: left">10-X01</td><td style="text-align: left">Elaboración de comidas y platos preparados (elaboración de guisos congelados)/-/Elaboración de macarrones, fideos, alcuzcuz y productos farináceos similares (elaboración de pastas congeladas)</td><td style="text-align: right">0.024</td><td style="text-align: left">Elaboración de productos alimenticios</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1010</td><td style="text-align: left">Elaboración y conservación de carne (elaboración de carnes congeladas preparadas)</td><td style="text-align: right">0.693</td><td style="text-align: left">Elaboración de productos alimenticios</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1061</td><td style="text-align: left">Elaboración de productos de molienda (beneficio del arroz)</td><td style="text-align: right">3.687</td><td style="text-align: left">Elaboración de productos alimenticios</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1073</td><td style="text-align: left">Elaboración de cacao y chocolate y de productos de confitería (elaboración de chicles, bombones, chiclosos, caramelos macizos, fruta cristalizada, confitada y glaseada)</td><td style="text-align: right">0.395</td><td style="text-align: left">Elaboración de productos alimenticios</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1080</td><td style="text-align: left">Elaboración de alimentos preparados para animales</td><td style="text-align: right">0.85</td><td style="text-align: left">Elaboración de productos alimenticios</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1101</td><td style="text-align: left">Destilación, rectificación y mezcla de bebidas alcohólicas (elaboración de bebidas alcohólicas a base de uva)</td><td style="text-align: right">5.846</td><td style="text-align: left">Elaboración de bebidas</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1102</td><td style="text-align: left">Elaboración de vinos (elaboración de pulque)</td><td style="text-align: right">0.061</td><td style="text-align: left">Elaboración de bebidas</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1103</td><td style="text-align: left">Elaboración de malta y licores de malta (elaboración de malta)</td><td style="text-align: right">13.199</td><td style="text-align: left">Elaboración de bebidas</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1104</td><td style="text-align: left">Elaboración de bebidas no alcohólicas; producción de aguas minerales y otras aguas embotelladas (elaboración de refrescos y otras bebidas no alcohólicas)</td><td style="text-align: right">1.538</td><td style="text-align: left">Elaboración de bebidas</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1311</td><td style="text-align: left">Preparación e hilatura de fibras textiles (preparación e hilado de fibras duras naturales, como henequén, ixtle y palma)</td><td style="text-align: right">13.215</td><td style="text-align: left">Fabricación de productos textiles</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1399</td><td style="text-align: left">Fabricación de otros productos textiles n.c.p. (fabricación de telas angostas de tejido de trama y pasamanería)</td><td style="text-align: right">4.261</td><td style="text-align: left">Fabricación de productos textiles</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1511</td><td style="text-align: left">Curtido y adobo de cueros; adobo y teñido de pieles</td><td style="text-align: right">1.63</td><td style="text-align: left">Fabricación de productos de cuero y productos conexos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1512</td><td style="text-align: left">Fabricación de maletas, bolsos de mano y artículos similares, y de artículos de talabartería y guarnicionería (fabricación de bolsos de mano, maletas y similares)</td><td style="text-align: right">7.075</td><td style="text-align: left">Fabricación de productos de cuero y productos conexos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1520</td><td style="text-align: left">Fabricación de calzado (fabricación de calzado con corte de piel y cuero)</td><td style="text-align: right">1.371</td><td style="text-align: left">Fabricación de productos de cuero y productos conexos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1610</td><td style="text-align: left">Aserrado y acepilladura de madera (producción de trozas, astillas y rajas de madera)</td><td style="text-align: right">0.941</td><td style="text-align: left">Producción de madera y fabricación de productos de madera y corcho, excepto muebles; fabricación de artículos de paja y de materiales trenzables</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1622</td><td style="text-align: left">Fabricación de partes y piezas de carpintería para edificios y construcciones (fabricación de productos de madera para la construcción en aserraderos integrados)</td><td style="text-align: right">0.062</td><td style="text-align: left">Producción de madera y fabricación de productos de madera y corcho, excepto muebles; fabricación de artículos de paja y de materiales trenzables</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1623</td><td style="text-align: left">Fabricación de recipientes de madera (fabricación de contenedores de madera en aserraderos integrados)</td><td style="text-align: right">1.305</td><td style="text-align: left">Producción de madera y fabricación de productos de madera y corcho, excepto muebles; fabricación de artículos de paja y de materiales trenzables</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">17-X01</td><td style="text-align: left">Fabricación de papel y cartón ondulado y de envases de papel y cartón (fabricación de envases de papel en plantas integradas)/-/Fabricación de pasta de madera, papel y cartón (fabricación de pulpa)/-/Fabricación de otros artículos de papel y cartón (fabricación de productos de papel en plantas integradas)</td><td style="text-align: right">0.813</td><td style="text-align: left">Fabricación de papel y de productos de papel</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1812</td><td style="text-align: left">Actividades de servicios relacionadas con la impresión</td><td style="text-align: right">0.579</td><td style="text-align: left">Impresión y reproducción de grabaciones</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">1920</td><td style="text-align: left">Fabricación de productos de la refinación del petróleo (refinación de petróleo)</td><td style="text-align: right">11.37</td><td style="text-align: left">Fabricación de coque y productos de la refinación del petróleo</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2011</td><td style="text-align: left">Fabricación de sustancias químicas básicas (obtención de alcohol etílico potable)</td><td style="text-align: right">2.648</td><td style="text-align: left">Fabricación de sustancias y productos químicos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2012</td><td style="text-align: left">Fabricación de abonos y compuestos de nitrógeno (fabricación de cloruro amónico)</td><td style="text-align: right">0.72</td><td style="text-align: left">Fabricación de sustancias y productos químicos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2013</td><td style="text-align: left">Fabricación de plásticos y caucho sintético en formas primarias (fabricación de resinas sintéticas)</td><td style="text-align: right">2.09</td><td style="text-align: left">Fabricación de sustancias y productos químicos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2021</td><td style="text-align: left">Fabricación de plaguicidas y otros productos químicos de uso agropecuario (fabricación de pesticidas y otros agroquímicos, excepto fertilizantes)</td><td style="text-align: right">4.719</td><td style="text-align: left">Fabricación de sustancias y productos químicos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2022</td><td style="text-align: left">Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas (fabricación de pigmentos naturales para pieles)</td><td style="text-align: right">1.031</td><td style="text-align: left">Fabricación de sustancias y productos químicos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2023</td><td style="text-align: left">Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador (fabricación de jabones, detergentes, suavizantes de telas, ceras, aromatizantes de ambiente, limpiadores dentífricos y pulidores)</td><td style="text-align: right">1.631</td><td style="text-align: left">Fabricación de sustancias y productos químicos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2029</td><td style="text-align: left">Fabricación de otros productos químicos n.c.p. (fabricación de materiales sintéticos para perfumes y cosméticos)</td><td style="text-align: right">0.707</td><td style="text-align: left">Fabricación de sustancias y productos químicos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2100</td><td style="text-align: left">Fabricación de productos farmacéuticos, sustancias químicas medicinales y productos botánicos de uso farmacéutico (fabricación de ácido salicílico no medicinal)</td><td style="text-align: right">1.829</td><td style="text-align: left">Fabricación de productos farmacéuticos, sustancias químicas medicinales y productos botánicos de uso farmacéutico</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2310</td><td style="text-align: left">Fabricación de vidrio y productos de vidrio (fabricación de vidrio)</td><td style="text-align: right">1.721</td><td style="text-align: left">Fabricación de otros productos minerales no metálicos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2391</td><td style="text-align: left">Fabricación de productos refractarios</td><td style="text-align: right">13.699</td><td style="text-align: left">Fabricación de otros productos minerales no metálicos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2399</td><td style="text-align: left">Fabricación de otros productos minerales no metálicos n.c.p. (fabricación de papel alquitranado)</td><td style="text-align: right">3.333</td><td style="text-align: left">Fabricación de otros productos minerales no metálicos</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">25-X01</td><td style="text-align: left">Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de herramientas de mano sin motor)/-/Fabricación de maquinaria para la explotación de minas y canteras y para obras de construcción (fabricación de tractores de oruga, máquinas para movimiento de tierra, bulldozers y mezcladoras de concreto)/-/Fabricación de otras bombas, compresores, grifos y válvulas (fabricación de grifos y válvulas industriales)/-/Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de quinta rueda)/-/Fabricación de vehículos automotores (fabricación de motores diésel)/-/Fabricación de herramientas de mano motorizadas (fabricación de equipo con motor para la jardinería)/-/Fabricación de equipo de elevación y manipulación (fabricación de gatos mecánicos)/-/Fabricación de maquinaria agropecuaria y forestal (fabricación de podadoras de pasto sin motor)/-/Fabricación de otros tipos de equipo de transporte n.c.p. (fabricación de carritos de alambre para supermercado)</td><td style="text-align: right">0.134</td><td style="text-align: left">Fabricación de productos elaborados de metal, excepto maquinaria y equipo</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2591</td><td style="text-align: left">Forja, prensado, estampado y laminado de metales; pulvimetalurgia (fabricación de productos forjados y estampados, y de productos mediante pulvimetalurgia)</td><td style="text-align: right">0.08</td><td style="text-align: left">Fabricación de productos elaborados de metal, excepto maquinaria y equipo</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">26-X01</td><td style="text-align: left">Fabricación de relojes (excepto fabricación de parquímetros)/-/Fabricación de equipo de medición, prueba, navegación y control (fabricación de básculas y balanzas de laboratorio y de uso industrial)</td><td style="text-align: right">0.001</td><td style="text-align: left">Fabricación de productos de informática, de electrónica y de óptica</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2610</td><td style="text-align: left">Fabricación de componentes y tableros electrónicos</td><td style="text-align: right">0.113</td><td style="text-align: left">Fabricación de productos de informática, de electrónica y de óptica</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2620</td><td style="text-align: left">Fabricación de ordenadores (computadoras) y equipo periférico</td><td style="text-align: right">0</td><td style="text-align: left">Fabricación de productos de informática, de electrónica y de óptica</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2710</td><td style="text-align: left">Fabricación de motores, generadores y transformadores eléctricos y aparatos de distribución y control de la energía eléctrica (fabricación de transformadores para soldadura de arco)</td><td style="text-align: right">0.312</td><td style="text-align: left">Fabricación de equipo eléctrico</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2740</td><td style="text-align: left">Fabricación de equipo eléctrico de iluminación (fabricación de focos)</td><td style="text-align: right">0.109</td><td style="text-align: left">Fabricación de equipo eléctrico</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2750</td><td style="text-align: left">Fabricación de aparatos de uso doméstico (fabricación de enseres electrodomésticos menores)</td><td style="text-align: right">0.048</td><td style="text-align: left">Fabricación de equipo eléctrico</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">28-X01</td><td style="text-align: left">Fabricación de maquinaria para la elaboración de alimentos, bebidas y tabaco (fabricación de secadores de productos agrícolas)/-/Otras industrias manufactureras n.c.p. (fabricación de barredoras mecánicas industriales)/-/Fabricación de maquinaria y equipo de oficina [excepto ordenadores (computadoras) y equipo periférico] (fabricación y remanufactura de cartuchos de tóner)/-/Fabricación de maquinaria para la elaboración de productos textiles, prendas de vestir y cueros (fabricación de maquinaria para despepite de algodón)</td><td style="text-align: right">5.071</td><td style="text-align: left">Fabricación de maquinaria y equipo n.c.p.</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2819</td><td style="text-align: left">Fabricación de otros tipos de maquinaria de uso general (fabricación de cintas métricas)</td><td style="text-align: right">0.086</td><td style="text-align: left">Fabricación de maquinaria y equipo n.c.p.</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">2829</td><td style="text-align: left">Fabricación de otros tipos de maquinaria de uso especial (fabricación de maquinaria y equipo para la industrias del hule y del plástico)</td><td style="text-align: right">0.8</td><td style="text-align: left">Fabricación de maquinaria y equipo n.c.p.</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">3030</td><td style="text-align: left">Fabricación de aeronaves, naves espaciales y maquinaria conexa (fabricación de simuladores de vuelo)</td><td style="text-align: right">1.261</td><td style="text-align: left">Fabricación de otro equipo de transporte</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">3220</td><td style="text-align: left">Fabricación de instrumentos de música</td><td style="text-align: right">0</td><td style="text-align: left">Otras industrias manufactureras</td><td style="text-align: left">Industrias manufactureras</td></tr>
+<tr><td style="text-align: left">4620</td><td style="text-align: left">Venta al por mayor de materias primas agropecuarias y animales vivos (comercio al por mayor de tabaco sin procesar)</td><td style="text-align: right">8.713</td><td style="text-align: left">Comercio al por mayor, excepto el de vehículos automotores y motocicletas</td><td style="text-align: left">Comercio al por mayor y al por menor;reparación de vehículos automotores y motocicletas</td></tr>
+<tr><td style="text-align: left">4641</td><td style="text-align: left">Venta al por mayor de productos textiles, prendas de vestir y calzado (comercio al por mayor de fibras, hilos y telas)</td><td style="text-align: right">2.315</td><td style="text-align: left">Comercio al por mayor, excepto el de vehículos automotores y motocicletas</td><td style="text-align: left">Comercio al por mayor y al por menor;reparación de vehículos automotores y motocicletas</td></tr>
+<tr><td style="text-align: left">5210</td><td style="text-align: left">Almacenamiento y depósito (almacenes generales de depósito)</td><td style="text-align: right">0.331</td><td style="text-align: left">Almacenamiento y actividades de apoyo al transporte</td><td style="text-align: left">Transporte y almacenamiento</td></tr>
+<tr><td style="text-align: left">5222</td><td style="text-align: left">Actividades de servicios vinculadas al transporte acuático (administración de puertos y muelles)</td><td style="text-align: right">1.584</td><td style="text-align: left">Almacenamiento y actividades de apoyo al transporte</td><td style="text-align: left">Transporte y almacenamiento</td></tr>
+<tr><td style="text-align: left">5223</td><td style="text-align: left">Actividades de servicios vinculadas al transporte aéreo (servicios a la navegación aérea)</td><td style="text-align: right">0.035</td><td style="text-align: left">Almacenamiento y actividades de apoyo al transporte</td><td style="text-align: left">Transporte y almacenamiento</td></tr>
+<tr><td style="text-align: left">5229</td><td style="text-align: left">Otras actividades de apoyo al transporte (servicios de inspección y pesaje de carga para el transporte por agua)</td><td style="text-align: right">2.185</td><td style="text-align: left">Almacenamiento y actividades de apoyo al transporte</td><td style="text-align: left">Transporte y almacenamiento</td></tr>
+<tr><td style="text-align: left">5510</td><td style="text-align: left">Actividades de alojamiento para estancias cortas (hoteles con otros servicios integrados)</td><td style="text-align: right">0.049</td><td style="text-align: left">Actividades de alojamiento</td><td style="text-align: left">Actividades de alojamiento y de servicio de comidas</td></tr>
+<tr><td style="text-align: left">5520</td><td style="text-align: left">Actividades de campamentos, parques de vehículos recreativos y parques de caravanas</td><td style="text-align: right">0</td><td style="text-align: left">Actividades de alojamiento</td><td style="text-align: left">Actividades de alojamiento y de servicio de comidas</td></tr>
+<tr><td style="text-align: left">5590</td><td style="text-align: left">Otras actividades de alojamiento (pensiones y casas de huéspedes)</td><td style="text-align: right">15.738</td><td style="text-align: left">Actividades de alojamiento</td><td style="text-align: left">Actividades de alojamiento y de servicio de comidas</td></tr>
+<tr><td style="text-align: left">6492</td><td style="text-align: left">Otras actividades de concesión de crédito (banca de desarrollo)</td><td style="text-align: right">2.234</td><td style="text-align: left">Actividades de servicios financieros, excepto las de seguros y fondos de pensiones</td><td style="text-align: left">Actividades financieras y de seguros</td></tr>
+<tr><td style="text-align: left">6499</td><td style="text-align: left">Otras actividades de servicios financieros, excepto las de seguros y fondos de pensiones, n.c.p. (factoraje financiero)</td><td style="text-align: right">0.022</td><td style="text-align: left">Actividades de servicios financieros, excepto las de seguros y fondos de pensiones</td><td style="text-align: left">Actividades financieras y de seguros</td></tr>
+<tr><td style="text-align: left">6512</td><td style="text-align: left">Seguros generales (fondos de aseguramiento campesino)</td><td style="text-align: right">19.204</td><td style="text-align: left">Seguros, reaseguros y fondos de pensiones, excepto planes de seguridad social de afiliación obligatoria</td><td style="text-align: left">Actividades financieras y de seguros</td></tr>
+<tr><td style="text-align: left">6619</td><td style="text-align: left">Otras actividades auxiliares de las actividades de servicios financieros (servicios relacionados con la intermediación crediticia no bursátil)</td><td style="text-align: right">4.277</td><td style="text-align: left">Actividades auxiliares de las actividades de servicios financieros</td><td style="text-align: left">Actividades financieras y de seguros</td></tr>
+<tr><td style="text-align: left">7020</td><td style="text-align: left">Actividades de consultoría de gestión (consultoría en administración estratégica, financiera, de recursos humanos, y de operaciones)</td><td style="text-align: right">0.971</td><td style="text-align: left">Actividades de oficinas principales; actividades de consultoría de gestión</td><td style="text-align: left">Actividades profesionales, científicas y técnicas</td></tr>
+<tr><td style="text-align: left">7220</td><td style="text-align: left">Investigaciones y desarrollo experimental en el campo de las ciencias sociales y las humanidades (servicios de investigación científica y desarrollo en ciencias sociales y humanidades, prestados por el sector privado)</td><td style="text-align: right">0.172</td><td style="text-align: left">Investigación científica y desarrollo</td><td style="text-align: left">Actividades profesionales, científicas y técnicas</td></tr>
+<tr><td style="text-align: left">7310</td><td style="text-align: left">Publicidad (agencias de publicidad)</td><td style="text-align: right">0.687</td><td style="text-align: left">Publicidad y estudios de mercado</td><td style="text-align: left">Actividades profesionales, científicas y técnicas</td></tr>
+<tr><td style="text-align: left">7320</td><td style="text-align: left">Estudios de mercado y encuestas de opinión pública</td><td style="text-align: right">0.508</td><td style="text-align: left">Publicidad y estudios de mercado</td><td style="text-align: left">Actividades profesionales, científicas y técnicas</td></tr>
+<tr><td style="text-align: left">7410</td><td style="text-align: left">Actividades especializadas de diseño (diseño y decoración de interiores)</td><td style="text-align: right">0.034</td><td style="text-align: left">Otras actividades profesionales, científicas y técnicas</td><td style="text-align: left">Actividades profesionales, científicas y técnicas</td></tr>
+<tr><td style="text-align: left">8292</td><td style="text-align: left">Actividades de envasado y empaquetado (empacado de productos en aerosol)</td><td style="text-align: right">0.169</td><td style="text-align: left">Actividades administrativas y de apoyo de oficina y otras actividades de apoyo a las empresas</td><td style="text-align: left">Actividades de servicios administrativos y de apoyo</td></tr>
+<tr><td style="text-align: left">8530</td><td style="text-align: left">Enseñanza superior (escuelas de postbachillerato del sector privado)</td><td style="text-align: right">1.275</td><td style="text-align: left">Enseñanza</td><td style="text-align: left">Enseñanza</td></tr>
+<tr><td style="text-align: left">8550</td><td style="text-align: left">Actividades de apoyo a la enseñanza</td><td style="text-align: right">0.86</td><td style="text-align: left">Enseñanza</td><td style="text-align: left">Enseñanza</td></tr>
+<tr><td style="text-align: left">9200</td><td style="text-align: left">Actividades de juegos de azar y apuestas (casinos)</td><td style="text-align: right">0.175</td><td style="text-align: left">Actividades de juegos de azar y apuestas</td><td style="text-align: left">Actividades artísticas, de entretenimiento y recreativas</td></tr>
+<tr><td style="text-align: left">9312</td><td style="text-align: left">Actividades de clubes deportivos (equipos deportivos profesionales)</td><td style="text-align: right">0.594</td><td style="text-align: left">Actividades deportivas, de esparcimiento y recreativas</td><td style="text-align: left">Actividades artísticas, de entretenimiento y recreativas</td></tr>
+<tr><td style="text-align: left">9321</td><td style="text-align: left">Actividades de parques de atracciones y parques temáticos (parques de diversiones y temáticos del sector privado)</td><td style="text-align: right">3.568</td><td style="text-align: left">Actividades deportivas, de esparcimiento y recreativas</td><td style="text-align: left">Actividades artísticas, de entretenimiento y recreativas</td></tr>
+</tbody></table>
+</div>
+<p>Con estas 71 industrias, se realizó el cálculo de las medidas complejidad. Específicamente, se calculó:</p>
+<ul>
+<li>RCA</li>
+<li>Densidad</li>
+<li>Diversidad</li>
+<li>Ubicuidad</li>
+<li>Índice de Complejidad del Producto</li>
+<li>Ganancia de Oportunidad</li>
+</ul>
+<p>Una primera prueba de coherencia de resultados es el rankeo por el Índice de Complejidad Económica de las unidades geográficas que son comparadas. La siguiente tabla presenta el ranking de las Zonas Metropolitanas de México y El Salvador. Para los años 2013, 2020 y 2021, El Salvador entra en el top 10 de las zonas con mayor complejidad económica. Particularmente llama la atención que en 2021 se coloca en el puesto 5 del ranking. Como era de esperarse, Zonas Metropolitanas para las cuales hay evidencia que presentan alta complejidad (Monterrey y Ciudad de México), aparecen en los primeros puestos.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: right">Ranking</th><th style="text-align: left">2013</th><th style="text-align: left">2020</th><th style="text-align: left">2021</th></tr></thead><tbody>
+<tr><td style="text-align: right">1</td><td style="text-align: left">León</td><td style="text-align: left">Monterrey</td><td style="text-align: left">Monterrey</td></tr>
+<tr><td style="text-align: right">2</td><td style="text-align: left">Piedras Negras</td><td style="text-align: left">Ciudad de México</td><td style="text-align: left">León</td></tr>
+<tr><td style="text-align: right">3</td><td style="text-align: left">Monterrey</td><td style="text-align: left">León</td><td style="text-align: left">Ciudad de México</td></tr>
+<tr><td style="text-align: right">4</td><td style="text-align: left">Ciudad de México</td><td style="text-align: left">Guadalajara</td><td style="text-align: left">Piedras Negras</td></tr>
+<tr><td style="text-align: right">5</td><td style="text-align: left">Guadalajara</td><td style="text-align: left">San Luis Potosí</td><td style="text-align: left">El Salvador</td></tr>
+<tr><td style="text-align: right">6</td><td style="text-align: left">El Salvador</td><td style="text-align: left">Saltillo</td><td style="text-align: left">Celaya</td></tr>
+<tr><td style="text-align: right">7</td><td style="text-align: left">Querétaro</td><td style="text-align: left">Ciudad Juárez</td><td style="text-align: left">Querétaro</td></tr>
+<tr><td style="text-align: right">8</td><td style="text-align: left">Matamoros</td><td style="text-align: left">Celaya</td><td style="text-align: left">Guadalajara</td></tr>
+<tr><td style="text-align: right">9</td><td style="text-align: left">San Luis Potosí</td><td style="text-align: left">Querétaro</td><td style="text-align: left">Ciudad Juárez</td></tr>
+<tr><td style="text-align: right">10</td><td style="text-align: left">Ciudad Juárez</td><td style="text-align: left">El Salvador</td><td style="text-align: left">Irapuato</td></tr>
+</tbody></table>
+</div>
+<p>El análisis del márgen extensivo consiste en enfocarse en aquellas actividades que no cuentan con ventajas comparativas reveladas (esto es, aquellas actividades que tienen un RCA &lt; 1). Fueron 37 industrias las que no cuentan con ventajas comparativas reveladas. Las industrias se encuentran listadas en el apéndice de la documentación en linea. La siguiente tabla presenta la distribución de las 37 industrias en la agregación de Sección del CIIU.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Seccion</th><th style="text-align: right">Industrias</th></tr></thead><tbody>
+<tr><td style="text-align: left">Industrias manufactureras</td><td style="text-align: right">22</td></tr>
+<tr><td style="text-align: left">Actividades profesionales, científicas y técnicas</td><td style="text-align: right">5</td></tr>
+<tr><td style="text-align: left">Transporte y almacenamiento</td><td style="text-align: right">2</td></tr>
+<tr><td style="text-align: left">Actividades de alojamiento y de servicio de comidas</td><td style="text-align: right">2</td></tr>
+<tr><td style="text-align: left">Actividades artísticas, de entretenimiento y recreativas</td><td style="text-align: right">2</td></tr>
+<tr><td style="text-align: left">Explotación de minas y canteras</td><td style="text-align: right">1</td></tr>
+<tr><td style="text-align: left">Actividades financieras y de seguros</td><td style="text-align: right">1</td></tr>
+<tr><td style="text-align: left">Actividades de servicios administrativos y de apoyo</td><td style="text-align: right">1</td></tr>
+<tr><td style="text-align: left">Enseñanza</td><td style="text-align: right">1</td></tr>
+</tbody></table>
+</div>
+<h2 id="proceso-de-identificación-de-industrias-clave"><a class="header" href="#proceso-de-identificación-de-industrias-clave">Proceso de identificación de industrias clave</a></h2>
+<p>Para la identificación de industrias clave se utilizó una técnica TOPSI (Technique for Order of Preference by Similarity to Ideal Solution) del enfoque de Decisión Multicriterio. El método compara un conjunto de alternativas, normaliza los scores para cada criterio y calcula la distancia geométrica entre cada alternativa y la alternativa ideal, la cual es el mejor score de cada criterio. En este caso, las alternativas corresponden a las industrias que se priorizarán, mientras que los criterios de selección corresponden a las métricas de complejidad:</p>
+<ul>
+<li>Ganancia de Oportunidad</li>
+<li>Índice de complejidad del Producto</li>
+<li>Distancia</li>
+</ul>
+<p>Para cada métrica se necesita definir qué tipo de optimización debe realizar el método. Para el caso de la Distancia, el método debe encontrar industrias que minimicen la métrica, dado que nos interesa priorizar industrias para las cuales la brecha entre las capácidades existentes sea la más pequeña. Para el caso de Ganancia de Oportunidad y Complejidad del Producto, necesitamos que el método máximice su valor. <strong>Todos los criterios tienen los mismos pesos de importancia</strong>.</p>
+<p>El método TOPSI compara los criterios de cada una de las alternativas para generar un ranking que toma valor entre 0 y 1 de las alternativas que cumplen con los criterios de optimización. </p>
+<p>La siguiente tabla presenta las industrias priorizadas de acuerdo al ranking calculado por TOPSI:</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">CIIU</th><th style="text-align: left">Nombre</th><th style="text-align: right">Ranking TOPSI</th></tr></thead><tbody>
+<tr><td style="text-align: left">2740</td><td style="text-align: left">Fabricación de equipo eléctrico de iluminación (fabricación de focos)</td><td style="text-align: right">0.9493</td></tr>
+<tr><td style="text-align: left">2710</td><td style="text-align: left">Fabricación de motores, generadores y transformadores eléctricos y aparatos de distribución y control de la energía eléctrica (fabricación de transformadores para soldadura de arco)</td><td style="text-align: right">0.9492</td></tr>
+<tr><td style="text-align: left">7320</td><td style="text-align: left">Estudios de mercado y encuestas de opinión pública</td><td style="text-align: right">0.9369</td></tr>
+<tr><td style="text-align: left">1102</td><td style="text-align: left">Elaboración de vinos</td><td style="text-align: right">0.9368</td></tr>
+<tr><td style="text-align: left">8292</td><td style="text-align: left">Actividades de envasado y empaquetado (empacado de productos en aerosol)</td><td style="text-align: right">0.9063</td></tr>
+<tr><td style="text-align: left">2829</td><td style="text-align: left">Fabricación de otros tipos de maquinaria de uso especial (fabricación de maquinaria y equipo para la industrias del hule y del plástico)</td><td style="text-align: right">0.9007</td></tr>
+<tr><td style="text-align: left">2750</td><td style="text-align: left">Fabricación de aparatos de uso doméstico (fabricación de enseres electrodomésticos menores)</td><td style="text-align: right">0.8939</td></tr>
+<tr><td style="text-align: left">2620</td><td style="text-align: left">Fabricación de ordenadores (computadoras) y equipo periférico</td><td style="text-align: right">0.8139</td></tr>
+<tr><td style="text-align: left">8550</td><td style="text-align: left">Actividades de apoyo a la enseñanza</td><td style="text-align: right">0.8119</td></tr>
+<tr><td style="text-align: left">7220</td><td style="text-align: left">Investigaciones y desarrollo experimental en el campo de las ciencias sociales y las humanidades (servicios de investigación científica y desarrollo en ciencias sociales y humanidades, prestados por el sector privado)</td><td style="text-align: right">0.7931</td></tr>
+<tr><td style="text-align: left">2610</td><td style="text-align: left">Fabricación de componentes y tableros electrónicos</td><td style="text-align: right">0.79</td></tr>
+<tr><td style="text-align: left">2591</td><td style="text-align: left">Forja, prensado, estampado y laminado de metales; pulvimetalurgia (fabricación de productos forjados y estampados, y de productos mediante pulvimetalurgia)</td><td style="text-align: right">0.782</td></tr>
+<tr><td style="text-align: left">2819</td><td style="text-align: left">Fabricación de otros tipos de maquinaria de uso general (fabricación de cintas métricas)</td><td style="text-align: right">0.7803</td></tr>
+<tr><td style="text-align: left">5210</td><td style="text-align: left">Almacenamiento y depósito (almacenes generales de depósito)</td><td style="text-align: right">0.7802</td></tr>
+<tr><td style="text-align: left">2012</td><td style="text-align: left">Fabricación de abonos y compuestos de nitrógeno (fabricación de cloruro amónico)</td><td style="text-align: right">0.7786</td></tr>
+<tr><td style="text-align: left">26-X01</td><td style="text-align: left">Fabricación de relojes (excepto fabricación de parquímetros)/-/Fabricación de equipo de medición, prueba, navegación y control (fabricación de básculas y balanzas de laboratorio y de uso industrial)</td><td style="text-align: right">0.7773</td></tr>
+<tr><td style="text-align: left">3220</td><td style="text-align: left">Fabricación de instrumentos de música</td><td style="text-align: right">0.7701</td></tr>
+<tr><td style="text-align: left">17-X01</td><td style="text-align: left">Fabricación de papel y cartón ondulado y de envases de papel y cartón (fabricación de envases de papel en plantas integradas)/-/Fabricación de pasta de madera, papel y cartón (fabricación de pulpa)/-/Fabricación de otros artículos de papel y cartón (fabricación de productos de papel en plantas integradas)</td><td style="text-align: right">0.7641</td></tr>
+<tr><td style="text-align: left">5223</td><td style="text-align: left">Actividades de servicios vinculadas al transporte aéreo (servicios a la navegación aérea)</td><td style="text-align: right">0.76</td></tr>
+<tr><td style="text-align: left">25-X01</td><td style="text-align: left">Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería (fabricación de herramientas de mano sin motor)/-/Fabricación de maquinaria para la explotación de minas y canteras y para obras de construcción (fabricación de tractores de oruga, máquinas para movimiento de tierra, bulldozers y mezcladoras de concreto)/-/Fabricación de otras bombas, compresores, grifos y válvulas (fabricación de grifos y válvulas industriales)/-/Fabricación de partes, piezas y accesorios para vehículos automotores (fabricación de quinta rueda)/-/Fabricación de vehículos automotores (fabricación de motores diésel)/-/Fabricación de herramientas de mano motorizadas (fabricación de equipo con motor para la jardinería)/-/Fabricación de equipo de elevación y manipulación (fabricación de gatos mecánicos)/-/Fabricación de maquinaria agropecuaria y forestal (fabricación de podadoras de pasto sin motor)/-/Fabricación de otros tipos de equipo de transporte n.c.p. (fabricación de carritos de alambre para supermercado)</td><td style="text-align: right">0.7474</td></tr>
+<tr><td style="text-align: left">10-X01</td><td style="text-align: left">Elaboración de comidas y platos preparados (elaboración de guisos congelados)/-/Elaboración de macarrones, fideos, alcuzcuz y productos farináceos similares (elaboración de pastas congeladas)</td><td style="text-align: right">0.746</td></tr>
+<tr><td style="text-align: left">1073</td><td style="text-align: left">Elaboración de cacao y chocolate y de productos de confitería (elaboración de chicles, bombones, chiclosos, caramelos macizos, fruta cristalizada, confitada y glaseada)</td><td style="text-align: right">0.7231</td></tr>
+<tr><td style="text-align: left">2029</td><td style="text-align: left">Fabricación de otros productos químicos n.c.p. (fabricación de materiales sintéticos para perfumes y cosméticos)</td><td style="text-align: right">0.6927</td></tr>
+<tr><td style="text-align: left">1010</td><td style="text-align: left">Elaboración y conservación de carne (elaboración de carnes congeladas preparadas)</td><td style="text-align: right">0.6553</td></tr>
+<tr><td style="text-align: left">1080</td><td style="text-align: left">Elaboración de alimentos preparados para animales</td><td style="text-align: right">0.6444</td></tr>
+<tr><td style="text-align: left">7020</td><td style="text-align: left">Actividades de consultoría de gestión (consultoría en administración estratégica, financiera, de recursos humanos, y de operaciones)</td><td style="text-align: right">0.641</td></tr>
+<tr><td style="text-align: left">7310</td><td style="text-align: left">Publicidad (agencias de publicidad)</td><td style="text-align: right">0.6373</td></tr>
+<tr><td style="text-align: left">1812</td><td style="text-align: left">Actividades de servicios relacionadas con la impresión</td><td style="text-align: right">0.6292</td></tr>
+<tr><td style="text-align: left">1622</td><td style="text-align: left">Fabricación de partes y piezas de carpintería para edificios y construcciones (fabricación de productos de madera para la construcción en aserraderos integrados)</td><td style="text-align: right">0.6146</td></tr>
+<tr><td style="text-align: left">7410</td><td style="text-align: left">Actividades especializadas de diseño (diseño y decoración de interiores)</td><td style="text-align: right">0.6126</td></tr>
+<tr><td style="text-align: left">9200</td><td style="text-align: left">Actividades de juegos de azar y apuestas (casinos)</td><td style="text-align: right">0.6089</td></tr>
+<tr><td style="text-align: left">9312</td><td style="text-align: left">Actividades de clubes deportivos (equipos deportivos profesionales)</td><td style="text-align: right">0.5844</td></tr>
+<tr><td style="text-align: left">5520</td><td style="text-align: left">Actividades de campamentos, parques de vehículos recreativos y parques de caravanas</td><td style="text-align: right">0.5539</td></tr>
+<tr><td style="text-align: left">1610</td><td style="text-align: left">Aserrado y acepilladura de madera (producción de trozas, astillas y rajas de madera)</td><td style="text-align: right">0.5411</td></tr>
+<tr><td style="text-align: left">6499</td><td style="text-align: left">Otras actividades de servicios financieros, excepto las de seguros y fondos de pensiones, n.c.p. (factoraje financiero)</td><td style="text-align: right">0.5365</td></tr>
+<tr><td style="text-align: left">5510</td><td style="text-align: left">Actividades de alojamiento para estancias cortas (hoteles con otros servicios integrados)</td><td style="text-align: right">0.4956</td></tr>
+<tr><td style="text-align: left">06-X01</td><td style="text-align: left">Extracción de gas natural (extracción de gas natural asociado)/-/Extracción de petróleo crudo (extracción de petróleo crudo asociado)</td><td style="text-align: right">0.0102</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../contenido/transables.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../contenido/transables.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

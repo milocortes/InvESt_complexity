@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Industrias transables - InvESt-Tec Monterrey</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introducción</a></li><li class="chapter-item expanded affix "><li class="part-title">Contenido</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Medidas de Complejidad</div></li><li class="chapter-item expanded "><a href="../contenido/datos_empleo.html"><strong aria-hidden="true">2.</strong> Uso de datos de empleo en el margen extensivo</a></li><li class="chapter-item expanded "><a href="../contenido/transables.html" class="active"><strong aria-hidden="true">3.</strong> Industrias transables</a></li><li class="chapter-item expanded "><a href="../contenido/identificacion_extensivo.html"><strong aria-hidden="true">4.</strong> Proceso de identificación de industrias clave</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">InvESt-Tec Monterrey</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="industrias-transables"><a class="header" href="#industrias-transables">Industrias transables</a></h1>
+<p>El análisis de complejidad con datos se empleo se restringió a industrias transables.</p>
+<p>No existe una clasificación oficial de industrias transables. Para el estudio, se utilizó la clasificación de <a href="https://www.nber.org/system/files/working_papers/w20375/w20375.pdf">Delgado (2014)</a>.</p>
+<p>A continuación se listan los Cluster de actividades transables que indentifican los autores, así como el número de industrias que los integran y el porcentaje de empleo incorporado.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Cluster</th><th style="text-align: right">No. Industrias</th><th style="text-align: left">% empleo</th></tr></thead><tbody>
+<tr><td style="text-align: left">Aerospace Vehicles and Defense</td><td style="text-align: right">7</td><td style="text-align: left">1.3%</td></tr>
+<tr><td style="text-align: left">Agricultural Inputs and Services</td><td style="text-align: right">9</td><td style="text-align: left">0.2%</td></tr>
+<tr><td style="text-align: left">Apparel</td><td style="text-align: right">21</td><td style="text-align: left">0.4%</td></tr>
+<tr><td style="text-align: left">Automotive</td><td style="text-align: right">26</td><td style="text-align: left">1.9%</td></tr>
+<tr><td style="text-align: left">Biopharmaceuticals</td><td style="text-align: right">4</td><td style="text-align: left">0.6%</td></tr>
+<tr><td style="text-align: left">Business Services</td><td style="text-align: right">33</td><td style="text-align: left">24.2%</td></tr>
+<tr><td style="text-align: left">Coal Mining</td><td style="text-align: right">4</td><td style="text-align: left">0.2%</td></tr>
+<tr><td style="text-align: left">Communications Equipment and Services</td><td style="text-align: right">8</td><td style="text-align: left">1.3%</td></tr>
+<tr><td style="text-align: left">Construction Products and Services</td><td style="text-align: right">20</td><td style="text-align: left">1.8%</td></tr>
+<tr><td style="text-align: left">Distribution and Electronic Commerce</td><td style="text-align: right">62</td><td style="text-align: left">13.0%</td></tr>
+<tr><td style="text-align: left">Downstream Chemical Products</td><td style="text-align: right">13</td><td style="text-align: left">0.6%</td></tr>
+<tr><td style="text-align: left">Downstream Metal Products</td><td style="text-align: right">16</td><td style="text-align: left">1.0%</td></tr>
+<tr><td style="text-align: left">Education and Knowledge Creation</td><td style="text-align: right">15</td><td style="text-align: left">6.8%</td></tr>
+<tr><td style="text-align: left">Electric Power Generation and Transmission</td><td style="text-align: right">5</td><td style="text-align: left">0.3%</td></tr>
+<tr><td style="text-align: left">Environmental Services</td><td style="text-align: right">7</td><td style="text-align: left">0.2%</td></tr>
+<tr><td style="text-align: left">Financial Services</td><td style="text-align: right">26</td><td style="text-align: left">4.9%</td></tr>
+<tr><td style="text-align: left">Fishing and Fishing Products</td><td style="text-align: right">5</td><td style="text-align: left">0.1%</td></tr>
+<tr><td style="text-align: left">Food Processing and Manufacturing</td><td style="text-align: right">47</td><td style="text-align: left">2.2%</td></tr>
+<tr><td style="text-align: left">Footwear</td><td style="text-align: right">6</td><td style="text-align: left">0.0%</td></tr>
+<tr><td style="text-align: left">Forestry</td><td style="text-align: right">4</td><td style="text-align: left">0.2%</td></tr>
+<tr><td style="text-align: left">Furniture</td><td style="text-align: right">12</td><td style="text-align: left">0.9%</td></tr>
+<tr><td style="text-align: left">Hospitality and Tourism</td><td style="text-align: right">31</td><td style="text-align: left">7.0%</td></tr>
+<tr><td style="text-align: left">Information Technology and Analytical Instruments</td><td style="text-align: right">27</td><td style="text-align: left">2.6%</td></tr>
+<tr><td style="text-align: left">Insurance Services</td><td style="text-align: right">8</td><td style="text-align: left">3.8%</td></tr>
+<tr><td style="text-align: left">Jewelry and Precious Metals</td><td style="text-align: right">4</td><td style="text-align: left">0.1%</td></tr>
+<tr><td style="text-align: left">Leather and Related Products</td><td style="text-align: right">6</td><td style="text-align: left">0.1%</td></tr>
+<tr><td style="text-align: left">Lighting and Electrical Equipment</td><td style="text-align: right">15</td><td style="text-align: left">0.8%</td></tr>
+<tr><td style="text-align: left">Livestock Processing</td><td style="text-align: right">5</td><td style="text-align: left">1.2%</td></tr>
+<tr><td style="text-align: left">Marketing, Design, and Publishing</td><td style="text-align: right">22</td><td style="text-align: left">2.9%</td></tr>
+<tr><td style="text-align: left">Medical Devices</td><td style="text-align: right">5</td><td style="text-align: left">0.7%</td></tr>
+<tr><td style="text-align: left">Metal Mining</td><td style="text-align: right">8</td><td style="text-align: left">0.1%</td></tr>
+<tr><td style="text-align: left">Metalworking Technology</td><td style="text-align: right">17</td><td style="text-align: left">1.2%</td></tr>
+<tr><td style="text-align: left">Music and Sound Recording</td><td style="text-align: right">5</td><td style="text-align: left">0.1%</td></tr>
+<tr><td style="text-align: left">Nonmetal Mining</td><td style="text-align: right">13</td><td style="text-align: left">0.2%</td></tr>
+<tr><td style="text-align: left">Oil and Gas Production and Transportation</td><td style="text-align: right">12</td><td style="text-align: left">1.3%</td></tr>
+<tr><td style="text-align: left">Paper and Packaging</td><td style="text-align: right">20</td><td style="text-align: left">0.9%</td></tr>
+<tr><td style="text-align: left">Performing Arts</td><td style="text-align: right">8</td><td style="text-align: left">0.7%</td></tr>
+<tr><td style="text-align: left">Plastics</td><td style="text-align: right">15</td><td style="text-align: left">1.6%</td></tr>
+<tr><td style="text-align: left">Printing Services</td><td style="text-align: right">13</td><td style="text-align: left">1.3%</td></tr>
+<tr><td style="text-align: left">Production Technology and Heavy Machinery</td><td style="text-align: right">41</td><td style="text-align: left">2.3%</td></tr>
+<tr><td style="text-align: left">Recreational and Small Electric Goods</td><td style="text-align: right">15</td><td style="text-align: left">0.5%</td></tr>
+<tr><td style="text-align: left">Textile Manufacturing</td><td style="text-align: right">23</td><td style="text-align: left">0.5%</td></tr>
+<tr><td style="text-align: left">Tobacco</td><td style="text-align: right">3</td><td style="text-align: left">0.0%</td></tr>
+<tr><td style="text-align: left">Trailers, Motor Homes, and Appliances</td><td style="text-align: right">9</td><td style="text-align: left">0.3%</td></tr>
+<tr><td style="text-align: left">Transportation and Logistics</td><td style="text-align: right">17</td><td style="text-align: left">3.8%</td></tr>
+<tr><td style="text-align: left">Upstream Chemical Products</td><td style="text-align: right">12</td><td style="text-align: left">0.4%</td></tr>
+<tr><td style="text-align: left">Upstream Metal Manufacturing</td><td style="text-align: right">26</td><td style="text-align: left">0.9%</td></tr>
+<tr><td style="text-align: left">Video Production and Distribution</td><td style="text-align: right">6</td><td style="text-align: left">0.5%</td></tr>
+<tr><td style="text-align: left">Vulcanized and Fired Materials</td><td style="text-align: right">17</td><td style="text-align: left">0.6%</td></tr>
+<tr><td style="text-align: left">Water Transportation</td><td style="text-align: right">12</td><td style="text-align: left">0.7%</td></tr>
+<tr><td style="text-align: left">Wood Products</td><td style="text-align: right">13</td><td style="text-align: left">0.9%</td></tr>
+</tbody></table>
+</div>
+<p>La clasificación está elaborada para NAICS 2008 a nivel de clase, de manera que se procedió a realizar los encadenamientos necesarios para harmonizar dicha clasificación con la versión más actual de NAICS 2017. Posteriormente se realizó un diccionario de las actividades transables en NAICS 2017 a SCIAN 2018. Por último, se utilizó la reclasificación CIIU Rev 4- SCIAN 2018 para identificar las industrias CIIU Rev 4 para las cuales todas las actividades SCIAN 2018 corresponden a actividades transables. Es decir, filtramos por industrias CIIU para las cuales la suma del empleo de clases SCIAN 2018 correspondiera al 100% del total de empleo. </p>
+<p>La siguiente tabla presenta la correspondencia entre los cluster de actividades transables y las clases de actividad NAICS que los integran. </p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Cluster</th><th style="text-align: left">Clases NAICS 2017</th></tr></thead><tbody>
+<tr><td style="text-align: left">Aerospace</td><td style="text-align: left">334511,336411,336412,336413,336414,336415,336419</td></tr>
+<tr><td style="text-align: left">Agricultural</td><td style="text-align: left">115111,115112,115113,115114,115115,115116,115210,325311,325314</td></tr>
+<tr><td style="text-align: left">Apparel</td><td style="text-align: left">314999,315210,315220,315240,315280,315990</td></tr>
+<tr><td style="text-align: left">Auto</td><td style="text-align: left">331511,331512,331513,331523,331524,331529,332114,336111,336112,336120,336211,336310,336320,336330,336340,336350,336360,336370,336390,336992,336999</td></tr>
+<tr><td style="text-align: left">Biopharma</td><td style="text-align: left">325411,325412,325413,325414</td></tr>
+<tr><td style="text-align: left">Business Svcs</td><td style="text-align: left">485310,485320,485999,518210,532112,533110,541199,541214,541310,541320,541330,541340,541511,541512,541513,541519,541611,541612,541614,541618,541690,541930,541990,551111,551112,551114,561210,561311,561312,561330,561421,561422,561920</td></tr>
+<tr><td style="text-align: left">Coal Mining</td><td style="text-align: left">212111,212112,212113,213113</td></tr>
+<tr><td style="text-align: left">Commcns</td><td style="text-align: left">334210,334220,334290,335912,515210,517312,517410,517919</td></tr>
+<tr><td style="text-align: left">Construction</td><td style="text-align: left">221310,221330,236210,237120,237130,237990,324121,324122,327310,327331,327332,327410,327420,327991,327993,327999,332410,332420,332913,332996</td></tr>
+<tr><td style="text-align: left">Distribution &amp; eCommerce</td><td style="text-align: left">423210,423220,423410,423420,423430,423440,423450,423460,423490,423510,423520,423610,423620,423690,423720,423810,423820,423830,423840,423850,423860,423910,423920,423940,424110,424120,424130,424210,424310,424320,424330,424340,424440,424460,424470,424480,424590,424610,424690,424710,424720,424820,424910,424920,424930,424940,424950,424990,425110,425120,454110,493110,493120,493130,493190,532411,532412,532420,532490,561499,561910</td></tr>
+<tr><td style="text-align: left">Downstream Chemical</td><td style="text-align: left">324191,325130,325510,325520,325611,325612,325613,325620,325920,325991,325992,325998</td></tr>
+<tr><td style="text-align: left">Downstream Metal</td><td style="text-align: left">332215,332216,332311,332312,332321,332323,332431,332439,332510,332992,332993,332994,332999</td></tr>
+<tr><td style="text-align: left">Education</td><td style="text-align: left">541713,541715,541720,611210,611310,611410,611420,611430,611512,611513,611630,611691,611699,611710,813920</td></tr>
+<tr><td style="text-align: left">Electric Power</td><td style="text-align: left">221111,221112,221113,221114,221115,221116,221117,221118,221121</td></tr>
+<tr><td style="text-align: left">Environmental</td><td style="text-align: left">562112,562119,562211,562213,562219,562920,562998</td></tr>
+<tr><td style="text-align: left">Financial Svcs</td><td style="text-align: left">521110,522120,522190,522210,522220,522291,522292,522293,522294,522298,522310,522320,522390,523110,523120,523130,523140,523210,523910,523920,523930,523991,523999,525910,525990,561450</td></tr>
+<tr><td style="text-align: left">Fishing</td><td style="text-align: left">114111,114112,114119,311710</td></tr>
+<tr><td style="text-align: left">Food Processing</td><td style="text-align: left">311111,311119,311211,311212,311213,311221,311224,311225,311230,311313,311314,311340,311351,311352,311411,311412,311421,311422,311423,311511,311512,311513,311514,311520,311813,311821,311824,311830,311911,311919,311920,311930,311941,311942,311991,311999,312111,312112,312113,312120,312130,312140,327213,424510</td></tr>
+<tr><td style="text-align: left">Footwear</td><td style="text-align: left">316110,316210</td></tr>
+<tr><td style="text-align: left">Forestry</td><td style="text-align: left">113110,113210,113310,115310</td></tr>
+<tr><td style="text-align: left">Furniture</td><td style="text-align: left">321991,321999,337110,337121,337122,337124,337125,337127,337211,337214,337215,337910</td></tr>
+<tr><td style="text-align: left">Hospitality &amp; Tourism</td><td style="text-align: left">114210,453920,487110,487210,487990,532284,561510,561520,561591,561599,711211,711212,711219,712110,712120,712130,712190,713110,713120,713210,713290,713920,713930,713990,721110,721120,721191,721199,721211,721214,721310</td></tr>
+<tr><td style="text-align: left">IT &amp; Analytical Instruments</td><td style="text-align: left">333242,333316,334111,334112,334118,334310,334412,334413,334416,334417,334418,334419,334510,334512,334513,334514,334515,334516,334517,334519,334613,334614,511210</td></tr>
+<tr><td style="text-align: left">Insurance</td><td style="text-align: left">524113,524114,524126,524127,524128,524130,524291,524298</td></tr>
+<tr><td style="text-align: left">Jewelry &amp; Precious Metals</td><td style="text-align: left">339910</td></tr>
+<tr><td style="text-align: left">Leather and Related Products</td><td style="text-align: left">314910,316992,316998</td></tr>
+<tr><td style="text-align: left">Lighting &amp; Electrical Equip</td><td style="text-align: left">335110,335121,335122,335129,335311,335312,335313,335314,335911,335921,335929,335931,335932,335991,335999</td></tr>
+<tr><td style="text-align: left">Livestock Processing</td><td style="text-align: left">311611,311612,311613,311615,424520</td></tr>
+<tr><td style="text-align: left">Marketing, Design, &amp; Publishing</td><td style="text-align: left">511120,511130,511140,511199,519110,519120,519130,519190,541410,541420,541430,541490,541613,541810,541820,541830,541840,541850,541860,541870,541890,541910</td></tr>
+<tr><td style="text-align: left">Medical Devices</td><td style="text-align: left">333314,339112,339113,339114,339115</td></tr>
+<tr><td style="text-align: left">Metal Mining</td><td style="text-align: left">212210,212221,212222,212230,212291,212299,213114</td></tr>
+<tr><td style="text-align: left">Metalworking Technology</td><td style="text-align: left">327910,332216,332313,332721,332722,332811,332812,332813,333511,333514,333515,333517,333519,333991,333992</td></tr>
+<tr><td style="text-align: left">Music &amp; Sound Recording</td><td style="text-align: left">512230,512240,512250,512290</td></tr>
+<tr><td style="text-align: left">Nonmetal Mining</td><td style="text-align: left">212311,212312,212313,212319,212321,212322,212324,212325,212391,212392,212393,212399,213115</td></tr>
+<tr><td style="text-align: left">Oil &amp; Gas</td><td style="text-align: left">211120,211130,213111,213112,324110,324199,333132,486110,486210,486910,486990,541360</td></tr>
+<tr><td style="text-align: left">Paper &amp; Packaging</td><td style="text-align: left">322110,322121,322122,322130,322211,322212,322219,322220,322230,322291,322299</td></tr>
+<tr><td style="text-align: left">Performing Arts</td><td style="text-align: left">711110,711120,711130,711190,711310,711320,711410,711510</td></tr>
+<tr><td style="text-align: left">Plastics</td><td style="text-align: left">325211,326111,326112,326113,326121,326122,326130,326140,326150,326160,326191,326199,333249,339994</td></tr>
+<tr><td style="text-align: left">Printing</td><td style="text-align: left">323111,323113,323117,323120,325910,511191</td></tr>
+<tr><td style="text-align: left">Prod Tech &amp; Heavy Machinery</td><td style="text-align: left">332911,332912,332919,332991,332999,333111,333112,333120,333131,333241,333243,333244,333249,333318,333413,333414,333415,333611,333612,333613,333618,333912,333914,333921,333922,333923,333924,333993,333994,333995,333996,333997,333999,336510,339991</td></tr>
+<tr><td style="text-align: left">Recreational &amp; Small Electronic</td><td style="text-align: left">333316,333318,335210,336991,337920,339920,339930,339940,339992,339993,339999</td></tr>
+<tr><td style="text-align: left">Textile Manufacturing</td><td style="text-align: left">313110,313210,313220,313230,313240,313310,313320,314110,314120,314994,315110,315190,325220</td></tr>
+<tr><td style="text-align: left">Tobacco</td><td style="text-align: left">312230</td></tr>
+<tr><td style="text-align: left">Trailers, Motor Homes &amp; Applian</td><td style="text-align: left">335210,335220,336212,336213,336214,339995</td></tr>
+<tr><td style="text-align: left">Transportation &amp; Logistics</td><td style="text-align: left">481111,481112,481211,481212,481219,484121,484230,485210,485510,488111,488119,488190,488210,488490,488510,488991,488999</td></tr>
+<tr><td style="text-align: left">Upstream Chemical Prod</td><td style="text-align: left">325110,325120,325180,325193,325194,325199,325212,325312,325320</td></tr>
+<tr><td style="text-align: left">Upstream Metal Manufacturing</td><td style="text-align: left">331110,331210,331221,331222,331313,331314,331315,331318,331410,331420,331491,331492,332111,332112,332117,332119,332613,332618</td></tr>
+<tr><td style="text-align: left">Video Production &amp; Distribution</td><td style="text-align: left">334614,512110,512120,512132,512191,512199</td></tr>
+<tr><td style="text-align: left">Vulcanized &amp; Fired Materials</td><td style="text-align: left">326211,326212,326220,326291,326299,327110,327120,327211,327212,327215,327992</td></tr>
+<tr><td style="text-align: left">Water Transportation</td><td style="text-align: left">336611,336612,483111,483112,483113,483114,483211,483212,488310,488320,488330,488390</td></tr>
+<tr><td style="text-align: left">Wood Products</td><td style="text-align: left">321113,321114,321211,321212,321213,321214,321219,321911,321912,321918,321920,321992,321999</td></tr>
+</tbody></table>
+</div>
+<p>Cabe señalar que es preciso realizar un filtrado adicional de actividades transables para ajustarlo al contexto particular de la economía Salvadoreña. Es posible que en Estados Unidos las actividades como Marketing puedan ser consideradas transables por su capacidad de ser demandadas por economías del resto del mundo. Sin embargo, dichas capacidades no han sido desarrolladas en economías latinoamericanas. Por ello, se está tomando en cuenta realizar un filtrado adicional para contextualizar las actividades transables al caso de El Salvador. </p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../contenido/datos_empleo.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../contenido/identificacion_extensivo.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../contenido/datos_empleo.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../contenido/identificacion_extensivo.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js"></script>
+        <script src="../editor.js"></script>
+        <script src="../mode-rust.js"></script>
+        <script src="../theme-dawn.js"></script>
+        <script src="../theme-tomorrow_night.js"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
