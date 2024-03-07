@@ -188,6 +188,39 @@ occ_proximity_mat_continua = pd.DataFrame((1 + np.corrcoef(RCA_mat.T)) / 2, colu
 occ_proximity_mat_continua.index = occ_proximity_mat.columns
 occ_proximity_mat_continua = occ_proximity_mat_continua.replace(np.nan, 0.0)
 
+#### IO similarity
+## Cargamos IO
+mip_ciiu = pd.read_csv(os.path.join(MIP_PATH, "mip_ciiu.csv"))
+mip_ciiu.set_index("actividad", inplace = True)
+
+## Obtenemos la matriz de coeficientes técnicos (matriz A)
+# X es el vector de producto total
+X = mip_ciiu.sum(axis = 1).to_numpy()
+
+# Z es la matriz de demanda intermedia 
+Z = mip_ciiu.to_numpy()
+
+# Calculamos la matriz de coeficientes técnicos
+A = Z/X[:,None]
+
+# Lac convertimos en un dataframe
+df_A = pd.DataFrame(A, columns=list(mip_ciiu.index))
+df_A.index = list(mip_ciiu.index)
+df_A = df_A.replace(np.nan, 0.0)
+
+# Nos quedamos con el subset de industrias
+df_A = df_A.loc[datos_slv_mex.variable.unique() ,datos_slv_mex.variable.unique()]
+
+## Input presence similarity (column wise correlation)
+df_A_input_presence_similarity = df_A.corr().replace(np.nan, 0.0)
+# Normalizamos entre 0 y 1 
+df_A_input_presence_similarity = (df_A_input_presence_similarity - np.min(df_A_input_presence_similarity.to_numpy()))/2
+
+## Output presence similarity (row wise correlation)
+df_A_output_presence_similarity = df_A.T.corr().replace(np.nan, 0.0)
+# Normalizamos entre 0 y 1
+df_A_output_presence_similarity = (df_A_output_presence_similarity - np.min(df_A_output_presence_similarity.to_numpy()))/2
+
 ###############################
 acumula_complexity = []
 
@@ -270,30 +303,8 @@ for anio in range(2012, 2023):
     df_density = pd.DataFrame(almacena, columns = ["place", "activity", "density"])
     df_density
 
-    #### IO similarity
-    ## Cargamos IO
-    mip_ciiu = pd.read_csv(os.path.join(MIP_PATH, "mip_ciiu.csv"))
-    mip_ciiu.set_index("actividad", inplace = True)
 
-    ## Obtenemos la matriz de coeficientes técnicos (matriz A)
-    # X es el vector de producto total
-    X = mip_ciiu.sum(axis = 1).to_numpy()
-
-    # Z es la matriz de demanda intermedia 
-    Z = mip_ciiu.to_numpy()
-
-    # Calculamos la matriz de coeficientes técnicos
-    A = Z/X[:,None]
-
-    # Lac convertimos en un dataframe
-    df_A = pd.DataFrame(A, columns=list(mip_ciiu.index))
-    df_A.index = list(mip_ciiu.index)
-    df_A = df_A.replace(np.nan, 0.0)
-
-    # Nos quedamos con el subset de industrias
-    df_A = df_A.loc[proximity_matrix.columns,proximity_matrix.columns]
-
-    ### Input similarity
+    ### Input presence
     almacena = []
     for place in complexity_data.zm.unique():
         for activity in complexity_data.variable.unique():
@@ -306,7 +317,7 @@ for anio in range(2012, 2023):
     df_input_similarity = pd.DataFrame(almacena, columns = ["place", "activity", "input_similarity"])
     df_input_similarity
 
-    ### Output similarity
+    ### Output presence
     almacena = []
     for place in complexity_data.zm.unique():
         for activity in complexity_data.variable.unique():
@@ -318,6 +329,32 @@ for anio in range(2012, 2023):
 
     df_output_similarity = pd.DataFrame(almacena, columns = ["place", "activity", "output_similarity"])
     df_output_similarity
+
+    # Input presence similarity (column wise correlation)
+    almacena = []
+    for place in complexity_data.zm.unique():
+        for activity in complexity_data.variable.unique():
+            almacena.append((place,
+                            activity,
+                            density(place, activity, Mcp, df_A_input_presence_similarity)
+                            ))
+
+
+    df_input_presence_similarity = pd.DataFrame(almacena, columns = ["place", "activity", "input_presence_similarity"])
+    df_input_presence_similarity
+
+    # Output presence similarity (row wise correlation)
+    almacena = []
+    for place in complexity_data.zm.unique():
+        for activity in complexity_data.variable.unique():
+            almacena.append((place,
+                            activity,
+                            density(place, activity, Mcp, df_A_output_presence_similarity)
+                            ))
+
+
+    df_output_presence_similarity = pd.DataFrame(almacena, columns = ["place", "activity", "output_presence_similarity"])
+    df_output_presence_similarity
 
     ### Cooempleo similarity (density con Mcp y matriz de proximidad de coempleo)
     ## Version discreta
@@ -353,6 +390,11 @@ for anio in range(2012, 2023):
     df_density["llave"] = df_density["place"].apply(lambda x : str(x)) + "/" + df_density.activity
     df_input_similarity["llave"] = df_input_similarity["place"].apply(lambda x : str(x)) + "/" + df_input_similarity.activity
     df_output_similarity["llave"] = df_output_similarity["place"].apply(lambda x : str(x)) + "/" + df_output_similarity.activity
+
+    df_input_presence_similarity["llave"] = df_input_presence_similarity["place"].apply(lambda x : str(x)) + "/" + df_input_similarity.activity
+    df_output_presence_similarity["llave"] = df_output_presence_similarity["place"].apply(lambda x : str(x)) + "/" + df_output_presence_similarity.activity
+
+
     df_coempleo_similarity["llave"] = df_coempleo_similarity["place"].apply(lambda x : str(x)) + "/" + df_coempleo_similarity.activity
     df_coempleo_similarity_continua["llave"] = df_coempleo_similarity["place"].apply(lambda x : str(x)) + "/" + df_coempleo_similarity.activity
 
@@ -362,8 +404,10 @@ for anio in range(2012, 2023):
     zm_RCA_completo = zm_RCA_completo.merge(right=df_output_similarity[["llave","output_similarity"]], on = "llave")
     zm_RCA_completo = zm_RCA_completo.merge(right=df_coempleo_similarity[["llave","coempleo_similarity"]], on = "llave")
     zm_RCA_completo = zm_RCA_completo.merge(right=df_coempleo_similarity_continua[["llave","coempleo_similarity_continua"]], on = "llave")
+    zm_RCA_completo = zm_RCA_completo.merge(right=df_input_presence_similarity[["llave","input_presence_similarity"]], on = "llave")
+    zm_RCA_completo = zm_RCA_completo.merge(right=df_output_presence_similarity[["llave","output_presence_similarity"]], on = "llave")
 
-    zm_RCA_completo = zm_RCA_completo[["place", "variable", "rca","diversity", "ubiquity", "mcp", "density", "distance", "output_similarity", "input_similarity", "coempleo_similarity", "coempleo_similarity_continua"]]
+    zm_RCA_completo = zm_RCA_completo[["place", "variable", "rca","diversity", "ubiquity", "mcp", "density", "distance", "output_similarity", "input_similarity", "coempleo_similarity", "coempleo_similarity_continua", "input_presence_similarity", "output_presence_similarity"]]
 
     ## Agregamos etiquetas de nombres de actividades y zm
     zm_RCA_completo["zm_nombre"] = zm_RCA_completo["place"].replace({str(i):j for i,j in zm_mex_nombres_zm_cw.items()})
@@ -396,6 +440,13 @@ data_complexity = data_complexity.sort_values(by=["anio", "variable", "place"]).
 
 ### Agregamos distancia a nuestros datos del paquete ecomplexity
 cdata_datos_empleo_todo["distance"] = data_complexity["distance"]
+cdata_datos_empleo_todo["input_similarity"] = data_complexity["input_similarity"]
+cdata_datos_empleo_todo["output_similarity"] = data_complexity["output_similarity"]
+cdata_datos_empleo_todo["coempleo_similarity_discreta"] = data_complexity["coempleo_similarity"]
+cdata_datos_empleo_todo["coempleo_similarity_continua"] = data_complexity["coempleo_similarity_continua"]
+cdata_datos_empleo_todo["input_presence_similarity"] = data_complexity["input_presence_similarity"]
+cdata_datos_empleo_todo["output_presence_similarity"] = data_complexity["output_presence_similarity"]
+
 cdata_datos_empleo_todo.to_csv("complexity_todo_metricas.csv", index=False)
 
 #### Matriz de proximidad
@@ -497,8 +548,8 @@ import numpy as np
 
 data_complexity = data_complexity.rename(columns={"place":"zm"})
 
-df_complexity_short = data_complexity[["zm", "variable", "anio", "density", "rca", "output_similarity", "input_similarity", "coempleo_similarity", "coempleo_similarity_continua"]]\
-                                    .pivot(index = ["zm", "variable"], columns=["anio"], values = ["density", "rca", "output_similarity", "input_similarity", "coempleo_similarity", "coempleo_similarity_continua"])\
+df_complexity_short = data_complexity[["zm", "variable", "anio", "density", "rca", "output_similarity", "input_similarity", "coempleo_similarity", "coempleo_similarity_continua", "input_presence_similarity", "output_presence_similarity"]]\
+                                    .pivot(index = ["zm", "variable"], columns=["anio"], values = ["density", "rca", "output_similarity", "input_similarity", "coempleo_similarity", "coempleo_similarity_continua", "input_presence_similarity", "output_presence_similarity"])\
                                     .reset_index()
 
 df_complexity_short.columns = ["edo", "actividad"] + [f"{i}_{j}" for i,j in df_complexity_short.columns[2:]]
@@ -506,28 +557,54 @@ df_complexity_short.columns = ["edo", "actividad"] + [f"{i}_{j}" for i,j in df_c
 anio_inicio = "2015"
 anio_final = "2020"
 
+### growth_rca
 df_complexity_short["growth_rca_log"] = np.log(df_complexity_short[f"rca_{anio_final}"]/df_complexity_short[f"rca_{anio_inicio}"])
 df_complexity_short["growth_rca_arcsinh"] = np.arcsinh(df_complexity_short[f"rca_{anio_final}"]/df_complexity_short[f"rca_{anio_inicio}"])
+
+### diff_rca
 df_complexity_short["diff_rca_log"] = np.log(df_complexity_short[f"rca_{anio_final}"] - df_complexity_short[f"rca_{anio_inicio}"]) 
 df_complexity_short["diff_rca_arcsinh"] = np.arcsinh(df_complexity_short[f"rca_{anio_final}"] - df_complexity_short[f"rca_{anio_inicio}"])
+
+### Apariciones
 df_complexity_short["apariciones"] = 0
 df_complexity_short.loc[(df_complexity_short[f"rca_{anio_final}"]>0.2) & (df_complexity_short[f"rca_{anio_inicio}"]<0.05) , "apariciones"] = 1
+
+### Desapariciones
 df_complexity_short["desapariciones"] = 0
 df_complexity_short.loc[(df_complexity_short[f"rca_{anio_final}"]<0.05) & (df_complexity_short[f"rca_{anio_inicio}"]>0.2) , "desapariciones"] = 1
+
+### Density
 df_complexity_short["log_density"] = np.log(df_complexity_short[f"density_{anio_inicio}"])
 df_complexity_short["arcsinh_density"] = np.arcsinh(df_complexity_short[f"density_{anio_inicio}"])
+
+### RCA
 df_complexity_short["log_rca"] = np.log(df_complexity_short[f"rca_{anio_inicio}"])
 df_complexity_short["arcsinh_rca"] = np.arcsinh(df_complexity_short[f"rca_{anio_inicio}"])
+
+### Output presence
 df_complexity_short["log_output_presence"] = np.log(df_complexity_short[f"output_similarity_{anio_inicio}"])
 df_complexity_short["arcsinh_output_presence"] = np.arcsinh(df_complexity_short[f"output_similarity_{anio_inicio}"])
+
+### Input presence
 df_complexity_short["log_input_presence"] = np.log(df_complexity_short[f"input_similarity_{anio_inicio}"])
 df_complexity_short["arcsinh_input_presence"] = np.arcsinh(df_complexity_short[f"input_similarity_{anio_inicio}"])
 
+### Cooempleo presence (discreta)
 df_complexity_short["log_coempleo_presence"] = np.log(df_complexity_short[f"coempleo_similarity_{anio_inicio}"])
 df_complexity_short["arcsinh_coempleo_presence"] = np.arcsinh(df_complexity_short[f"coempleo_similarity_{anio_inicio}"])
 
+### Cooempleo presence (continua)
 df_complexity_short["log_coempleo_presence_continua"] = np.log(df_complexity_short[f"coempleo_similarity_continua_{anio_inicio}"])
 df_complexity_short["arcsinh_coempleo_presence_continua"] = np.arcsinh(df_complexity_short[f"coempleo_similarity_continua_{anio_inicio}"])
+
+### Output presence similarity
+df_complexity_short["log_output_presence_similarity"] = np.log(df_complexity_short[f"output_presence_similarity_{anio_inicio}"])
+df_complexity_short["arcsinh_output_presence_similarity"] = np.arcsinh(df_complexity_short[f"output_presence_similarity_{anio_inicio}"])
+
+### Input presence similarity
+df_complexity_short["log_input_presence_similarity"] = np.log(df_complexity_short[f"input_presence_similarity_{anio_inicio}"])
+df_complexity_short["arcsinh_input_presence_similarity"] = np.arcsinh(df_complexity_short[f"input_presence_similarity_{anio_inicio}"])
+
 
 df_complexity_short.to_csv("regresiones_crecimiento.csv", index = False)
 
