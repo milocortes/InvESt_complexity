@@ -455,6 +455,7 @@ proximidad = proximidad.query("anio==2021")[["variable_1", "variable_2", "proxim
 proximidad.proximity = proximidad.proximity.replace(np.nan, 1.0)
 
 
+"""
 import networkx as nx 
 import matplotlib.pyplot as plt
 from py2cytoscape import util as cy 
@@ -536,6 +537,7 @@ new_style_name = res.json()['title']
 
 # Apply it to current netwrok
 requests.get(BASE + 'apply/styles/' + new_style_name + '/' + str(new_suid))
+"""
 
 ######## NOS OLVIDAMOS TANTITO Y HACEMOS REGRESIONES
 import numpy as np
@@ -605,6 +607,10 @@ df_complexity_short["arcsinh_output_presence_similarity"] = np.arcsinh(df_comple
 df_complexity_short["log_input_presence_similarity"] = np.log(df_complexity_short[f"input_presence_similarity_{anio_inicio}"])
 df_complexity_short["arcsinh_input_presence_similarity"] = np.arcsinh(df_complexity_short[f"input_presence_similarity_{anio_inicio}"])
 
+df_complexity_short = df_complexity_short.replace(np.infty, np.nan)
+df_complexity_short = df_complexity_short.replace(np.inf, np.nan)
+
+df_complexity_short = df_complexity_short.rename(columns = {"edo":"zm"})
 
 df_complexity_short.to_csv("regresiones_crecimiento.csv", index = False)
 
