@@ -150,6 +150,8 @@ ciiu_occ_empleo_total_long.columns = ["occ_code", "ciiu", "coempleo"]
 ciiu_occ_empleo_total_long["anio"] = 2017
 ciiu_occ_empleo_total_long = ciiu_occ_empleo_total_long[["anio"]+["occ_code", "ciiu", "coempleo"]]
 
+ciiu_occ_empleo_total_long["ciiu"] = ciiu_occ_empleo_total_long["ciiu"].apply(lambda x : str(x))
+
 ## Guardamos los datos
 ciiu_occ_empleo_total_long.to_csv(os.path.join(OUTPUT_PATH, "usa_ciiu_occ_empleo.csv"), index = False)
 
