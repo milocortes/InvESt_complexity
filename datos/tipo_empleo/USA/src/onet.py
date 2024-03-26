@@ -73,6 +73,6 @@ def reescala(medida : pd.Series, t_max : float, t_min : float) -> pd.Series:
 
 df_ciiu_onet_metrica["r_onet_metrica"] = reescala(df_ciiu_onet_metrica["onet_metrica"], 10.0, 0.0)
 
-df_ciiu_onet_metrica[["ciiu", "ciiu_nombre", "onet_metrica", "r_onet_metrica"]].sort_values(by="r_onet_metrica", ascending=False).to_csv("df_ciiu_onet_metrica.csv", index = False)
+df_ciiu_onet_metrica[["ciiu", "ciiu_nombre", "onet_metrica", "r_onet_metrica"]].sort_values(by="r_onet_metrica", ascending=False).to_csv(os.path.join(OUTPUT_PATH, "df_ciiu_onet_metrica.csv"), index = False)
 
 
