@@ -39,6 +39,14 @@ skills = skills.merge(right=escalas, how = "left", on = "Scale ID")
 abilities = abilities.merge(right=escalas, how = "left", on = "Scale ID")
 knowledge = knowledge.merge(right=escalas, how = "left", on = "Scale ID")
 
+### Agregamos información del nombre de los identificadores 
+onet_taxonomia = pd.read_html("https://www.onetcenter.org/taxonomy/2019/list.html")[0]
+onet_taxonomia = onet_taxonomia.rename(columns = {"O*NET-SOC 2019 Code" : "O*NET-SOC Code"})
+
+skills = skills.merge(right=onet_taxonomia, how="inner", on="O*NET-SOC Code")
+abilities = abilities.merge(right=onet_taxonomia, how="inner", on="O*NET-SOC Code")
+knowledge = knowledge.merge(right=onet_taxonomia, how="inner", on="O*NET-SOC Code")
+
 ### Agregamos las categorías de O*NET-SOC Code
 skills["O*NET-SOC Code"] = skills["O*NET-SOC Code"].apply(lambda x : str(x).split(".")[0])
 abilities["O*NET-SOC Code"] = abilities["O*NET-SOC Code"].apply(lambda x : str(x).split(".")[0])
@@ -47,6 +55,7 @@ knowledge["O*NET-SOC Code"] = knowledge["O*NET-SOC Code"].apply(lambda x : str(x
 skills = skills[skills.duplicated(subset=['O*NET-SOC Code'], keep='last')]
 abilities = abilities[abilities.duplicated(subset=['O*NET-SOC Code'], keep='last')]
 knowledge = knowledge[knowledge.duplicated(subset=['O*NET-SOC Code'], keep='last')]
+
 
 ### Agregamos información correspondiente al empleo por actividad ciiu y tipo de ocupación
 occ_ciiu_completo = occ_ciiu.merge(right=skills, how="inner", left_on="occ_code", right_on="O*NET-SOC Code")
