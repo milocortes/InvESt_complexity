@@ -9,6 +9,8 @@ DATA_PATH = os.path.abspath(os.path.join(PATH_FILE, "..", "output"))
 OUTPUT_PATH = os.path.abspath(os.path.join(PATH_FILE, "..", "output"))
 ONET_DATA_PATH = os.path.abspath(os.path.join(PATH_FILE, "..", "datos", "onet", "db_28_2_text"))
 
+OUTPUT_EDUCACION_PATH =  os.path.join(OUTPUT_PATH, "iniciativa_educacion")
+
 # Cargamos ciiu occ
 occ_ciiu = pd.read_csv(os.path.join(DATA_PATH, "usa_ciiu_occ_empleo.csv"), low_memory=False)
 occ_ciiu = occ_ciiu.merge(right = occ_ciiu[["ciiu", "coempleo"]].groupby("ciiu").sum().reset_index().rename(columns = {"coempleo":"ciiu_empleo_total"}), how="left", on="ciiu")
@@ -58,5 +60,55 @@ knowledge = knowledge[knowledge.duplicated(subset=['O*NET-SOC Code'], keep='last
 
 
 ### Agregamos información correspondiente al empleo por actividad ciiu y tipo de ocupación
-occ_ciiu_completo = occ_ciiu.merge(right=skills, how="inner", left_on="occ_code", right_on="O*NET-SOC Code")
-occ_ciiu_completo["coempleo_share"] = (occ_ciiu_completo["coempleo"]/occ_ciiu_completo["ciiu_empleo_total"]).replace(np.nan, 0.0)
+skills_completo = occ_ciiu.merge(right=skills[["O*NET-SOC Code", "Element ID", "Scale ID", "Data Value"]], how="inner", left_on="occ_code", right_on="O*NET-SOC Code")
+skills_completo = skills_completo.drop(columns=["O*NET-SOC Code"])
+skills_completo.to_csv(os.path.join(OUTPUT_EDUCACION_PATH, "onet_ciiu_skills.csv"), index=False)
+
+del skills_completo
+
+abilities_completo = occ_ciiu.merge(right=abilities[["O*NET-SOC Code", "Element ID", "Scale ID", "Data Value"]], how="inner", left_on="occ_code", right_on="O*NET-SOC Code")
+abilities_completo = abilities_completo.drop(columns=["O*NET-SOC Code"])
+abilities_completo.to_csv(os.path.join(OUTPUT_EDUCACION_PATH, "onet_ciiu_abilities.csv"), index=False)
+
+del abilities_completo
+
+knowledge_completo = occ_ciiu.merge(right=knowledge[["O*NET-SOC Code", "Element ID", "Scale ID", "Data Value"]], how="inner", left_on="occ_code", right_on="O*NET-SOC Code")
+knowledge_completo = knowledge_completo.drop(columns=["O*NET-SOC Code"])
+knowledge_completo.to_csv(os.path.join(OUTPUT_EDUCACION_PATH, "onet_ciiu_knowledge.csv"), index=False)
+
+del knowledge_completo
+
+### Guardamos catálogos de escalas, de elementos y la taxonomía
+elementos = pd.read_table("https://www.onetcenter.org/dl_files/database/db_28_2_text/Content%20Model%20Reference.txt")
+elementos.to_csv(os.path.join(OUTPUT_EDUCACION_PATH, "catalogo_onet_element_model.csv"), index=False)
+
+escalas.to_csv(os.path.join(OUTPUT_EDUCACION_PATH, "catalogo_onet_scale_model.csv"), index=False)
+onet_taxonomia.to_csv(os.path.join(OUTPUT_EDUCACION_PATH, "catalogo_onet_taxonomia.csv"), index=False)
+
+#### Cargamos diccionario de actividades ciiu-scian-naics
+ciiu_scian = pd.read_html("https://milocortes.github.io/InvESt_complexity/contenido/datos_empleo.html")[0]
+
+def rompe_chunks(cadena : str, chunk : int):
+
+    index_init = 0
+    index_fin = chunk
+
+    size = len(cadena)//chunk
+    
+    acumula = []
+
+    for i in range(size):
+        acumula.append(
+            cadena[index_init:index_fin]
+        )
+
+        index_init = index_fin
+        index_fin += chunk
+
+    return ",".join(acumula)
+
+ciiu_scian["Actividades CIIU agrupadas"] = ciiu_scian["Actividades CIIU agrupadas"].apply(lambda x : rompe_chunks(str(x),4))
+ciiu_scian["NAICS 2017"] = ciiu_scian["NAICS 2017"].apply(lambda x : rompe_chunks(str(x),6))
+ciiu_scian["SCIAN 2018"] = ciiu_scian["SCIAN 2018"].apply(lambda x : rompe_chunks(str(x),6))
+
+ciiu_scian.to_csv(os.path.join(OUTPUT_EDUCACION_PATH, "catalogo_ciiu_scian_naics.csv"), index=False)

@@ -1,0 +1,31 @@
+El archivo comprimido integra tres archivos csv que contienen información de empleo por ocupación e industria, 
+así cómo también información de Knowledge, Skills y Abilities asociado con cada ocupación para El Salvador.
+
+Los archivos csv son:
+
+* onet_ciiu_skills.csv
+* onet_ciiu_abilities.csv
+* onet_ciiu_knowledge.csv
+
+Los datos están organizados de acuerdo a los siguientes campos:
+
+* anio : Año de registro de la información
+* occ_code : Código O*NET-SOC  
+* ciiu : Código CIIU-Recodificado-Rev 4
+* empleo  : Empleo de la actividad CIIU para la ocupación específica
+* ciiu_empleo_total : Empleo total de la actividad CIIU
+* Element ID : Content Model Element Name 
+* Scale ID  : Scale ID (see Scales Reference)
+* Data Value : Rating associated with the O*NET-SOC occupation
+
+Se agregan tres catálogos que contienen información adicional de los identificadores ciiu, occ_code, Element ID y Scale ID.
+Los catálogos son los siguientes:
+
+* catalogo_ciiu_scian_naics.csv
+* catalogo_onet_element_model.csv
+* catalogo_onet_scale_model.csv
+* catalogo_onet_taxonomia.csv
+
+
+La documentación de los datos de O*NET se presenta en el siguiente sitio:
+https://milocortes.github.io/InvESt_complexity/contenido/identificacion_extensivo.html
