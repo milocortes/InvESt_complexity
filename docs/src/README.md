@@ -9,3 +9,5 @@ El materíal está organizado de la siguiente manera:
 * Uso de datos de empleo en el margen extensivo
 * Industrias transables
 * Proceso de identificación de industrias clave
+* Cálculo de Factores de Viabilidad
+* Regresiones para Crecimiento del RCA, Apariciones y Desapariciones
