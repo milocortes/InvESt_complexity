@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introducción</a></li><li class="chapter-item expanded affix "><li class="part-title">Contenido</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Medidas de Complejidad</div></li><li class="chapter-item expanded "><a href="contenido/datos_empleo.html"><strong aria-hidden="true">2.</strong> Uso de datos de empleo en el margen extensivo</a></li><li class="chapter-item expanded "><a href="contenido/transables.html"><strong aria-hidden="true">3.</strong> Industrias transables</a></li><li class="chapter-item expanded "><a href="contenido/identificacion_extensivo.html"><strong aria-hidden="true">4.</strong> Proceso de identificación de industrias clave</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introducción</a></li><li class="chapter-item expanded affix "><li class="part-title">Contenido</li><li class="chapter-item expanded "><a href="contenido/datos_empleo.html"><strong aria-hidden="true">1.</strong> Uso de datos de empleo en el margen extensivo</a></li><li class="chapter-item expanded "><a href="contenido/transables.html"><strong aria-hidden="true">2.</strong> Industrias transables</a></li><li class="chapter-item expanded "><a href="contenido/identificacion_extensivo.html"><strong aria-hidden="true">3.</strong> Proceso de identificación de industrias clave</a></li><li class="chapter-item expanded "><a href="contenido/onet.html"><strong aria-hidden="true">4.</strong> Datos de Educación, Knowledge, Skills y Abilities de O*NET </a></li><li class="chapter-item expanded "><a href="contenido/viabilidad.html"><strong aria-hidden="true">5.</strong> Cálculo de Factores de Viabilidad</a></li><li class="chapter-item expanded "><a href="contenido/regresiones.html"><strong aria-hidden="true">6.</strong> Regresiones para Crecimiento del RCA, Apariciones y Desapariciones</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -185,6 +185,8 @@
 <li>Uso de datos de empleo en el margen extensivo</li>
 <li>Industrias transables</li>
 <li>Proceso de identificación de industrias clave</li>
+<li>Cálculo de Factores de Viabilidad</li>
+<li>Regresiones para Crecimiento del RCA, Apariciones y Desapariciones</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="uso-de-datos-de-empleo-en-el-margen-extensivo"><a class="header" href="#uso-de-datos-de-empleo-en-el-margen-extensivo">Uso de datos de empleo en el margen extensivo</a></h1>
 <p>Los datos de comercio internacional que se utilizan para el análisis del margen intensivo carecen de registros correspondientes a actividades de servicios. Dada la importancia del sector servicios en las economías, para el análisis del margen extensivo (esto es, identificación de industrias con una capacidad promisoria de desarrollo) se utilizaron datos de empleo de México y El Salvador para realizar el análisis de complejidad al comparar Zonas Metropolitanas de México con El Salvador.</p>
@@ -822,7 +824,856 @@
 <tr><td style="text-align: left">5510</td><td style="text-align: left">Actividades de alojamiento para estancias cortas (hoteles con otros servicios integrados)</td><td style="text-align: right">0.4956</td></tr>
 <tr><td style="text-align: left">06-X01</td><td style="text-align: left">Extracción de gas natural (extracción de gas natural asociado)/-/Extracción de petróleo crudo (extracción de petróleo crudo asociado)</td><td style="text-align: right">0.0102</td></tr>
 </tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="datos-de-educación-knowledge-skills-y-abilities-de-onet"><a class="header" href="#datos-de-educación-knowledge-skills-y-abilities-de-onet">Datos de Educación, Knowledge, Skills y Abilities de O*NET</a></h1>
+<p><a href="https://www.onetcenter.org/overview.html">O*NET</a> (Occupational Information Network) ofrece información sobre tipos de ocupación para USA. O*NET se desarrolla bajo el patrocinio de la U.S. Department of Labor/Employment and Training Administration (USDOL/ETA).</p>
+<p>Cada ocupación necesita una combinación diferente de conocimientos(knowledge) y habilidades (skills-abilities) para llevar acabo distintas actividades y tareas.</p>
+<p>O*NET define una <a href="https://www.onetcenter.org/taxonomy.html">taxonomía</a> para el conjunto de ocupaciones, la cual está basada en <a href="https://www.onetcenter.org/taxonomy.html">Standard Occupational Classification</a>(SOC). La actual taxonomía incluye 923 ocupaciones, las cuales se actualizan periodicamente. La más reciente revisión es la correspondiente a <a href="https://www.onetcenter.org/taxonomy/2019/list.html">2019</a>. la cual se organiza en la siguiente clasificación:</p>
+<p><img src="contenido/images/onet_taxonomia.png" alt="Redes" /></p>
+<h2 id="onet-282-database"><a class="header" href="#onet-282-database">O*NET 28.2 Database</a></h2>
+<p>La base de datos de O*NET contiene una variedad de variables que describen las características del trabajo y trabajadores, incluyendo requerimientos de habilidades, nivel educativo, experiencia, conocimientos, etc.</p>
+<h2 id="onet-model-content"><a class="header" href="#onet-model-content">O*NET <em>Model Content</em></a></h2>
+<p>El <em>Model Content</em> proporciona el marco que identifica los más importantes tipos de información acerca del trabajo, y los integra a un marco teórico y empírico. </p>
+<p>El <em>Model Content</em> se desarrolló utilizando investigaciones sobre análisis de puestos y organizaciones. Incorpora una visión que refleja el carácter de las ocupaciones (a través de descriptores orientados al trabajo) y de las personas (a través de descriptores orientados al trabajador).</p>
+<p>El <em>Model Content</em> también permite que la información ocupacional se aplique en todos los trabajos, sectores o industrias (descriptores interocupacionales) y dentro de las ocupaciones (descriptores ocupacionales específicos). Estos descriptores están organizados en seis dominios principales, que permiten al usuario centrarse en áreas de información que especifican los atributos y características clave de los trabajadores y ocupaciones.</p>
+<p><img src="contenido/images/model_content.png" alt="Redes" /></p>
+<h3 id="worker-characteristics"><a class="header" href="#worker-characteristics">Worker Characteristics</a></h3>
+<p>Características duraderas que pueden influir tanto en el desempeño como en la capacidad de adquirir conocimientos y habilidades necesarios para un desempeño laboral eficaz.</p>
+<ul>
+<li>Abilities : Atributos duraderos del individuo que influyen en el desempeño.</li>
+</ul>
+<h3 id="worker-requirements"><a class="header" href="#worker-requirements">Worker Requirements</a></h3>
+<p>Descriptores que se refieren a atributos relacionados con el trabajo adquiridos y/o desarrollados a través de la experiencia y la educación.</p>
+<ul>
+<li>Skills : Capacidades desarrolladas que facilitan el aprendizaje o la adquisición más rápida de conocimientos.</li>
+<li>Knowledge : Conjuntos organizados de principios y hechos que se aplican en dominios generales.</li>
+<li>Education : Experiencia educativa previa requerida para desempeñarse en un puesto de trabajo.</li>
+</ul>
+<h3 id="knowledge-skills-abilities"><a class="header" href="#knowledge-skills-abilities">Knowledge, Skills, Abilities</a></h3>
+<p>Los datos presentan información de Knowledge, Skills y Abilities asociado con cada ocupación O*NET. La información está organizada de acuerdo a los siguientes campos:</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Column</th><th style="text-align: left">Column Content</th></tr></thead><tbody>
+<tr><td style="text-align: left">O*NET-SOC Code</td><td style="text-align: left">O*NET-SOC Code (see Occupation Data)</td></tr>
+<tr><td style="text-align: left">Title</td><td style="text-align: left">O*NET-SOC Title (see Occupation Data)</td></tr>
+<tr><td style="text-align: left">Element ID</td><td style="text-align: left">Content Model Outline Position (see Content Model Reference)</td></tr>
+<tr><td style="text-align: left">Element Name</td><td style="text-align: left">Content Model Element Name (see Content Model Reference)</td></tr>
+<tr><td style="text-align: left">Scale ID</td><td style="text-align: left">Scale ID (see Scales Reference)</td></tr>
+<tr><td style="text-align: left">Scale Name</td><td style="text-align: left">Scale Name (see Scales Reference)</td></tr>
+<tr><td style="text-align: left">Data Value</td><td style="text-align: left">Rating associated with the O*NET-SOC occupation</td></tr>
+<tr><td style="text-align: left">N</td><td style="text-align: left">Sample size</td></tr>
+<tr><td style="text-align: left">Standard Error</td><td style="text-align: left">Standard Error</td></tr>
+<tr><td style="text-align: left">Lower CI Bound</td><td style="text-align: left">Lower 95% confidence interval bound</td></tr>
+<tr><td style="text-align: left">Upper CI Bound</td><td style="text-align: left">Upper 95% confidence interval bound</td></tr>
+<tr><td style="text-align: left">Recommend Suppress</td><td style="text-align: left">Low precision indicator (Y=yes, N=no)</td></tr>
+<tr><td style="text-align: left">Not Relevant</td><td style="text-align: left">Not relevant for the occupation (Y=yes, N=no)</td></tr>
+<tr><td style="text-align: left">Date</td><td style="text-align: left">Date when data was updated</td></tr>
+<tr><td style="text-align: left">Domain Source</td><td style="text-align: left">Source of the data</td></tr>
+</tbody></table>
 </div>
+<p>Un ejemplo de Element ID, Element Name para Knowledge y Skills así como su descripción es el siguiente:</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Element ID</th><th style="text-align: left">Element Name</th><th style="text-align: left">Description</th></tr></thead><tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left">Worker Characteristics</td><td style="text-align: left">Worker Characteristics</td></tr>
+<tr><td style="text-align: left">1.A</td><td style="text-align: left">Abilities</td><td style="text-align: left">Enduring attributes of the individual that influence performance</td></tr>
+<tr><td style="text-align: left">1.A.1</td><td style="text-align: left">Cognitive Abilities</td><td style="text-align: left">Abilities that influence the acquisition and application of knowledge in problem solving</td></tr>
+<tr><td style="text-align: left">1.A.1.a</td><td style="text-align: left">Verbal Abilities</td><td style="text-align: left">Abilities that influence the acquisition and application of verbal information in problem solving</td></tr>
+<tr><td style="text-align: left">1.A.1.a.1</td><td style="text-align: left">Oral Comprehension</td><td style="text-align: left">The ability to listen to and understand information and ideas presented through spoken words and sentences.</td></tr>
+</tbody></table>
+</div>
+<p>El listado completo puede descargarse de la siguiente <a href="https://www.onetcenter.org/dl_files/database/db_28_2_text/Content%20Model%20Reference.txt">liga</a></p>
+<p>Los campos Scale ID y Scale Name representan categorias de escalas de ordenamiento las cuales tienen las siguientes etiquetas así como sus los valores mínimos y máximos:</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Scale ID</th><th style="text-align: left">Scale Name</th><th style="text-align: right">Minimum</th><th style="text-align: right">Maximum</th></tr></thead><tbody>
+<tr><td style="text-align: left">CT</td><td style="text-align: left">Context</td><td style="text-align: right">1</td><td style="text-align: right">3</td></tr>
+<tr><td style="text-align: left">CTP</td><td style="text-align: left">Context (Categories 1-3)</td><td style="text-align: right">0</td><td style="text-align: right">100</td></tr>
+<tr><td style="text-align: left">CX</td><td style="text-align: left">Context</td><td style="text-align: right">1</td><td style="text-align: right">5</td></tr>
+<tr><td style="text-align: left">CXP</td><td style="text-align: left">Context (Categories 1-5)</td><td style="text-align: right">0</td><td style="text-align: right">100</td></tr>
+<tr><td style="text-align: left">IM</td><td style="text-align: left">Importance</td><td style="text-align: right">1</td><td style="text-align: right">5</td></tr>
+<tr><td style="text-align: left">LV</td><td style="text-align: left">Level</td><td style="text-align: right">0</td><td style="text-align: right">7</td></tr>
+<tr><td style="text-align: left">OJ</td><td style="text-align: left">On-The-Job Training (Categories 1-9)</td><td style="text-align: right">0</td><td style="text-align: right">100</td></tr>
+<tr><td style="text-align: left">PT</td><td style="text-align: left">On-Site Or In-Plant Training (Categories 1-9)</td><td style="text-align: right">0</td><td style="text-align: right">100</td></tr>
+<tr><td style="text-align: left">RL</td><td style="text-align: left">Required Level Of Education (Categories 1-12)</td><td style="text-align: right">0</td><td style="text-align: right">100</td></tr>
+<tr><td style="text-align: left">RW</td><td style="text-align: left">Related Work Experience (Categories 1-11)</td><td style="text-align: right">0</td><td style="text-align: right">100</td></tr>
+</tbody></table>
+</div>
+<p>El listado completo puede descargarse de la siguiente <a href="https://www.onetcenter.org/dl_files/database/db_28_2_text/Scales%20Reference.txt">liga</a></p>
+<p>Los campos Data Value, N, Standard Error, Lower CI Bound, Upper CI Bound, Recommend Suppress y Not Relevant corresponden a estadísticas de nivel de calificación, así como errores estándar e indicadores de datos para ayudar a proporcionar una descripción de la calidad de los valores de los datos.</p>
+<p>La descripción completa de estos campos se encuentran en la siguiente <a href="https://www.onetcenter.org/dictionary/28.2/excel/appendix_incumbent.html">liga</a></p>
+<h3 id="education-training-and-experience"><a class="header" href="#education-training-and-experience">Education, Training, and Experience</a></h3>
+<p>Los datos contienen la frecuencia porcentual de educación, capacitación y experiencia, asociada con las categorías de ocupación.</p>
+<p>Para el caso específico de Educación, los datos presentan información del porcentaje de trabajadores que cuentan con algún grado de educación para cada categoría de ocupación de la taxonomía de O*NET. Por ejemplo, para la categoría 11-1011.00 Chief Executives, se tiene la siguiente información:</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">O*NET-SOC Code</th><th style="text-align: left">Category</th><th style="text-align: right">Data Value</th></tr></thead><tbody>
+<tr><td style="text-align: left">11-1011.00</td><td style="text-align: left">Less than a High School Diploma</td><td style="text-align: right">0</td></tr>
+<tr><td style="text-align: left">11-1011.00</td><td style="text-align: left">High School Diploma - or the equivalent (for example, GED)</td><td style="text-align: right">4.46</td></tr>
+<tr><td style="text-align: left">11-1011.00</td><td style="text-align: left">Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production)</td><td style="text-align: right">0</td></tr>
+<tr><td style="text-align: left">11-1011.00</td><td style="text-align: left">Some College Courses</td><td style="text-align: right">0</td></tr>
+<tr><td style="text-align: left">11-1011.00</td><td style="text-align: left">Associate's Degree (or other 2-year degree)</td><td style="text-align: right">5.15</td></tr>
+<tr><td style="text-align: left">11-1011.00</td><td style="text-align: left">Bachelor's Degree</td><td style="text-align: right">32.29</td></tr>
+<tr><td style="text-align: left">11-1011.00</td><td style="text-align: left">Post-Baccalaureate Certificate - awarded for completion of an organized program of study; designed for people who have completed a Baccalaureate degree but do not meet the requirements of academic degrees carrying the title of Master.</td><td style="text-align: right">0</td></tr>
+<tr><td style="text-align: left">11-1011.00</td><td style="text-align: left">Master's Degree</td><td style="text-align: right">45.91</td></tr>
+<tr><td style="text-align: left">11-1011.00</td><td style="text-align: left">Post-Master's Certificate - awarded for completion of an organized program of study; designed for people who have completed a Master's degree but do not meet the requirements of academic degrees at the doctoral level.</td><td style="text-align: right">3.94</td></tr>
+<tr><td style="text-align: left">11-1011.00</td><td style="text-align: left">First Professional Degree - awarded for completion of a program that: requires at least 2 years of college work before entrance into the program, includes a total of at least 6 academic years of work to complete, and provides all remaining academic requirements to begin practice in a profession.</td><td style="text-align: right">0.55</td></tr>
+<tr><td style="text-align: left">11-1011.00</td><td style="text-align: left">Doctoral Degree</td><td style="text-align: right">4.92</td></tr>
+<tr><td style="text-align: left">11-1011.00</td><td style="text-align: left">Post-Doctoral Training</td><td style="text-align: right">2.78</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="cálculo-de-factores-de-viabilidad"><a class="header" href="#cálculo-de-factores-de-viabilidad">Cálculo de Factores de Viabilidad</a></h1>
+<h2 id="relación-directa-de-insumosinput_similarity"><a class="header" href="#relación-directa-de-insumosinput_similarity">Relación Directa de Insumos/<code>input_similarity</code></a></h2>
+<p>La métrica expresa la presencia de actividades que producen insumos necesarios para las industrias. Es decir, trata de responder a la pregunta ¿están presentes las actividades que a las cuales las actividades les compran insumos?. Para la construcción de esta métrica se utilizó la <a href="https://www.inegi.org.mx/temas/mip/#informacion_general">Matriz de Insumo Producto para México</a> de 2018 en precios constantes y la matriz de presencia-ausencia para las actividades CIIU-Recodificado-Rev-4 estimada en el ejercicio de Complejidad (o matriz \( M_{u,a} \), donde los subíndices \( u\) y \(a\) corresponden a una unidad geográfica-zona metropolitana- y actividad, respectivamente). La Matriz Insumo Producto fue traducida de SCIAN 2018 a CIIU-Recodificado-Rev-4. </p>
+<p>Para el cálculo de la metrica se utilizó la matriz de coeficientes técnicos , \(A\), de la Matriz Insumo Producto. Siendo \(Z\) la matriz de flujo entre sectores y \(X\) es el vector de producto total, la matriz de coeficientes técnicos se calcularía como:</p>
+<p>\[
+A= Z \cdot (X \cdot I)^{-1}
+\]</p>
+<p>Las entradas de la matriz \(A\) definen los coeficientes técnicos como la proporción de insumo ofrecido por el sector \(i\) y comprado por el sector \(j\) con respecto al producto total del sector \(j\), \(a_{ij}= \dfrac{z_{ij}}{x_j}\).</p>
+<p>La presencia entre insumos utilizados por las actividades se calcularía como una medida de densidad donde la matriz de proximidad entre industrias, \(\phi_{a,a'}\), se sustituye por la matriz de coeficientes técnicos:</p>
+<p>\[
+\begin{equation}
+\dfrac{ \sum_{a'}M_{ua'}A_{aa'}^{T} }{\sum_{a'} A^{T}_{aa'}}
+\end{equation}
+\]</p>
+<p>Dado que las columnas de la matriz de coeficientes técnicos representa la proporción de insumo ofrecido por el sector  \(j\) y comprado por el sector \(i\), transponemos la matriz para poder realizar el cálculo.</p>
+<h2 id="relación-directa-de-productosoutput_similarity"><a class="header" href="#relación-directa-de-productosoutput_similarity">Relación Directa de Productos/<code>output_similarity</code></a></h2>
+<p>La métrica expresa la presencia de actividades que compran productos de las actividades. Es decir, trata de responder a la pregunta ¿están presentes las actividades que son clientes de los productos de las actividades? El cálculo es prácticamente el mismo que el de la medida de Relación Directa de Insumos. Sin embargo, dado que las entradas de la matriz de coeficientes técnicod corresponden a la proporción de insumo ofrecido por el sector \(i\) y comprado por el sector \(j\) con respecto al producto total del sector \(j\), no es necesario transponer la matriz: </p>
+<p>\[
+\begin{equation}
+\dfrac{ \sum_{a'}M_{ua'}A_{aa'} }{\sum_{a'} A_{aa'}}
+\end{equation}
+\]</p>
+<h2 id="similitud-de-industrias-provedorasinput_presence_similarity"><a class="header" href="#similitud-de-industrias-provedorasinput_presence_similarity">Similitud de industrias provedoras/input_presence_similarity</a></h2>
+<p>La métrica expresa la presencia de actividades similares respecto a la demanda de mismos insumos. Es decir, trata de responder a la pregunta ¿están presentes industrias que demandan los mismos insumos? Para el cálculo de la medida se utilizó la matriz de coeficientes técnicos \(A\) para realizar el cáculo <em>row wise correlation</em>, esto es, calcular la correlación para cada par de industrias para obtener una medida de similitud entre industrias de acuerdo a los insumos que utilizan.</p>
+<p>La presencia entre industrias que demandan insumos similares se calcularía como una medida de densidad donde la matriz de proximidad entre industrias, \(\phi_{a,a'}\), se sustituye por la matriz de correlación entre pares de industrias de la matriz de coeficientes técnicos:</p>
+<p>\[
+\begin{equation}
+\dfrac{ \sum_{a'}M_{ua'}corr(A_{aa'}^T) }{\sum_{a'} corr(A_{aa'}^T)}
+\end{equation}
+\]</p>
+<p>Dado que las columnas de la matriz de coeficientes técnicos representa la proporción de insumo ofrecido por el sector  \(j\) y comprado por el sector \(i\), transponemos la matriz de coeficientes técnicos para calcular la correlación entre pares de industrias.</p>
+<h2 id="similitud-de-industrias-compradorasoutput_presence_similarity"><a class="header" href="#similitud-de-industrias-compradorasoutput_presence_similarity">Similitud de industrias compradoras/output_presence_similarity</a></h2>
+<p>La métrica expresa la presencia de actividades similares respecto a si le venden sus producción a las mismas industrias. Es decir, trata de responder a la pregunta ¿están presentes industrias que tienen como clientes a las mismas activiades? Para el cálculo de la medida se utilizó la matriz de coeficientes técnicos \(A\) para realizar el cáculo <em>column wise correlation</em>, esto es, calcular la correlación para cada par de industrias para obtener una medida de similitud entre industrias de acuerdo a las industrias que tienen como clientes.</p>
+<p>La presencia entre industrias que demandan insumos similares se calcularía como una medida de densidad donde la matriz de proximidad entre industrias, \(\phi_{a,a'}\), se sustituye por la matriz de correlación entre pares de industrias de la matriz de coeficientes técnicos:</p>
+<p>\[
+\begin{equation}
+\dfrac{ \sum_{a'}M_{ua'}corr(A_{aa'}) }{\sum_{a'} corr(A_{aa'})}
+\end{equation}
+\]</p>
+<h2 id="relación-directa-de-ocupacionescoempleo_similarity"><a class="header" href="#relación-directa-de-ocupacionescoempleo_similarity">Relación Directa de Ocupaciones/coempleo_similarity</a></h2>
+<p>La métrica expresa la presencia de actividades que demandan los mismos tipos de ocupaciones. Para calcular la métrica se utilizaron datos de Staffing Patterns. Dichos datos por tipo de empleo de acuerdo al <a href="https://www.bls.gov/soc/2018/home.htm">Standard Occupational Classification (SOC) 2018</a> para las actividades NAICS 2017.</p>
+<p>Una muestra de los datos se presenta en la siguiente tabla:</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: right">NAICS</th><th style="text-align: left">NAICS_TITLE</th><th style="text-align: left">OCC_CODE</th><th style="text-align: left">OCC_TITLE</th><th style="text-align: right">TOT_EMP</th></tr></thead><tbody>
+<tr><td style="text-align: right">221111</td><td style="text-align: left">Hydroelectric Power Generation</td><td style="text-align: left">00-0000</td><td style="text-align: left">Industry Total</td><td style="text-align: right">5610</td></tr>
+<tr><td style="text-align: right">221111</td><td style="text-align: left">Hydroelectric Power Generation</td><td style="text-align: left">11-0000</td><td style="text-align: left">Management Occupations</td><td style="text-align: right">250</td></tr>
+<tr><td style="text-align: right">221111</td><td style="text-align: left">Hydroelectric Power Generation</td><td style="text-align: left">11-1000</td><td style="text-align: left">Top Executives</td><td style="text-align: right">180</td></tr>
+<tr><td style="text-align: right">221111</td><td style="text-align: left">Hydroelectric Power Generation</td><td style="text-align: left">11-1021</td><td style="text-align: left">General and Operations Managers</td><td style="text-align: right">180</td></tr>
+<tr><td style="text-align: right">221111</td><td style="text-align: left">Hydroelectric Power Generation</td><td style="text-align: left">11-3000</td><td style="text-align: left">Operations Specialties Managers</td><td style="text-align: right">40</td></tr>
+</tbody></table>
+</div>
+<p>A partir de estos datos se estimó una matriz de presencia-ausencia donde nos interesa conocer si las actividades están especializadas en el empleo de algún tipo de ocupación. Denotamos la matriz como \(M_{occ,a}\) donde los subíndices \(a\) y \(occ\) corresponden a la actividad CIIU Recodificada Rev 4 y al tipo de ocupación SOC, respectivamente. De esta matriz calculamos una matriz de proximidad del tipo de ocupación empleado entre actividades , \(\phi_{a,a'}^{\text{SOC}}\). </p>
+<p>Al sustituir esta matriz de proximidad \(\phi_{a,a'}^{\text{SOC}}\) en el cálculo de la densidad, y usando la matriz \( M_{u,a} \), podemos calcular una medida de la presencia de actividades que demandan las mismas ocupaciones-o coempleo- </p>
+<p>\[
+\begin{equation}
+\dfrac{ \sum_{a'}M_{ua'}\phi_{a,a'}^{\text{SOC}} }{\sum_{a'} \phi_{a,a'}^{\text{SOC}}}
+\end{equation}
+\]</p>
+<h2 id="medida-de-requerimientos-de-trabajo-calificado-balance-de-competencias-laboralesonet_metrica"><a class="header" href="#medida-de-requerimientos-de-trabajo-calificado-balance-de-competencias-laboralesonet_metrica">Medida de requerimientos de trabajo calificado (Balance de Competencias Laborales/onet_metrica)</a></h2>
+<p>Se estimó una medida de requerimientos de trabajo calificado por industria en clasificación CIIU-Recodificada-Rev 4.</p>
+<p>Se usaron dos fuentes de datos:</p>
+<ul>
+<li>Tipo de empleo por actividad NAICS (Staffing Patterns).</li>
+<li><a href="https://www.onetcenter.org/dictionary/28.2/excel/education_training_experience.html">O*NET datos de Educación, Training and Experience</a></li>
+</ul>
+<p>Se necesita una medida que manifieste la intensidad de trabajo calificado requerido por las industrias. Consideramos trabajo calificado a aquellas ocupaciones que cuentan, cómo mínimo, con grado de Bachelor. De manera que agrupamos los datos de O*NET para considerar la suma de las razones de empleo de Bachelor a Pos-Doctoral.</p>
+<p>Posteriormente, de los datos de Staffing Patterns ponderamos los datos agrupados por la razón cantidad de empleo en cada categoría O*NET y el empleo total de la actividad CIIU-Recodificada-Rev 4, esto con la intensión de modular el nivel de educación requerido en el tipo de ocupación ONET con la demanda de esa ocupación en la actividad CIIU.</p>
+<p>Por último, ponderamos ese valor por la razón entre el empleo de la actividad CIIU con respecto al total del empleo.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="regresiones-para-crecimiento-del-rca-apariciones-y-desapariciones"><a class="header" href="#regresiones-para-crecimiento-del-rca-apariciones-y-desapariciones">Regresiones para Crecimiento del RCA, Apariciones y Desapariciones</a></h1>
+<p>Con el objetivo de ofrecer evidencia empírica sobre la trayectoria de dependencia de la evolución industrial para el conjunto de Zonas Metropolitanas y El Salvador, se estimaron regresiones para tres variables explicaticas:</p>
+<ul>
+<li><strong>Crecimiento del RCA</strong> : variable continua igual a la inversa hiperbólica de la tasa de crecimiento del RCA entre 2015 y 2020. </li>
+<li><strong>Aparición de industrias</strong>:  variable dicotómica que toma la etiqueta 1 si la industria tenía un RCA &lt; 0.05 en 2015 y un RCA &gt; 0.2 en 2020. En caso contrario, se asigna la etiqueta 0. La variable indica si la actividad se especializó en el periodo.</li>
+<li><strong>Desaparición de industrias</strong> : variable dicotómica que toma la etiqueta 1 si la industria tenía un RCA &lt; 0.2 en 2015 y un RCA &gt; 0.05 en 2020. En caso contrario, se asigna la etiqueta 0. La variable indica si la actividad perdió especialización en el periodo.</li>
+</ul>
+<p>Las regresiones toman la siguiente forma funcional:</p>
+<p>\[
+\begin{equation}
+y_{j,k,t_1} = \alpha_0 + \alpha_1 Densidad_{j,k,t_0} + \alpha_2RCA_{j,k,t_0} + \delta_1 ZM + \delta_2 CIIU+\varepsilon_{j,k,t_1}
+\end{equation}
+\]</p>
+<p>Donde el subíndice \(j\) corresponde a la actividad CIIU, \(k\) corresponde a la zona metropolitana, \(t_0\) corresponde al año de inicio del periodo de estudio(2015), \(t_1\) corresponde al año final del periodo de estudio (2020). La estimación controla por efectos fijos para zonas metropolitanas (ZM) y actividades CIIU (CIIU). </p>
+<p>Para examinar el efecto de las métricas de viabilidad en la trayectoria de evolución industrial, a la forma funcional anterior agregamos como regresores las metricas de viabilidad:</p>
+<ul>
+<li><strong>Input Presence</strong> : mide la presencia de actividades que producen insumos necesarios para las actividades.</li>
+<li><strong>Output Presence</strong> : mide la presencia de actividades que compran productos de las actividades.</li>
+<li><strong>Input Presence Similarity</strong> : mide la presencia de actividades que son similares respecto a la demanda de mismos insumos.</li>
+<li><strong>Output Presence Similarity</strong> : mide la presencia de actividades similares respecto a si le venden sus producción a las mismas industrias. </li>
+<li><strong>Co-empleo</strong> :  mide la presencia de actividades que demandan los mismos tipos de ocupaciones.</li>
+</ul>
+<h2 id="crecimiento-del-rca"><a class="header" href="#crecimiento-del-rca">Crecimiento del RCA</a></h2>
+<p>La siguiente tabla muestra lo resultados para las regresiones de crecimiento del RCA. En todos los casos, el RCA fue estadísticamente significativo y negativo. El signo del coeficiento es el esperado, pues industrias con un alto RCA se espera que crezcan menos. Sólo para una especificación resultaron significativos los regresores de densidad y presencia de actividades similares respecto a si le venden sus producción a las mismas industrias. Para las regresiones donde se incorporó la medida de co-empleo, resultó significativa y negativa, lo cual da evidencia que existe una competencia por recursos humanos entre las industrias que demandan los mismos tipos de ocupaciones. </p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th colspan="7" style="text-align: center;">Crecimiento RCA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span>2-8</span></td>
+<td style="text-align: right;">(1)</td>
+<td style="text-align: right;">(2)</td>
+<td style="text-align: right;">(3)</td>
+<td style="text-align: right;">(4)</td>
+<td style="text-align: right;">(5)</td>
+<td style="text-align: right;">(6)</td>
+<td style="text-align: right;">(7)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Density</td>
+<td style="text-align: right;">0.057</td>
+<td style="text-align: right;">0.074</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;">0.012</td>
+<td style="text-align: right;">-0.035</td>
+<td style="text-align: right;">0.202*</td>
+<td style="text-align: right;">0.070</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: right;">(0.152)</td>
+<td style="text-align: right;">(0.182)</td>
+<td style="text-align: right;">(0.189)</td>
+<td style="text-align: right;">(0.172)</td>
+<td style="text-align: right;">(0.178)</td>
+<td style="text-align: right;">(0.110)</td>
+<td style="text-align: right;">(0.174)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RCA</td>
+<td style="text-align: right;">-0.071***</td>
+<td style="text-align: right;">-0.069***</td>
+<td style="text-align: right;">-0.073***</td>
+<td style="text-align: right;">-0.076***</td>
+<td style="text-align: right;">-0.076***</td>
+<td style="text-align: right;">-0.067***</td>
+<td style="text-align: right;">-0.075***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: right;">(0.021)</td>
+<td style="text-align: right;">(0.019)</td>
+<td style="text-align: right;">(0.020)</td>
+<td style="text-align: right;">(0.021)</td>
+<td style="text-align: right;">(0.021)</td>
+<td style="text-align: right;">(0.021)</td>
+<td style="text-align: right;">(0.020)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Input Presence</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">-0.035</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">-0.124</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">(0.106)</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">(0.107)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Input Presence Similarity</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0.126</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0.221</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">(0.334)</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">(0.310)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Output Presence</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0.086</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0.094</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">(0.067)</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">(0.068)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Output Presence Similarity</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0.405</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0.444*</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">(0.244)</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">(0.241)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Co-empleo</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">-1.679***</td>
+<td style="text-align: right;">-1.867***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">(0.623)</td>
+<td style="text-align: right;">(0.602)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Zona Metropolitana Fixed Effects</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">Yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Actividad CIIU Fixed Effects</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Obs.</td>
+<td style="text-align: right;">1,488</td>
+<td style="text-align: right;">1,488</td>
+<td style="text-align: right;">1,488</td>
+<td style="text-align: right;">1,488</td>
+<td style="text-align: right;">1,488</td>
+<td style="text-align: right;">1,488</td>
+<td style="text-align: right;">1,488</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+class="math inline"><em>R</em><sup>2</sup></span></td>
+<td style="text-align: right;">0.167</td>
+<td style="text-align: right;">0.167</td>
+<td style="text-align: right;">0.167</td>
+<td style="text-align: right;">0.169</td>
+<td style="text-align: right;">0.169</td>
+<td style="text-align: right;">0.178</td>
+<td style="text-align: right;">0.183</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Within-<span
+class="math inline"><em>R</em><sup>2</sup></span></td>
+<td style="text-align: right;">0.021</td>
+<td style="text-align: right;">0.021</td>
+<td style="text-align: right;">0.021</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;">0.034</td>
+<td style="text-align: right;">0.040</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pseudo-R2</td>
+<td style="text-align: right;">0.182</td>
+<td style="text-align: right;">0.182</td>
+<td style="text-align: right;">0.182</td>
+<td style="text-align: right;">0.183</td>
+<td style="text-align: right;">0.184</td>
+<td style="text-align: right;">0.195</td>
+<td style="text-align: right;">0.201</td>
+</tr>
+</tbody>
+</table>
+<h2 id="aparición-de-industrias"><a class="header" href="#aparición-de-industrias">Aparición de industrias</a></h2>
+<p>La siguiente tabla muestra lo resultados para las regresiones de Apariciones de industrias. En todos los casos, la Densidad resultó significativa y positiva, como es lo esperado en la literatura. Sin embargo, la densidad no es el único determinante de la evolución industrial regional. Las regresiones calculadas muestran que Output Presence Similarity y Co-empleo tienen un efecto positivo y significativo sobre las apariciones. Es decir, el incremento de actividades que son clientes de la producción de las actividades, la cual podemos pensarla como un efecto positivo del lado de la demanda local, incrementa la aparición de industrias. Por otro lado, el incremento de actividades que demandan los mismos tipos de ocupaciones influyen de forma positiva en la aparición de industrias. </p>
+<table>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;"></th>
+    <th colspan="7" style="text-align: center;">Apariciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;"><span>2-8</span></td>
+    <td style="text-align: right;">(1)</td>
+    <td style="text-align: right;">(2)</td>
+    <td style="text-align: right;">(3)</td>
+    <td style="text-align: right;">(4)</td>
+    <td style="text-align: right;">(5)</td>
+    <td style="text-align: right;">(6)</td>
+    <td style="text-align: right;">(7)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Density</td>
+    <td style="text-align: right;">0.056**</td>
+    <td style="text-align: right;">0.060**</td>
+    <td style="text-align: right;">0.062**</td>
+    <td style="text-align: right;">0.057**</td>
+    <td style="text-align: right;">0.050*</td>
+    <td style="text-align: right;">0.052*</td>
+    <td style="text-align: right;">0.051*</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;">(0.027)</td>
+    <td style="text-align: right;">(0.027)</td>
+    <td style="text-align: right;">(0.027)</td>
+    <td style="text-align: right;">(0.027)</td>
+    <td style="text-align: right;">(0.028)</td>
+    <td style="text-align: right;">(0.027)</td>
+    <td style="text-align: right;">(0.028)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">RCA</td>
+    <td style="text-align: right;">0.090</td>
+    <td style="text-align: right;">0.092</td>
+    <td style="text-align: right;">0.088</td>
+    <td style="text-align: right;">0.090</td>
+    <td style="text-align: right;">0.091</td>
+    <td style="text-align: right;">0.079</td>
+    <td style="text-align: right;">0.079</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;">(0.230)</td>
+    <td style="text-align: right;">(0.230)</td>
+    <td style="text-align: right;">(0.230)</td>
+    <td style="text-align: right;">(0.230)</td>
+    <td style="text-align: right;">(0.230)</td>
+    <td style="text-align: right;">(0.230)</td>
+    <td style="text-align: right;">(0.230)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Input Presence</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">-0.014</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">-0.014</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.010)</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.011)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Input Presence Similarity</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">-0.047</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">-0.063</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.033)</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.042)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Output Presence</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">-0.002</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">-0.006</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.006)</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.006)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Output Presence Similarity</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">0.035</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">0.089**</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.033)</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.041)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Co-empleo</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">0.101**</td>
+    <td style="text-align: right;">0.117**</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.051)</td>
+    <td style="text-align: right;">(0.051)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Zona Metropolitana Fixed Effects</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Actividad CIIU Fixed Effects</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Obs.</td>
+    <td style="text-align: right;">3,640</td>
+    <td style="text-align: right;">3,640</td>
+    <td style="text-align: right;">3,640</td>
+    <td style="text-align: right;">3,640</td>
+    <td style="text-align: right;">3,640</td>
+    <td style="text-align: right;">3,640</td>
+    <td style="text-align: right;">3,640</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"><span
+    class="math inline"><em>R</em><sup>2</sup></span></td>
+    <td style="text-align: right;">0.092</td>
+    <td style="text-align: right;">0.092</td>
+    <td style="text-align: right;">0.092</td>
+    <td style="text-align: right;">0.092</td>
+    <td style="text-align: right;">0.092</td>
+    <td style="text-align: right;">0.093</td>
+    <td style="text-align: right;">0.095</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Within-<span
+    class="math inline"><em>R</em><sup>2</sup></span></td>
+    <td style="text-align: right;">0.001</td>
+    <td style="text-align: right;">0.002</td>
+    <td style="text-align: right;">0.002</td>
+    <td style="text-align: right;">0.001</td>
+    <td style="text-align: right;">0.002</td>
+    <td style="text-align: right;">0.002</td>
+    <td style="text-align: right;">0.005</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Pseudo-R2</td>
+    <td style="text-align: right;">-0.033</td>
+    <td style="text-align: right;">-0.034</td>
+    <td style="text-align: right;">-0.034</td>
+    <td style="text-align: right;">-0.033</td>
+    <td style="text-align: right;">-0.034</td>
+    <td style="text-align: right;">-0.034</td>
+    <td style="text-align: right;">-0.035</td>
+    </tr>
+    </tbody>
+    </table>
+<h2 id="desaparición-de-industrias"><a class="header" href="#desaparición-de-industrias">Desaparición de industrias</a></h2>
+<p>La siguiente tabla muestra lo resultados para las regresiones de Desapariciones de industrias. En todos los casos, la Densidad resultó significativa y negativa, como es lo esperado en la literatura. En este caso, sólo Input Presence Similarity resultó significativa y con signo negativo. Esta medida puede pensarse como indicadora de restricciones a la oferta local de insumos. Si se incrementan las actividades que demandan los mismos insumos que otras actividades,  la especialización se reduce. Esto puede pensarse que hay un efecto negativo de la competencia por insumos lo cual deja a algunas industrias fuera del acceso a la oferta local de insumos. Si no hay acceso a mercados internacionales, se traduce en una pérdida de especialización.</p>
+<table>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;"></th>
+    <th colspan="7" style="text-align: center;">Desapariciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;"><span>2-8</span></td>
+    <td style="text-align: right;">(1)</td>
+    <td style="text-align: right;">(2)</td>
+    <td style="text-align: right;">(3)</td>
+    <td style="text-align: right;">(4)</td>
+    <td style="text-align: right;">(5)</td>
+    <td style="text-align: right;">(6)</td>
+    <td style="text-align: right;">(7)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Density</td>
+    <td style="text-align: right;">-0.128***</td>
+    <td style="text-align: right;">-0.122***</td>
+    <td style="text-align: right;">-0.087**</td>
+    <td style="text-align: right;">-0.133***</td>
+    <td style="text-align: right;">-0.122***</td>
+    <td style="text-align: right;">-0.123***</td>
+    <td style="text-align: right;">-0.091**</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;">(0.031)</td>
+    <td style="text-align: right;">(0.033)</td>
+    <td style="text-align: right;">(0.036)</td>
+    <td style="text-align: right;">(0.032)</td>
+    <td style="text-align: right;">(0.035)</td>
+    <td style="text-align: right;">(0.033)</td>
+    <td style="text-align: right;">(0.038)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">RCA</td>
+    <td style="text-align: right;">-0.004</td>
+    <td style="text-align: right;">-0.003</td>
+    <td style="text-align: right;">-0.002</td>
+    <td style="text-align: right;">-0.004</td>
+    <td style="text-align: right;">-0.004</td>
+    <td style="text-align: right;">-0.004</td>
+    <td style="text-align: right;">-0.003</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;">(0.004)</td>
+    <td style="text-align: right;">(0.004)</td>
+    <td style="text-align: right;">(0.004)</td>
+    <td style="text-align: right;">(0.004)</td>
+    <td style="text-align: right;">(0.004)</td>
+    <td style="text-align: right;">(0.004)</td>
+    <td style="text-align: right;">(0.004)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Input Presence</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">-0.013</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">-0.004</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.018)</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.021)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Input Presence Similarity</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">-0.151**</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">-0.174**</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.069)</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.084)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Output Presence</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">0.011</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">0.020</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.016)</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.017)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Output Presence Similarity</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">-0.028</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">0.020</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.064)</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.075)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Co-empleo</td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">-0.057</td>
+    <td style="text-align: right;">-0.020</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;"></td>
+    <td style="text-align: right;">(0.108)</td>
+    <td style="text-align: right;">(0.111)</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Zona Metropolitana Fixed Effects</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Actividad CIIU Fixed Effects</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    <td style="text-align: right;">Yes</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Obs.</td>
+    <td style="text-align: right;">1,236</td>
+    <td style="text-align: right;">1,236</td>
+    <td style="text-align: right;">1,236</td>
+    <td style="text-align: right;">1,236</td>
+    <td style="text-align: right;">1,236</td>
+    <td style="text-align: right;">1,236</td>
+    <td style="text-align: right;">1,236</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"><span
+    class="math inline"><em>R</em><sup>2</sup></span></td>
+    <td style="text-align: right;">0.257</td>
+    <td style="text-align: right;">0.257</td>
+    <td style="text-align: right;">0.260</td>
+    <td style="text-align: right;">0.257</td>
+    <td style="text-align: right;">0.257</td>
+    <td style="text-align: right;">0.257</td>
+    <td style="text-align: right;">0.261</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">Within-<span
+    class="math inline"><em>R</em><sup>2</sup></span></td>
+    <td style="text-align: right;">0.026</td>
+    <td style="text-align: right;">0.027</td>
+    <td style="text-align: right;">0.031</td>
+    <td style="text-align: right;">0.027</td>
+    <td style="text-align: right;">0.027</td>
+    <td style="text-align: right;">0.027</td>
+    <td style="text-align: right;">0.032</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Pseudo-R2</td>
+    <td style="text-align: right;">-0.164</td>
+    <td style="text-align: right;">-0.165</td>
+    <td style="text-align: right;">-0.167</td>
+    <td style="text-align: right;">-0.165</td>
+    <td style="text-align: right;">-0.164</td>
+    <td style="text-align: right;">-0.164</td>
+    <td style="text-align: right;">-0.168</td>
+    </tr>
+    </tbody>
+    </table>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
