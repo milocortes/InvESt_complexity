@@ -11,7 +11,7 @@ df_complexity = pd.read_csv("complexity_todo_metricas.csv")
 """
 DECISIÓN MULTICRITERIO
 
-Utilizaremos el método ELECTRE II que es una técnica de toma de decisión multicriterio el cual
+Utilizaremos el método TOPSI que es una técnica de toma de decisión multicriterio el cual
 nos permite generar un ranking de acciones dada una ponderación a lo criterios de esa acción
 
 Criterios a utilizar:
@@ -45,6 +45,9 @@ extensivo_slv_multicriteria = pd.concat([df_ciiu_agregacion.set_index("variable"
 
 # Guardamos el dataframe
 extensivo_slv_multicriteria.query("rca < 1.0").to_csv("extensivo_slv_multicriteria.csv", index = False)
+
+# TOPSI 71 industrias
+extensivo_slv_multicriteria.to_csv("slv_multicriteria_71_industrias.csv", index = False)
 
 # Exportamos dataframe a tabla markdown
 tabla_md_71_sectores = extensivo_slv_multicriteria[["variable", "ciiu_nombre", "division", "seccion", "rca"]].copy()

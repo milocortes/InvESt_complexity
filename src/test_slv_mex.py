@@ -179,6 +179,52 @@ Mcp = Mcp.replace(np.nan, 0)
 df_proximity = proximity(Mcp, ["actA", "actB", "proximity"])
 occ_proximity_mat = df_proximity.pivot(index = ["actA"], columns = ["actB"], values = "proximity")
 
+## Calculamos la matriz de proximidad de industrias que se parecen por demandar ocupaciones 
+## Con alto capital humano 
+
+## Generamos una copia de los datos de onet
+occ_empleo_calificado = occ_empleo.copy()
+
+## Cargamos los datos del porcentaje de empleo con grado y posgrado necesario para cada ocupación
+shares_occ_calificado = pd.read_csv(os.path.join(OCC_EMPLEO_PATH, "onet_ocupaciones_razon_empleo_calificado.csv"))
+#shares_occ_calificado["Data Value"] = 1 - shares_occ_calificado["Data Value"]
+## Reunimos los datos
+occ_empleo_calificado = occ_empleo_calificado.merge(right=shares_occ_calificado, how = "left", on="occ_code")
+
+## Sustituimos nan por el promedio de todas las ocupaciones
+occ_empleo_calificado["Data Value"] = occ_empleo_calificado["Data Value"].replace(np.nan, shares_occ_calificado["Data Value"].mean())
+
+## Obtenemos el nivel de empleo calificado para cada industria y ocupación
+occ_empleo_calificado["coempleo"] = (occ_empleo_calificado["coempleo"]*occ_empleo_calificado["Data Value"]).astype(int)
+
+## Construimos la matriz de proximidad por coempleo calificado
+
+value_col_name = "coempleo"
+activiy_col_name = "ciiu"
+place_col_name = "occ_code"
+
+sum_cp_X_cp = occ_empleo_calificado[[value_col_name]].sum().values[0]
+sum_c_X_cp = occ_empleo_calificado[[activiy_col_name, value_col_name]].groupby(activiy_col_name).sum()
+
+
+values_RCA = {"df" : occ_empleo_calificado, 
+            "value_col_name" : value_col_name, 
+            "activiy_col_name" : activiy_col_name, 
+            "place_col_name" : place_col_name,
+            "sum_cp_X_cp" : sum_cp_X_cp, 
+            "sum_c_X_cp" : sum_c_X_cp}
+
+
+occ_empleo_calificado_complexity = pd.concat([RCA(**values_RCA, place=p) for p in occ_empleo_calificado.occ_code.unique()], ignore_index = True)
+occ_RCA = occ_empleo_calificado_complexity.query("coempleo>=1.0").reset_index(drop=True)
+all_activities = occ_empleo_calificado_complexity.ciiu.unique()
+pair_RCA = occ_RCA[["place","ciiu"]].to_numpy()
+Mcp = build_Mcp(pair_RCA, all_activities)
+Mcp = Mcp.replace(np.nan, 0)
+df_proximity_calificado = proximity(Mcp, ["actA", "actB", "proximity"])
+occ_proximity_calificado_mat = df_proximity_calificado.pivot(index = ["actA"], columns = ["actB"], values = "proximity")
+
+
 ## Calculamos la versión continua de proximidad
 RCA_mat = occ_empleo_complexity.pivot(index = ["place"], columns = ["ciiu"])
 RCA_mat.columns = [i[1] for i in RCA_mat.columns]
@@ -381,6 +427,20 @@ for anio in range(2012, 2023):
 
     df_coempleo_similarity_continua = pd.DataFrame(almacena, columns = ["place", "activity", "coempleo_similarity_continua"])
 
+
+    ### Cooempleo calificado similarity (density con Mcp y matriz de proximidad de coempleo)
+    ## Version discreta
+    almacena = []
+    for place in complexity_data.zm.unique():
+        for activity in complexity_data.variable.unique():
+            almacena.append((place,
+                            activity,
+                            density(place, activity, Mcp, occ_proximity_calificado_mat)
+                            ))
+
+
+    df_coempleo_calificado_similarity = pd.DataFrame(almacena, columns = ["place", "activity", "coempleo_calificado_similarity"])
+    
     ### Reunimos datos de Mcp y distancia
     df_Mcp = Mcp.reset_index().melt(id_vars="index", value_vars=Mcp.columns)
     df_Mcp["llave"] = df_Mcp["index"].apply(lambda x : str(x)) + "/" + df_Mcp.variable
@@ -398,16 +458,19 @@ for anio in range(2012, 2023):
     df_coempleo_similarity["llave"] = df_coempleo_similarity["place"].apply(lambda x : str(x)) + "/" + df_coempleo_similarity.activity
     df_coempleo_similarity_continua["llave"] = df_coempleo_similarity["place"].apply(lambda x : str(x)) + "/" + df_coempleo_similarity.activity
 
+    df_coempleo_calificado_similarity["llave"] = df_coempleo_calificado_similarity["place"].apply(lambda x : str(x)) + "/" + df_coempleo_calificado_similarity.activity
+
     zm_RCA_completo = zm_RCA_completo.merge(right=df_distance[["llave","distance"]], on = "llave")
     zm_RCA_completo = zm_RCA_completo.merge(right=df_density[["llave","density"]], on = "llave")
     zm_RCA_completo = zm_RCA_completo.merge(right=df_input_similarity[["llave","input_similarity"]], on = "llave")
     zm_RCA_completo = zm_RCA_completo.merge(right=df_output_similarity[["llave","output_similarity"]], on = "llave")
     zm_RCA_completo = zm_RCA_completo.merge(right=df_coempleo_similarity[["llave","coempleo_similarity"]], on = "llave")
+    zm_RCA_completo = zm_RCA_completo.merge(right=df_coempleo_calificado_similarity[["llave","coempleo_calificado_similarity"]], on = "llave")
     zm_RCA_completo = zm_RCA_completo.merge(right=df_coempleo_similarity_continua[["llave","coempleo_similarity_continua"]], on = "llave")
     zm_RCA_completo = zm_RCA_completo.merge(right=df_input_presence_similarity[["llave","input_presence_similarity"]], on = "llave")
     zm_RCA_completo = zm_RCA_completo.merge(right=df_output_presence_similarity[["llave","output_presence_similarity"]], on = "llave")
 
-    zm_RCA_completo = zm_RCA_completo[["place", "variable", "rca","diversity", "ubiquity", "mcp", "density", "distance", "output_similarity", "input_similarity", "coempleo_similarity", "coempleo_similarity_continua", "input_presence_similarity", "output_presence_similarity"]]
+    zm_RCA_completo = zm_RCA_completo[["place", "variable", "rca","diversity", "ubiquity", "mcp", "density", "distance", "output_similarity", "input_similarity", "coempleo_similarity", "coempleo_calificado_similarity", "coempleo_similarity_continua", "input_presence_similarity", "output_presence_similarity"]]
 
     ## Agregamos etiquetas de nombres de actividades y zm
     zm_RCA_completo["zm_nombre"] = zm_RCA_completo["place"].replace({str(i):j for i,j in zm_mex_nombres_zm_cw.items()})
@@ -443,6 +506,7 @@ cdata_datos_empleo_todo["distance"] = data_complexity["distance"]
 cdata_datos_empleo_todo["input_similarity"] = data_complexity["input_similarity"]
 cdata_datos_empleo_todo["output_similarity"] = data_complexity["output_similarity"]
 cdata_datos_empleo_todo["coempleo_similarity_discreta"] = data_complexity["coempleo_similarity"]
+cdata_datos_empleo_todo["coempleo_calificado_similarity_discreta"] = data_complexity["coempleo_calificado_similarity"]
 cdata_datos_empleo_todo["coempleo_similarity_continua"] = data_complexity["coempleo_similarity_continua"]
 cdata_datos_empleo_todo["input_presence_similarity"] = data_complexity["input_presence_similarity"]
 cdata_datos_empleo_todo["output_presence_similarity"] = data_complexity["output_presence_similarity"]
@@ -453,91 +517,6 @@ cdata_datos_empleo_todo.to_csv("complexity_todo_metricas.csv", index=False)
 proximidad = proximity_ecomplexity(datos_slv_mex, trade_cols)
 proximidad = proximidad.query("anio==2021")[["variable_1", "variable_2", "proximity"]]
 proximidad.proximity = proximidad.proximity.replace(np.nan, 1.0)
-
-
-"""
-import networkx as nx 
-import matplotlib.pyplot as plt
-from py2cytoscape import util as cy 
-from py2cytoscape import cytoscapejs as cyjs
-import requests
-import json
-
-# empty graph/network
-G = nx.Graph()
-
-# add nodes
-for i in proximidad.variable_1.unique():
-    G.add_node(i)
-  
-# add edges    
-for in_node, out_node, w in proximidad.to_records(index = False):
-    if w!=0.0:
-        G.add_edge(in_node, out_node, key=0, weight=w)
-
-# attributes
-node_rca = {}
-node_ciiu_seccion = {}
-
-# node attributes 
-from ciiu_agregacion import ciiu_agregacion
-
-for node_name, rca_value in cdata_datos_empleo_todo.query("anio==2021 and zm=='SLV'")[["variable", "rca"]].to_records(index = False):
-    node_rca[node_name]=rca_value
-    node_ciiu_seccion[node_name] = ciiu_agregacion[node_name[:2]][1]
-
-# assign attributes to networkx G
-nx.set_node_attributes(G,node_rca,"n_rca")
-nx.set_node_attributes(G,node_ciiu_seccion,"n_seccion")
-    
-# move network from networkx to cy
-G.node = G.nodes
-cytoscape_network = cy.from_networkx(G)
-
-# Basic Setup
-PORT_NUMBER = 1234
-IP = 'localhost'
-BASE = 'http://' + IP + ':' + str(PORT_NUMBER) + '/v1/'
-HEADERS = {'Content-Type': 'application/json'}
-requests.delete(BASE + 'session')
-
-res1 = requests.post(BASE + 'networks', data=json.dumps(cytoscape_network), headers=HEADERS)
-res1_dict = res1.json()
-new_suid = res1_dict['networkSUID']
-requests.get(BASE + 'apply/layouts/force-directed/' + str(new_suid))
-
-style_name = 'Basic_Style'
-
-my_style = {
-  "title" : style_name,
-   'defaults': [{
-       'visualProperty': 'EDGE_TRANSPARENCY', 
-       'value': 255
-  }, {
-    "visualProperty" : "NODE_SIZE",
-    'value': 20
-  }, {
-    "visualProperty" : "EDGE_WIDTH",
-    'value': 1
-  },{
-       'visualProperty': 'NODE_LABEL_FONT_SIZE', 
-       'value': 12
-   },{
-       'visualProperty': 'NODE_LABEL_TRANSPARENCY', 
-       'value': 250
-   }, {
-       'visualProperty': 'NODE_TRANSPARENCY', 
-       'value': 250
-   }]
-}
-
-# Create new Visual Style
-res = requests.post(BASE + "styles", data=json.dumps(my_style), headers=HEADERS)
-new_style_name = res.json()['title']
-
-# Apply it to current netwrok
-requests.get(BASE + 'apply/styles/' + new_style_name + '/' + str(new_suid))
-"""
 
 ######## NOS OLVIDAMOS TANTITO Y HACEMOS REGRESIONES
 import numpy as np
@@ -550,8 +529,8 @@ import numpy as np
 
 data_complexity = data_complexity.rename(columns={"place":"zm"})
 
-df_complexity_short = data_complexity[["zm", "variable", "anio", "density", "rca", "output_similarity", "input_similarity", "coempleo_similarity", "coempleo_similarity_continua", "input_presence_similarity", "output_presence_similarity"]]\
-                                    .pivot(index = ["zm", "variable"], columns=["anio"], values = ["density", "rca", "output_similarity", "input_similarity", "coempleo_similarity", "coempleo_similarity_continua", "input_presence_similarity", "output_presence_similarity"])\
+df_complexity_short = data_complexity[["zm", "variable", "anio", "density", "rca", "output_similarity", "input_similarity", "coempleo_similarity", "coempleo_calificado_similarity", "coempleo_similarity_continua", "input_presence_similarity", "output_presence_similarity"]]\
+                                    .pivot(index = ["zm", "variable"], columns=["anio"], values = ["density", "rca", "output_similarity", "input_similarity", "coempleo_similarity", "coempleo_calificado_similarity", "coempleo_similarity_continua", "input_presence_similarity", "output_presence_similarity"])\
                                     .reset_index()
 
 df_complexity_short.columns = ["edo", "actividad"] + [f"{i}_{j}" for i,j in df_complexity_short.columns[2:]]
@@ -595,6 +574,10 @@ df_complexity_short["arcsinh_input_presence"] = np.arcsinh(df_complexity_short[f
 df_complexity_short["log_coempleo_presence"] = np.log(df_complexity_short[f"coempleo_similarity_{anio_inicio}"])
 df_complexity_short["arcsinh_coempleo_presence"] = np.arcsinh(df_complexity_short[f"coempleo_similarity_{anio_inicio}"])
 
+### Cooempleo calificado presence (discreta)
+df_complexity_short["log_coempleo_calificado_presence"] = np.log(df_complexity_short[f"coempleo_calificado_similarity_{anio_inicio}"])
+df_complexity_short["arcsinh_coempleo_calificado_presence"] = np.arcsinh(df_complexity_short[f"coempleo_calificado_similarity_{anio_inicio}"])
+
 ### Cooempleo presence (continua)
 df_complexity_short["log_coempleo_presence_continua"] = np.log(df_complexity_short[f"coempleo_similarity_continua_{anio_inicio}"])
 df_complexity_short["arcsinh_coempleo_presence_continua"] = np.arcsinh(df_complexity_short[f"coempleo_similarity_continua_{anio_inicio}"])
@@ -607,6 +590,10 @@ df_complexity_short["arcsinh_output_presence_similarity"] = np.arcsinh(df_comple
 df_complexity_short["log_input_presence_similarity"] = np.log(df_complexity_short[f"input_presence_similarity_{anio_inicio}"])
 df_complexity_short["arcsinh_input_presence_similarity"] = np.arcsinh(df_complexity_short[f"input_presence_similarity_{anio_inicio}"])
 
+### Requerimientos de capital humano
+#onet_human_capital = pd.read_csv()
+
+### Ordenamos datos y exportamos a csv
 df_complexity_short = df_complexity_short.replace(np.infty, np.nan)
 df_complexity_short = df_complexity_short.replace(np.inf, np.nan)
 

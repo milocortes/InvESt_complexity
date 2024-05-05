@@ -4,7 +4,8 @@ using CSV
 
 #### Hacemos ejecución para el margen extensivo
 ## Cargamos los datos para realizar el análisis multicriterio
-extensivo_slv_multicriteria = DataFrame(CSV.File("extensivo_slv_multicriteria.csv"))
+#extensivo_slv_multicriteria = DataFrame(CSV.File("extensivo_slv_multicriteria.csv"))
+extensivo_slv_multicriteria = DataFrame(CSV.File("slv_multicriteria_71_industrias.csv"))
 
 ## Eliminamos la columna del sector
 extensivo_slv_multicriteria_mat = extensivo_slv_multicriteria[!, [:pci, :cog, :distance]]
@@ -36,5 +37,6 @@ df_resultados_extensivo = DataFrame(
 sort!(df_resultados_extensivo, [:ranking], rev = true)
 
 
-CSV.write("extensivo_multicriterio_ranking_sectores.csv", df_resultados_extensivo)            
+#CSV.write("extensivo_multicriterio_ranking_sectores.csv", df_resultados_extensivo)            
+CSV.write("71_industrias_multicriterio_ranking_sectores.csv", df_resultados_extensivo)            
 
