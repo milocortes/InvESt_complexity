@@ -28,6 +28,7 @@ df = q.collect().to_pandas()
 
 ## Read CW NAICS 2017 - HS
 naics2hs = pd.read_csv("naics_2017_to_hs.csv")
+naics2hs = naics2hs.dropna()
 
 ## Paises a investigar China, Vietnam, Camboya, Malasia, Indonesia
 paises = ["CHN", "VNM", "KHM", "MYS", "IDN"]
@@ -40,7 +41,7 @@ df.loc[~df.partner_iso3_code.isin(paises), "tag"] = "rest_of_world"
 df = df.groupby(["tag", "year", "product_hs92_code"]).agg({"import_value" : "sum"}).reset_index()
 df["product_hs92_code"] = df["product_hs92_code"].astype(int).astype(str)
 
-naics2hs["hs"] = naics2hs["hs"].astype(str)
+naics2hs["hs"] = naics2hs["hs"].astype(float).astype(int).astype(str)
 
 complete_hs_data = []
 
@@ -62,7 +63,21 @@ complete_hs_data["import_weighted_value"] = complete_hs_data["import_value"]*com
 complete_hs_data = complete_hs_data.groupby(["naics", "tag", "year"]).agg({"import_weighted_value" : "sum"}).reset_index()
 
 ### El Salvador Data
-df_slv = pd.read_csv("extensivo_slv_multicriteria.csv")
+#df_slv = pd.read_csv("extensivo_slv_multicriteria.csv")
+df_slv = pd.read_csv("slv_multicriteria_71_industrias.csv")
+
+
+####### 30 sectores del estudio (tienen RCA>1.0 y RCA <= 1.0)
+ciiu_sectores_lista =["1103","1073","1102","2011","2399","1920","2012","2022","2029","2023","2013","1511","1512","17-X01","1311","2391","2310",
+"2591","25-X01","2620","2829","2819","2710","2750","2610","26-X01","3220","2740","1399","10-X01"]
+
+df_slv = df_slv[df_slv.variable.isin(ciiu_sectores_lista)].reset_index(drop=True)
+
+
+#################
+
+
+
 ciiu_naics = pd.read_csv(CIIU_NAICS_FP)
 ciiu_naics = ciiu_naics[ciiu_naics.ciiu.isin(df_slv.variable)].reset_index(drop = True)
 
@@ -120,3 +135,38 @@ plt.show()
 #data = pd.read_csv(data_url, compression="zip", low_memory=False)
 #hscomerce = pd.read_csv("country_hsproduct4digit_year.csv")
 """
+
+
+ciiu_sectores_lista =["1103",
+"1073",
+"1102",
+"2011",
+"2399",
+"1920",
+"2012",
+"2022",
+"2029",
+"2023",
+"2013",
+"1511",
+"1512",
+"17-X01",
+"1311",
+"2391",
+"2310",
+"2591",
+"25-X01",
+"2620",
+"2829",
+"2819",
+"2710",
+"2750",
+"2610",
+"26-X01",
+"3220",
+"2740",
+"1399",
+"10-X01"]
+
+no_sectores_extensivo = list(set(ciiu_sectores_lista) - set(df_slv.variable))
+

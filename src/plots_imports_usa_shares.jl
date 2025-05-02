@@ -18,7 +18,7 @@ dy = diff([extrema(y)...])[1]/20  # adjust offset if needed
 scatter(x,y, ms=7, 
         legend=false, 
         ylimits = (-10.,80.0), 
-        xlimits = (0.65, 1.1), 
+        xlimits = (0.65, 1.2), 
         xlabel = "Distancia",
         ylabel = "Razón con respecto al Total de Importaciones [%]",
         xguidefontsize=10,
@@ -52,7 +52,7 @@ plot!()
   titlefontsize=15,
   tickfontsize=15,
   ylimits = (-10.,80.0), 
-  xlimits = (0.7, 1.1), 
+  xlimits = (0.7, 1.11), 
   legendfontsize=14
 )
 
