@@ -22,7 +22,9 @@ scatter(x,y, ms=7,
         xguidefontsize=10,
         yguidefontsize=9,
         titlefontsize=8,
-        title = "Industrias del Sector Extensivo (2023).\nImportaciones provenientes de China, Vietnam, Camboya, Malasia, Indonesia"
+        title = "Industrias del Sector Extensivo.\nImportaciones provenientes de China, Vietnam, Camboya, Malasia, Indonesia (2023)",
+        dpi=1000
         )
 [annotate!(x, y+dy, Plots.text(string(i), 4)) for (i,x, y) in zip(data_plot.ciiu_nombre,x,y)];
 plot!()
+savefig("importaciones_usa_sectores_slv.png") 
