@@ -79,6 +79,15 @@ ciiu_complete_hs_data = ciiu_complete_hs_data.merge(right=df_slv[['variable', 'd
 
 ciiu_complete_hs_data.ciiu_nombre = ciiu_complete_hs_data.ciiu_nombre.apply(lambda x : re.sub("\(.*?\)|\[.*?\]","",x).replace("Fabricación de","").title().split(" /-/")[0])
 
+
+ciiu_complete_hs_data.division = ciiu_complete_hs_data.division.str.split(";").str[0]
+ciiu_complete_hs_data.division = ciiu_complete_hs_data.division.str.replace("Elaboración de ", "")
+ciiu_complete_hs_data.division = ciiu_complete_hs_data.division.str.replace("Fabricación de","")
+ciiu_complete_hs_data.division = ciiu_complete_hs_data.division.str.replace("Producción de ","")
+ciiu_complete_hs_data.division = ciiu_complete_hs_data.division.str.replace("Extracción de ","")
+ciiu_complete_hs_data.division = ciiu_complete_hs_data.division.str.title()
+ciiu_complete_hs_data.division = ciiu_complete_hs_data.division.str.strip()
+
 ciiu_complete_hs_data.to_csv("paises_asia_ciiu_complete_hs_data.csv", index = False)
 
 """
