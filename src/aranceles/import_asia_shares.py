@@ -4,6 +4,8 @@ import os
 import polars as pl
 import re
 
+from utils import HSAData 
+
 ### Define paths
 def build_path(PATHS):
     return os.path.abspath(os.path.join(*PATHS))
@@ -18,6 +20,7 @@ CLASIFICACION_TRADE_FP = build_path([DATA_PATH, "product_hs92.csv"])
 ECI_TRADE_FP = build_path([DATA_PATH, "growth_proj_eci_rankings.csv"])
 
 SLV_EXTENSIVO_INTENSIVO = build_path([OUTPUT_PATH, "asia_shares_extensivo_intensivo.csv"])
+HS_CORRESPONDENCIAS_FP = build_path([OUTPUT_PATH, "hs_correspondencias.csv"])
 
 # International Trade Data (HS92) (Bilateral Trade, HS92, 6 digit, 2020-2023)
 # This dataset contains information about International Trade Data (HS92). It includes data from 2020-2023 and is classified as Bilateral Trade with HS92 classification at the 6-digit level.
@@ -71,16 +74,11 @@ uni_trade = uni_trade.merge(right=eci_paises, how="inner", on=["country_iso3_cod
 
 ### Agrega nombres de clasificación
 hs_dic = pd.read_csv(CLASIFICACION_TRADE_FP)
-hs_dic = hs_dic[["product_level", "product_hs92_code", "product_name", "product_name_short"]]
+hs_data = HSAData(hs_dic)
 
-
-uni_trade["product_hs92_code_2d"] = uni_trade["product_hs92_code_4d"].apply(lambda x : x[:2])
-uni_trade["product_hs92_code_1d"] = uni_trade["product_hs92_code_4d"].apply(lambda x : x[:1])
-
-uni_trade["product_hs92_name_1d"] = uni_trade["product_hs92_code_1d"].replace({i:j for i,j in hs_dic.query("product_level == 1")[["product_hs92_code", "product_name_short"]].to_records(index = False) })
-uni_trade["product_hs92_name_2d"] = uni_trade["product_hs92_code_2d"].replace({i:j for i,j in hs_dic.query("product_level == 2")[["product_hs92_code", "product_name_short"]].to_records(index = False) })
-uni_trade["product_hs92_name_4d"] = uni_trade["product_hs92_code_4d"].replace({i:j for i,j in hs_dic.query("product_level == 4")[["product_hs92_code", "product_name_short"]].to_records(index = False) })
+df_hs_correspondencias = hs_data.build_correspondence()
+uni_trade = uni_trade.merge(right=df_hs_correspondencias, how = "inner", on="product_hs92_code_4d")
 
 ### Guarda datos
 uni_trade.to_csv(SLV_EXTENSIVO_INTENSIVO, index = False)
-
+df_hs_correspondencias.to_csv(HS_CORRESPONDENCIAS_FP, index = False)

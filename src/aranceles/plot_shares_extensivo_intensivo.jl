@@ -39,6 +39,10 @@ data_extensivo = data[data.year .== 2023 .&& data.tag.=="paises_interes" .&& dat
   legendfontsize=14
 )
 
+# Guardamos figura
+filename_string = "images/extensivo.png"
+savefig(filename_string) 
+
 @df data_extensivo scatter3d(
     :distance,
     :pci,
@@ -59,6 +63,10 @@ data_extensivo = data[data.year .== 2023 .&& data.tag.=="paises_interes" .&& dat
     #xlimits = (0.7, 1.0), 
     legendfontsize=14
 )
+
+# Guardamos figura
+filename_string = "images/extensivo_3d.png"
+savefig(filename_string) 
 
 ### Hacemos un loop para ver las tablas por nombre en un layout
 extensivo_layout = []
@@ -91,7 +99,11 @@ for i in unique(data_extensivo.product_hs92_name_1d)
         )
 end
 
-plot(extensivo_layout..., layout = (3,3), plot_title="Industrias del Sector Extensivo.\nImportaciones de China, Vietnam, Camboya, Malasia, Indonesia (2023)", left_margin = [20mm 0mm])
+plot(extensivo_layout..., layout = (4,3), plot_title="Industrias del Sector Extensivo.\nImportaciones de China, Vietnam, Camboya, Malasia, Indonesia (2023)", left_margin = [20mm 0mm])
+
+# Guardamos figura
+filename_string = "images/extensivo_grid.png"
+savefig(filename_string) 
 
 ## Extensivo 3D
 extensivo_3d_layout = []
@@ -122,7 +134,11 @@ for i in unique(data_extensivo.product_hs92_name_1d)
         )
 end
 
-plot(extensivo_3d_layout..., layout = (3,3), plot_title="Industrias del Sector Extensivo.\nImportaciones de China, Vietnam, Camboya, Malasia, Indonesia (2023)", left_margin = [20mm 0mm])
+plot(extensivo_3d_layout..., layout = (4,3), plot_title="Industrias del Sector Extensivo.\nImportaciones de China, Vietnam, Camboya, Malasia, Indonesia (2023)", left_margin = [20mm 0mm])
+
+# Guardamos figura
+filename_string = "images/extensivo_3d_grid.png"
+savefig(filename_string) 
 
 ### INTENSIVO
 @df data_intensivo plot(
@@ -148,6 +164,9 @@ plot(extensivo_3d_layout..., layout = (3,3), plot_title="Industrias del Sector E
 #vspan!([-0.02,0.02], label = "PCI=0", c=:black)
 vspan!([-0.092, -0.072 ]; alpha = 0.5, label = "ECI SLV", c = :red)
 
+# Guardamos figura
+filename_string = "images/intensivo.png"
+savefig(filename_string) 
 
 ### Hacemos un loop para ver las tablas por nombre en un layout
 intensivo_layout = []
@@ -179,4 +198,9 @@ for i in unique(data_intensivo.product_hs92_name_1d)
     )
 end
 
-plot(intensivo_layout..., layout = (3,3), plot_title="Industrias del Sector Intensivo.\nImportaciones de China, Vietnam, Camboya, Malasia, Indonesia (2023)", left_margin = [20mm 0mm])
+plot(intensivo_layout..., layout = (4,2), plot_title="Industrias del Sector Intensivo.\nImportaciones de China, Vietnam, Camboya, Malasia, Indonesia (2023)", left_margin = [20mm 0mm])
+
+# Guardamos figura
+filename_string = "images/intensivo_grid.png"
+savefig(filename_string) 
+
