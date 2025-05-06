@@ -37,7 +37,8 @@ df = q.collect().to_pandas()
 
 # International Trade Data (HS92) (Unilateral Trade, HS92, 4 digit, 1995-2023)
 # This dataset contains information about International Trade Data (HS92). It includes data from 1995-2023 and is classified as Unilateral Trade with HS92 classification at the 4-digit level.
-uni_trade = pd.read_csv("data/hs92_country_product_year_4.csv").query("country_iso3_code=='SLV'")
+pais = "HND"
+uni_trade = pd.read_csv("data/hs92_country_product_year_4.csv").query(f"country_iso3_code=='{pais}'")
 
 ### Agrupados datos de comercio a HS 4 digitos
 ## Paises a investigar China, Vietnam, Camboya, Malasia, Indonesia
