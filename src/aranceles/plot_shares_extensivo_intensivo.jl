@@ -40,7 +40,7 @@ data_extensivo = data[data.year .== 2023 .&& data.tag.=="paises_interes" .&& dat
 )
 
 # Guardamos figura
-filename_string = "images/extensivo.png"
+filename_string = "DOM/extensivo.png"
 savefig(filename_string) 
 
 @df data_extensivo scatter3d(
@@ -65,7 +65,7 @@ savefig(filename_string)
 )
 
 # Guardamos figura
-filename_string = "images/extensivo_3d.png"
+filename_string = "DOM/extensivo_3d.png"
 savefig(filename_string) 
 
 ### Hacemos un loop para ver las tablas por nombre en un layout
@@ -102,7 +102,7 @@ end
 plot(extensivo_layout..., layout = (4,3), plot_title="Industrias del Sector Extensivo.\nImportaciones de China, Vietnam, Camboya, Malasia, Indonesia (2023)", left_margin = [20mm 0mm])
 
 # Guardamos figura
-filename_string = "images/extensivo_grid.png"
+filename_string = "DOM/extensivo_grid.png"
 savefig(filename_string) 
 
 ## Extensivo 3D
@@ -137,7 +137,7 @@ end
 plot(extensivo_3d_layout..., layout = (4,3), plot_title="Industrias del Sector Extensivo.\nImportaciones de China, Vietnam, Camboya, Malasia, Indonesia (2023)", left_margin = [20mm 0mm])
 
 # Guardamos figura
-filename_string = "images/extensivo_3d_grid.png"
+filename_string = "DOM/extensivo_3d_grid.png"
 savefig(filename_string) 
 
 ### INTENSIVO
@@ -162,10 +162,10 @@ savefig(filename_string)
 )
 #hspan!([49.5,50.5], label= "50%", c=:red)
 #vspan!([-0.02,0.02], label = "PCI=0", c=:black)
-vspan!([-0.092, -0.072 ]; alpha = 0.5, label = "ECI SLV", c = :red)
+vspan!([-0.207, -0.187 ]; alpha = 0.5, label = "ECI DOM", c = :red)
 
 # Guardamos figura
-filename_string = "images/intensivo.png"
+filename_string = "DOM/intensivo.png"
 savefig(filename_string) 
 
 ### Hacemos un loop para ver las tablas por nombre en un layout
@@ -201,6 +201,6 @@ end
 plot(intensivo_layout..., layout = (4,2), plot_title="Industrias del Sector Intensivo.\nImportaciones de China, Vietnam, Camboya, Malasia, Indonesia (2023)", left_margin = [20mm 0mm])
 
 # Guardamos figura
-filename_string = "images/intensivo_grid.png"
+filename_string = "DOM/intensivo_grid.png"
 savefig(filename_string) 
 
