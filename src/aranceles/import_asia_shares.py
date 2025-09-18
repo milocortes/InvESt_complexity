@@ -108,13 +108,13 @@ hs_data = HSAData(hs_dic)
 
 df_hs_correspondencias = hs_data.build_correspondence()
 uni_trade = uni_trade.merge(right=df_hs_correspondencias, how = "inner", on="product_hs92_code_4d")
-uni_trade = uni_trade.merge(right=exports_from_slv2usa[["year", "product_hs92_code_4d", "export_share_to_usa"]], how = "inner", on = ["year", "product_hs92_code_4d"])
+uni_trade = uni_trade.merge(right=exports_from_slv2usa[["year", "product_hs92_code_4d", "export_share_to_usa", "export_value_to_usa"]], how = "inner", on = ["year", "product_hs92_code_4d"])
 
 ### Guarda datos
 uni_trade.to_csv(SLV_EXTENSIVO_INTENSIVO, index = False)
 df_hs_correspondencias.to_csv(HS_CORRESPONDENCIAS_FP, index = False)
 
-agg_vals = {"share_on_total_imports" : "mean", "distance" : "mean", "cog" : "mean", "pci" : "mean", "eci_hs92" : "mean", "export_share_to_usa" : "mean", "export_rca" : "mean", "export_value" : "sum"}
+agg_vals = {"share_on_total_imports" : "mean", "distance" : "mean", "cog" : "mean", "pci" : "mean", "eci_hs92" : "mean", "export_share_to_usa" : "mean", "export_value_to_usa" : "sum", "export_rca" : "mean", "export_value" : "sum"}
 cols_vals = ["product_hs92_code_2d", "year", 'product_hs92_name_2d', 'product_hs92_code_1d', 'product_hs92_name_1d']
 
 hs2_uni_trade = uni_trade.groupby(cols_vals).agg(agg_vals).reset_index()
