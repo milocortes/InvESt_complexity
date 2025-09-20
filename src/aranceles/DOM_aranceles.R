@@ -1,7 +1,7 @@
 # Libraries
 library(ggplot2)
 library(dplyr)
-library(hrbrthemes)
+#library(hrbrthemes)
 library(viridis)
 library(ggrepel)
 
@@ -49,7 +49,7 @@ ggplot(data_intensivo,
   geom_hline(yintercept=50,  color = "red", size = 1.5) + 
   geom_vline(xintercept = ECI_pais, color = "black", size=1.5)
 
-ggsave("../GTM/hs2_export_value_to_usa_intensivo.png",dpi = 300,  width = 15, height = 9,  bg = 'white')
+ggsave("../GTM/hs2_export_value_to_usa_intensivo.png",dpi = 300,  width = 1167/90, height = 575/90,  bg = 'white')
 
 ## Total export value
 ggplot(data_intensivo, 
@@ -69,10 +69,12 @@ ggplot(data_intensivo,
   geom_hline(yintercept=50,  color = "red", size = 1.5) + 
   geom_vline(xintercept = ECI_pais, color = "black", size=1.5)
 
-ggsave("../GTM/hs2_export_value_total_intensivo.png",dpi = 300,  width = 15, height = 9,  bg = 'white')
+ggsave("../GTM/hs2_export_value_total_intensivo.png",dpi = 300,  width = 1167/90, height = 575/90,  bg = 'white')
 
 
 ### EXTENSIVO
+
+### PCI VS SHARE ON TOTAL IMPORTS
 ## Export value to USA
 ggplot(data_extensivo, 
        aes(x = pci, y = share_on_total_imports, size = export_value_to_usa, fill = product_hs92_name_1d, label = product_hs92_name_2d)) +
@@ -91,7 +93,7 @@ ggplot(data_extensivo,
   geom_hline(yintercept=50,  color = "red", size = 1.5) + 
   geom_vline(xintercept = -0.19, color = "black", size=1.5)
 
-ggsave("../GTM/hs2_export_value_to_usa_extensivo.png",dpi = 300,  width = 15, height = 9,  bg = 'white')
+ggsave("../GTM/hs2_export_value_to_usa_extensivo.png",dpi = 300,  width = 1167/90, height = 575/90,  bg = 'white')
 
 ## Total export value
 ggplot(data_extensivo, 
@@ -111,8 +113,49 @@ ggplot(data_extensivo,
   geom_hline(yintercept=50,  color = "red", size = 1.5) + 
   geom_vline(xintercept = ECI_pais, color = "black", size=1.5)
 
-ggsave("../GTM/hs2_export_value_total_extensivo.png",dpi = 300,  width = 15, height = 9,  bg = 'white')
+ggsave("../GTM/hs2_export_value_total_extensivo.png",dpi = 300,  width = 1167/90, height = 575/90,  bg = 'white')
 
+### Distance VS SHARE ON TOTAL IMPORTS
+
+## Export value to USA
+ggplot(data_extensivo, 
+       aes(x = distance, y = share_on_total_imports, size = export_value_to_usa, fill = product_hs92_name_1d, label = product_hs92_name_2d)) +
+  geom_point(alpha = .5, 
+             shape = 21) +
+  geom_text(nudge_x = 0.001, nudge_y = 0.1, size = 3, color = "black")  +
+  scale_size_continuous(range = c(1, 16)) +
+  labs(title = "Industrias del Sector Extensivo (HS2)",
+       subtitle = "Importaciones de China, Vietnam, Camboya, Malasia, Indonesia (2023)",
+       x = "Distance",
+       y = "Razón con respecto al Total de Importaciones [%]",
+       size = "Export value to USA (Million USD)",
+       fill = "Cluster") +
+  theme_minimal()  +
+  guides(fill=guide_legend(override.aes=list(size=6))) + 
+  geom_hline(yintercept=30,  color = "red", size = 1.5, alpha = 0.3) + 
+  geom_vline(xintercept = 0.8, color = "black", size=1.5, alpha = 0.3)
+
+ggsave("../GTM/hs2_export_value_to_usa_extensivo_distance.png",dpi = 300,  width = 1167/90, height = 575/90,  bg = 'white')
+
+## Total export value
+ggplot(data_extensivo, 
+       aes(x = distance, y = share_on_total_imports, size = export_value, fill = product_hs92_name_1d, label = product_hs92_name_2d)) +
+  geom_point(alpha = .5, 
+             shape = 21) +
+  geom_text(nudge_x = 0.001, nudge_y = 0.1, size = 3, color = "black")  +
+  scale_size_continuous(range = c(1, 16)) +
+  labs(title = "Industrias del Sector Extensivo (HS2)",
+       subtitle = "Importaciones de China, Vietnam, Camboya, Malasia, Indonesia (2023)",
+       x = "Distance",
+       y = "Razón con respecto al Total de Importaciones [%]",
+       size = "Total export value (Million USD)",
+       fill = "Cluster") +
+  theme_minimal()  +
+  guides(fill=guide_legend(override.aes=list(size=6))) + 
+  geom_hline(yintercept=30,  color = "red", size = 1.5, alpha = 0.3) + 
+  geom_vline(xintercept = 0.8, color = "black", size=1.5, alpha = 0.3)
+
+ggsave("../GTM/hs2_export_value_total_extensivo_distance.png",dpi = 300,  width = 1167/90, height = 575/90,  bg = 'white')
 
 ### INTENSIVO HS4
 ## Export value to USA
@@ -150,7 +193,7 @@ ggplot(data_intensivo_4d,
   geom_vline(xintercept = ECI_pais, color = "black", size=1.5)
 
 ### Etiquetamos puntos en el cuadrante de interés
-labeled_df = subset(data_intensivo_4d, share_on_total_imports>40 & pci > -0.19)
+labeled_df = subset(data_intensivo_4d, share_on_total_imports>=30 & pci > -0.19)
 
 ## Export value to USA
 ggplot(data_intensivo_4d, 
@@ -166,11 +209,11 @@ ggplot(data_intensivo_4d,
        fill = "Cluster") +
   theme_minimal()  +
   guides(fill=guide_legend(override.aes=list(size=6))) + 
-  geom_hline(yintercept=40,  color = "red", size = 1.5) + 
-  geom_vline(xintercept = ECI_pais, color = "black", size=1.5)+ 
-  geom_text_repel(data = labeled_df, aes(label = product_hs92_name_4d), size = 3) 
+  geom_hline(yintercept=30,  color = "red", size = 1.5, alpha = 0.3) + 
+  geom_vline(xintercept = ECI_pais, color = "black", size=1.5, alpha = 0.3)+ 
+  geom_text_repel(data = labeled_df, aes(label = product_hs92_name_4d), size = 4) 
 
-ggsave("../GTM/hs4_intensivo_export_value_to_usa.png",dpi = 300,  width = 15, height = 9,  bg = 'white')
+ggsave("../GTM/hs4_intensivo_export_value_to_usa.png",dpi = 300,  width = 1167/90, height = 575/90,  bg = 'white')
 
 
 ## Total export value
@@ -187,8 +230,8 @@ ggplot(data_intensivo_4d,
        fill = "Cluster") +
   theme_minimal()  +
   guides(fill=guide_legend(override.aes=list(size=6))) + 
-  geom_hline(yintercept=40,  color = "red", size = 1.5) + 
-  geom_vline(xintercept = ECI_pais, color = "black", size=1.5)+ 
-  geom_text_repel(data = labeled_df, aes(label = product_hs92_name_4d), size = 3) 
+  geom_hline(yintercept=30,  color = "red", size = 1.5, alpha = 0.3) + 
+  geom_vline(xintercept = ECI_pais, color = "black", size=1.5, alpha = 0.3)+ 
+  geom_text_repel(data = labeled_df, aes(label = product_hs92_name_4d), size = 4) 
 
-ggsave("../GTM/hs4_intensivo_export_value_total.png",dpi = 300,  width = 15, height = 9,  bg = 'white')
+ggsave("../GTM/hs4_intensivo_export_value_total.png",dpi = 300,  width = 1167/90, height = 575/90,  bg = 'white')
